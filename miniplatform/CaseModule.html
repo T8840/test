@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>测试用例管理与导入模块 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/test/assets/css/0.styles.c0334387.css" as="style"><link rel="preload" href="/test/assets/js/app.f95afc0e.js" as="script"><link rel="preload" href="/test/assets/js/3.1de58c57.js" as="script"><link rel="preload" href="/test/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/test/assets/js/19.5b36ace8.js" as="script"><link rel="prefetch" href="/test/assets/js/10.5c2dccb8.js"><link rel="prefetch" href="/test/assets/js/11.8ccdf9e0.js"><link rel="prefetch" href="/test/assets/js/12.2cafa193.js"><link rel="prefetch" href="/test/assets/js/13.f84fbed8.js"><link rel="prefetch" href="/test/assets/js/14.630fbf66.js"><link rel="prefetch" href="/test/assets/js/15.bb979110.js"><link rel="prefetch" href="/test/assets/js/16.95d181db.js"><link rel="prefetch" href="/test/assets/js/17.e4952898.js"><link rel="prefetch" href="/test/assets/js/18.d349f9ac.js"><link rel="prefetch" href="/test/assets/js/20.e87a0845.js"><link rel="prefetch" href="/test/assets/js/21.9b2c8478.js"><link rel="prefetch" href="/test/assets/js/22.e7376488.js"><link rel="prefetch" href="/test/assets/js/23.58ebbf70.js"><link rel="prefetch" href="/test/assets/js/24.fd8e7dcc.js"><link rel="prefetch" href="/test/assets/js/25.bd6d1825.js"><link rel="prefetch" href="/test/assets/js/26.f7db35ea.js"><link rel="prefetch" href="/test/assets/js/27.e9020c7f.js"><link rel="prefetch" href="/test/assets/js/28.9bfdda65.js"><link rel="prefetch" href="/test/assets/js/29.f8f5b07a.js"><link rel="prefetch" href="/test/assets/js/30.4394a919.js"><link rel="prefetch" href="/test/assets/js/31.2bddd865.js"><link rel="prefetch" href="/test/assets/js/32.ad0973d0.js"><link rel="prefetch" href="/test/assets/js/33.224c072e.js"><link rel="prefetch" href="/test/assets/js/34.776b960a.js"><link rel="prefetch" href="/test/assets/js/35.b369adb9.js"><link rel="prefetch" href="/test/assets/js/36.8a409189.js"><link rel="prefetch" href="/test/assets/js/37.e8203659.js"><link rel="prefetch" href="/test/assets/js/38.ec7ebd69.js"><link rel="prefetch" href="/test/assets/js/39.029a257e.js"><link rel="prefetch" href="/test/assets/js/4.673bf15a.js"><link rel="prefetch" href="/test/assets/js/40.96456ab7.js"><link rel="prefetch" href="/test/assets/js/41.ea06ca1a.js"><link rel="prefetch" href="/test/assets/js/42.0f70b399.js"><link rel="prefetch" href="/test/assets/js/43.60e8b367.js"><link rel="prefetch" href="/test/assets/js/44.8d0871a7.js"><link rel="prefetch" href="/test/assets/js/45.02b5d702.js"><link rel="prefetch" href="/test/assets/js/46.e3baf61a.js"><link rel="prefetch" href="/test/assets/js/47.8e9a1df4.js"><link rel="prefetch" href="/test/assets/js/48.cffdb1f4.js"><link rel="prefetch" href="/test/assets/js/49.20f1ccf3.js"><link rel="prefetch" href="/test/assets/js/5.8b013b29.js"><link rel="prefetch" href="/test/assets/js/50.619e502f.js"><link rel="prefetch" href="/test/assets/js/6.aad79307.js"><link rel="prefetch" href="/test/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/test/assets/js/8.1296ca76.js"><link rel="prefetch" href="/test/assets/js/9.f2b953d4.js">
+    <link rel="stylesheet" href="/test/assets/css/0.styles.c0334387.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/test/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/test/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>37</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/test/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/test/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/concept/Test" class="sidebar-heading clickable"><span>概念</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/concept/Test.html" class="sidebar-link">软件测试</a></li><li><a href="/test/concept/Test.html" class="sidebar-link">质量标准</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/ut/Test" class="sidebar-heading clickable"><span>白盒测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/ut/Test.html" class="sidebar-link">白盒测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/api/Test" class="sidebar-heading clickable"><span>API测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/api/Test.html" class="sidebar-link">API测试</a></li><li><a href="/test/api/Model.html" class="sidebar-link">测试模型</a></li><li><a href="/test/api/Tools.html" class="sidebar-link">常见工具</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/ui/Test" class="sidebar-heading clickable"><span>UI测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/ui/Test.html" class="sidebar-link">UI测试</a></li><li><a href="/test/ui/Chrome.html" class="sidebar-link">浏览器UI测试</a></li><li><a href="/test/ui/Device.html" class="sidebar-link">移动端UI测试</a></li><li><a href="/test/ui/GUI.html" class="sidebar-link">桌面GUI测试</a></li><li><a href="/test/ui/Tools.html" class="sidebar-link">常见工具</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/app/Test" class="sidebar-heading clickable"><span>移动端测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/app/Test.html" class="sidebar-link">移动端测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/performance/Test" class="sidebar-heading clickable"><span>性能测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/performance/Test.html" class="sidebar-link">性能测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/stability/Test" class="sidebar-heading clickable"><span>稳定性测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/stability/Test.html" class="sidebar-link">稳定性测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/precise/Test" class="sidebar-heading clickable"><span>精准测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/precise/Test.html" class="sidebar-link">精准测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/safty/Test" class="sidebar-heading clickable"><span>安全测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/safty/Test.html" class="sidebar-link">安全测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/work/Summary" class="sidebar-heading clickable"><span>办公工具</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/work/Summary.html" class="sidebar-link">汇总</a></li><li><a href="/test/work/Case.html" class="sidebar-link">测试用例</a></li><li><a href="/test/work/CaseTools.html" class="sidebar-link">测试用例工具</a></li><li><a href="/test/work/Report.html" class="sidebar-link">测试报告</a></li><li><a href="/test/work/ReportTools.html" class="sidebar-link">测试报告工具</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/miniplatform/Composition" class="sidebar-heading clickable open"><span>微型测试平台开发</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/miniplatform/Composition.html" class="sidebar-link">测试平台基本组成</a></li><li><a href="/test/miniplatform/ResourceModule.html" class="sidebar-link">测试资源管理模块</a></li><li><a href="/test/miniplatform/ConfigModule.html" class="sidebar-link">测试配置管理模块</a></li><li><a href="/test/miniplatform/ReportModule.html" class="sidebar-link">测试报告管理模块</a></li><li><a href="/test/miniplatform/LogModule.html" class="sidebar-link">测试日志管理模块</a></li><li><a href="/test/miniplatform/CaseModule.html" aria-current="page" class="active sidebar-link">测试用例管理模块</a></li><li><a href="/test/miniplatform/EngineModule.html" class="sidebar-link">测试引擎模块</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/test/tools/Summary" class="sidebar-heading clickable"><span>工具汇总</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>测试用例管理与导入模块</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">测试用例管理与导入模块</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>T8840</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2023/1/15</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="测试用例模板"><a href="#测试用例模板" class="header-anchor">#</a> 测试用例模板</h2> <p>测试用例应该有其标准形式，以提供一个标准的模板给测试开发者使用。<br>
+大多数测试平台，会建议或定义一些默认的基本步骤，比如RFT（Rational Function Test)中的三步测试法：</p> <ol><li>Setup：用来进行测试过程的配置</li> <li>Test：具体的测试过程</li> <li>Cleanup：恢复测试的配置，使测试对象恢复初始状态。</li></ol> <h2 id="该平台测试用例为python脚本"><a href="#该平台测试用例为python脚本" class="header-anchor">#</a> 该平台测试用例为python脚本</h2> <p>形式与pytest脚本形式类似</p> <h3 id="测试用例的基类设计"><a href="#测试用例的基类设计" class="header-anchor">#</a> 测试用例的基类设计</h3> <p>case/base.py</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token triple-quoted-string string">&quot;&quot;&quot;
+The Test Case Base File for the Test engine
+&quot;&quot;&quot;</span>
+
+<span class="token keyword">from</span> abc <span class="token keyword">import</span> abstractmethod<span class="token punctuation">,</span> ABCMeta
+<span class="token keyword">from</span> enum <span class="token keyword">import</span> IntEnum
+
+<span class="token keyword">class</span> <span class="token class-name">TestType</span><span class="token punctuation">(</span>IntEnum<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    UNIT <span class="token operator">=</span> <span class="token number">1</span>
+    SANITY <span class="token operator">=</span> <span class="token number">2</span>
+    FEATURE <span class="token operator">=</span> <span class="token number">4</span>
+    REGRESSION <span class="token operator">=</span> <span class="token number">8</span>
+    SYSTEM <span class="token operator">=</span> <span class="token number">16</span>
+    ALL <span class="token operator">=</span> <span class="token number">255</span>
+
+<span class="token keyword">class</span> <span class="token class-name">TestCaseBase</span><span class="token punctuation">(</span>metaclass<span class="token operator">=</span>ABCMeta<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    The test case base class
+    User should implement the below 3 methods:
+        setup: for test setup
+        test: The main test body
+        cleanup: Clean the test
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> reporter<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>reporter <span class="token operator">=</span> reporter
+        self<span class="token punctuation">.</span>_output_var <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setting <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>logger <span class="token operator">=</span> reporter<span class="token punctuation">.</span>case_logger
+        self<span class="token punctuation">.</span>test_data_var <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>result <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">collect_resource</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pool<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        Collect Test Resource
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">setup</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">cleanup</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@property</span>
+    <span class="token keyword">def</span> <span class="token function">output_var</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        The test case output variable
+        Can be collected by Test Engine
+        :return:
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>_output_var
+
+    <span class="token keyword">def</span> <span class="token function">get_setting</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> setting_path<span class="token punctuation">,</span> setting_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        Get test case setting instance
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">for</span> k<span class="token punctuation">,</span>v <span class="token keyword">in</span> self<span class="token punctuation">.</span>__class__<span class="token punctuation">.</span>__dict__<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token builtin">hasattr</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> <span class="token string">&quot;__base__&quot;</span><span class="token punctuation">)</span> <span class="token keyword">and</span> v<span class="token punctuation">.</span>__base__<span class="token punctuation">.</span>__name__ <span class="token operator">==</span> <span class="token string">&quot;TestSettingBase&quot;</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>setting <span class="token operator">=</span> v<span class="token punctuation">(</span>setting_path<span class="token punctuation">,</span> setting_file<span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>setting<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+</code></pre></div><h3 id="使用类装饰器装饰类实现属性的输入增加测试用例对象的属性"><a href="#使用类装饰器装饰类实现属性的输入增加测试用例对象的属性" class="header-anchor">#</a> 使用类装饰器装饰类实现属性的输入增加测试用例对象的属性</h3> <p>case/decorator.py</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token triple-quoted-string string">&quot;&quot;&quot;
+The decorators for the test case
+case: the base decorator
+data_provider: for data driven
+&quot;&quot;&quot;</span>
+
+<span class="token keyword">from</span> functools <span class="token keyword">import</span> wraps
+<span class="token keyword">from</span> core<span class="token punctuation">.</span>result<span class="token punctuation">.</span>reporter <span class="token keyword">import</span> StepResult
+<span class="token keyword">from</span> <span class="token punctuation">.</span>base <span class="token keyword">import</span> TestType
+<span class="token keyword">import</span> inspect
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> json
+<span class="token keyword">import</span> re
+
+<span class="token keyword">class</span> <span class="token class-name">TestDataFileNotFound</span><span class="token punctuation">(</span>Exception<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MethodNotFoundError</span><span class="token punctuation">(</span>Exception<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+
+
+<span class="token keyword">def</span> <span class="token function">case</span><span class="token punctuation">(</span>priority <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>
+         test_type<span class="token operator">=</span>TestType<span class="token punctuation">.</span>ALL<span class="token punctuation">,</span>
+         feature_name<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>
+         testcase_id<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>
+         pre_tests <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">,</span>
+         skip_if_high_priority_failed<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    The Decorator for the test cases
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">decorator</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">setattr</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> <span class="token string">&quot;priority&quot;</span><span class="token punctuation">,</span> priority<span class="token punctuation">)</span>  <span class="token comment"># 测试用例的优先级</span>
+        <span class="token builtin">setattr</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> <span class="token string">&quot;test_type&quot;</span><span class="token punctuation">,</span> test_type<span class="token punctuation">)</span>  <span class="token comment"># 测试用例的类型</span>
+        <span class="token builtin">setattr</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> <span class="token string">&quot;feature_name&quot;</span><span class="token punctuation">,</span> feature_name<span class="token punctuation">)</span>  <span class="token comment"># 测试用例测试的功能</span>
+        <span class="token builtin">setattr</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> <span class="token string">&quot;testcase_id&quot;</span><span class="token punctuation">,</span> testcase_id<span class="token punctuation">)</span>  <span class="token comment"># 测试用例对应的测试用例ID</span>
+        <span class="token builtin">setattr</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> <span class="token string">&quot;pre_tests&quot;</span><span class="token punctuation">,</span> pre_tests <span class="token keyword">if</span> pre_tests <span class="token keyword">else</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token builtin">setattr</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> <span class="token string">&quot;skip_if_high_priority_failed&quot;</span><span class="token punctuation">,</span> skip_if_high_priority_failed<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> cls
+    <span class="token keyword">return</span> decorator
+
+
+<span class="token keyword">def</span> <span class="token function">_replace_value</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> test_case<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token builtin">dict</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+    <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> obj<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment"># 替换字符串</span>
+            obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value <span class="token operator">%</span> test_case<span class="token punctuation">.</span>test_data_var
+            <span class="token comment"># 查找方法并执行</span>
+            res <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r&quot;&lt;func:(.+?)&gt;&quot;</span><span class="token punctuation">,</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token builtin">any</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> <span class="token builtin">hasattr</span><span class="token punctuation">(</span>test_case<span class="token punctuation">,</span> res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">getattr</span><span class="token punctuation">(</span>test_case<span class="token punctuation">,</span> res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">raise</span> MethodNotFoundError<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;method: </span><span class="token interpolation"><span class="token punctuation">{</span>res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string"> not found&quot;</span></span><span class="token punctuation">)</span>
+
+        <span class="token keyword">elif</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> <span class="token builtin">dict</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            _replace_value<span class="token punctuation">(</span>value<span class="token punctuation">,</span> test_case<span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> <span class="token builtin">list</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> item <span class="token keyword">in</span> value<span class="token punctuation">:</span>
+                _replace_value<span class="token punctuation">(</span>item<span class="token punctuation">,</span> test_case<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">continue</span>
+
+
+<span class="token keyword">def</span> <span class="token function">data_provider</span><span class="token punctuation">(</span>filename<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> stop_on_error<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    The data provider for test method in test case
+    :param filename: the test data file, default case name is script name + &quot;.json&quot;
+    :param stop_on_error: If true, the case will stop if 1 data iteration failed.
+    :return:
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">outer</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token decorator annotation punctuation">@wraps</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span>
+        <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            test_case <span class="token operator">=</span> <span class="token builtin">locals</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">&quot;args&quot;</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            case_file <span class="token operator">=</span> inspect<span class="token punctuation">.</span>getfile<span class="token punctuation">(</span>test_case<span class="token punctuation">.</span>__class__<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> filename<span class="token punctuation">:</span>
+                case_file <span class="token operator">=</span> filename
+            test_data_file <span class="token operator">=</span> case_file <span class="token operator">+</span> <span class="token string">&quot;.json&quot;</span>
+            <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>test_data_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">raise</span> TestDataFileNotFound<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Cannot found test data for case </span><span class="token interpolation"><span class="token punctuation">{</span>test_case<span class="token punctuation">.</span>__class__<span class="token punctuation">.</span>__name__<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+            <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>test_data_file<span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+                test_data <span class="token operator">=</span> json<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+            iteration <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token keyword">for</span> data <span class="token keyword">in</span> test_data<span class="token punctuation">[</span><span class="token string">&quot;data&quot;</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                header <span class="token operator">=</span> data<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;header&quot;</span><span class="token punctuation">,</span> <span class="token string-interpolation"><span class="token string">f&quot;Iteration </span><span class="token interpolation"><span class="token punctuation">{</span>iteration<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+                <span class="token keyword">try</span><span class="token punctuation">:</span>
+                    iteration <span class="token operator">+=</span> <span class="token number">1</span>
+                    test_case<span class="token punctuation">.</span>reporter<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span>header<span class="token punctuation">)</span>
+                    _replace_value<span class="token punctuation">(</span>data<span class="token punctuation">,</span> test_case<span class="token punctuation">)</span>
+                    func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> data<span class="token punctuation">)</span>
+                <span class="token keyword">except</span> Exception <span class="token keyword">as</span> ex<span class="token punctuation">:</span>
+                    <span class="token keyword">if</span> <span class="token keyword">not</span> stop_on_error<span class="token punctuation">:</span>
+                        test_case<span class="token punctuation">.</span>reporter<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>EXCEPTION<span class="token punctuation">,</span> <span class="token string-interpolation"><span class="token string">f&quot;Exception on </span><span class="token interpolation"><span class="token punctuation">{</span>header<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+                    <span class="token keyword">else</span><span class="token punctuation">:</span>
+                        <span class="token keyword">raise</span> ex
+                <span class="token keyword">finally</span><span class="token punctuation">:</span>
+                    test_case<span class="token punctuation">.</span>reporter<span class="token punctuation">.</span>end_step_group<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> wrapper
+    <span class="token keyword">return</span> outer
+
+</code></pre></div><p>属性输入装饰器的使用：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token decorator annotation punctuation">@case</span><span class="token punctuation">(</span>priority<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> test_type<span class="token operator">=</span>TestType<span class="token punctuation">.</span>SANITY<span class="token punctuation">,</span>feature_name<span class="token operator">=</span><span class="token string">&quot;Test&quot;</span><span class="token punctuation">,</span>testcase_id<span class="token operator">=</span><span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">HelloWorldTest</span><span class="token punctuation">(</span>TestCaseBase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">pass</span>
+</code></pre></div><h3 id="测试用例参数"><a href="#测试用例参数" class="header-anchor">#</a> 测试用例参数</h3> <p>测试用例配置：</p> <ul><li>默认规则</li> <li>动态规则：使用动态配置</li></ul> <h2 id="测试用例形式"><a href="#测试用例形式" class="header-anchor">#</a> 测试用例形式</h2> <p>testcase/testlist.py</p> <h2 id="测试列表即testlist"><a href="#测试列表即testlist" class="header-anchor">#</a> 测试列表即TestList</h2> <p>测试列表是一组测试用例的集合。
+case/testlist.py</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> os
+<span class="token keyword">import</span> json
+
+<span class="token keyword">from</span> core<span class="token punctuation">.</span>config<span class="token punctuation">.</span>setting <span class="token keyword">import</span> SettingBase<span class="token punctuation">,</span> dynamic_setting
+<span class="token keyword">from</span> core<span class="token punctuation">.</span><span class="token keyword">case</span><span class="token punctuation">.</span>base <span class="token keyword">import</span> TestType
+
+
+<span class="token keyword">class</span> <span class="token class-name">TestListError</span><span class="token punctuation">(</span>Exception<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    用来描述测试列表的一系列错误异常
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> message<span class="token punctuation">,</span> ex<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token string">&quot;测试列表异常:&quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>parent <span class="token operator">=</span> ex
+
+
+<span class="token decorator annotation punctuation">@dynamic_setting</span>
+<span class="token keyword">class</span> <span class="token class-name">TestList</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    测试列表类
+    filepath 默认内容
+    {
+    &quot;name&quot;: &quot;&quot;,
+    &quot;description&quot;: &quot;&quot;,
+    &quot;setting_path&quot;: &quot;&quot;,
+    &quot;cases&quot;: [],
+    &quot;sublist&quot;: []
+    }
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> filepath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>filepath <span class="token operator">=</span> filepath
+        self<span class="token punctuation">.</span>setting_file_path <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>test_list_name <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+        self<span class="token punctuation">.</span>description <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+        self<span class="token punctuation">.</span>test_cases <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sub_list <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setting_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>self<span class="token punctuation">.</span>setting_file_path<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setting_file <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>self<span class="token punctuation">.</span>setting_file_path<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">load</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        读取测试列表
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>self<span class="token punctuation">.</span>filepath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> TestListError<span class="token punctuation">(</span><span class="token string">&quot;%s 无法找到&quot;</span> <span class="token operator">%</span> self<span class="token punctuation">.</span>filepath<span class="token punctuation">)</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            testlist_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>filepath<span class="token punctuation">)</span>
+            testlist_obj <span class="token operator">=</span> json<span class="token punctuation">.</span>load<span class="token punctuation">(</span>testlist_file<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>test_list_name <span class="token operator">=</span> testlist_obj<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span>
+            self<span class="token punctuation">.</span>description <span class="token operator">=</span> testlist_obj<span class="token punctuation">[</span><span class="token string">'description'</span><span class="token punctuation">]</span>
+            self<span class="token punctuation">.</span>setting_file_path <span class="token operator">=</span> testlist_obj<span class="token punctuation">[</span><span class="token string">'setting_path'</span><span class="token punctuation">]</span>
+            <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>setting_file_path<span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>setting_file_path <span class="token operator">=</span> \
+                    os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>self<span class="token punctuation">.</span>filepath<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                 os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>self<span class="token punctuation">.</span>filepath<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot;.settings&quot;</span><span class="token punctuation">)</span>
+
+            <span class="token keyword">for</span> testcase <span class="token keyword">in</span> testlist_obj<span class="token punctuation">[</span><span class="token string">'cases'</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>test_cases<span class="token punctuation">.</span>append<span class="token punctuation">(</span>testcase<span class="token punctuation">)</span>
+            <span class="token keyword">for</span> sublist <span class="token keyword">in</span> testlist_obj<span class="token punctuation">[</span><span class="token string">'sublist'</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                fullpath <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>self<span class="token punctuation">.</span>filepath<span class="token punctuation">)</span><span class="token punctuation">,</span> sublist<span class="token punctuation">)</span>
+                temp_list <span class="token operator">=</span> TestList<span class="token punctuation">(</span>fullpath<span class="token punctuation">)</span>
+                <span class="token keyword">try</span><span class="token punctuation">:</span>
+                    temp_list<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                    self<span class="token punctuation">.</span>sub_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>temp_list<span class="token punctuation">)</span>
+                <span class="token keyword">except</span><span class="token punctuation">:</span>
+                    <span class="token keyword">pass</span>
+
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> ex<span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> TestListError<span class="token punctuation">(</span><span class="token string">&quot;打开文件%s错误&quot;</span> <span class="token operator">%</span> self<span class="token punctuation">.</span>filepath<span class="token punctuation">,</span> ex<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">save</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        将测试列表保存成json格式的文件
+        &quot;&quot;&quot;</span>
+        json_obj <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        json_obj<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>test_list_name
+        json_obj<span class="token punctuation">[</span><span class="token string">'description'</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>description
+        json_obj<span class="token punctuation">[</span><span class="token string">'setting_path'</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>setting_file_path
+        json_obj<span class="token punctuation">[</span><span class="token string">'cases'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> testcase <span class="token keyword">in</span> self<span class="token punctuation">.</span>test_cases<span class="token punctuation">:</span>
+            json_obj<span class="token punctuation">[</span><span class="token string">'cases'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>testcase<span class="token punctuation">)</span>
+        json_obj<span class="token punctuation">[</span><span class="token string">'sublist'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> sublist <span class="token keyword">in</span> self<span class="token punctuation">.</span>sub_list<span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                sublist<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                json_obj<span class="token punctuation">[</span><span class="token string">'sublist'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>sublist<span class="token punctuation">.</span>filepath<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">except</span><span class="token punctuation">:</span>
+                <span class="token keyword">pass</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            testlist_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>filepath<span class="token punctuation">,</span> mode<span class="token operator">=</span><span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span>
+            json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>json_obj<span class="token punctuation">,</span> testlist_file<span class="token punctuation">,</span> indent<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> ex<span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> TestListError<span class="token punctuation">(</span><span class="token string">&quot;无法保存测试列表%s&quot;</span> <span class="token operator">%</span> self<span class="token punctuation">.</span>filepath<span class="token punctuation">,</span> ex<span class="token punctuation">)</span>
+
+    <span class="token keyword">class</span> <span class="token class-name">TestListSetting</span><span class="token punctuation">(</span>SettingBase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        filepath.settings 默认配置
+        {
+            &quot;random_seed&quot;: 0,
+            &quot;skip_if_high_priority_failed&quot;: true,
+            &quot;follow_priority&quot;: true,
+            &quot;run_type&quot;: 255,
+            &quot;priority_to_run&quot;: []
+        }
+        &quot;&quot;&quot;</span>
+        random_seed <span class="token operator">=</span> <span class="token number">0</span>
+        case_setting_path <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+        skip_if_high_priority_failed <span class="token operator">=</span> <span class="token boolean">True</span>
+        follow_priority <span class="token operator">=</span> <span class="token boolean">True</span>
+        run_type <span class="token operator">=</span> TestType<span class="token punctuation">.</span>ALL
+        priority_to_run <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&quot;__main__&quot;</span><span class="token punctuation">:</span>
+    <span class="token comment"># 使用时需在该目录下新建demo_list1.testlist、demo_list2.testlist，并填入上面的初始值</span>
+    <span class="token comment"># 配置文件这里有个bug：在Windows下无法自动创建，如在windows下调试需创建demo_list1.testlist.settings、demo_list2.testlist.settings并填入上面的初始值</span>
+    t1 <span class="token operator">=</span> TestList<span class="token punctuation">(</span><span class="token string">&quot;demo_list1.testlist&quot;</span><span class="token punctuation">)</span>
+    t1<span class="token punctuation">.</span>test_list_name <span class="token operator">=</span> <span class="token string">&quot;A Demo Test List&quot;</span>
+    t1<span class="token punctuation">.</span>description <span class="token operator">=</span> <span class="token string">&quot;Description&quot;</span>
+    t1<span class="token punctuation">.</span>test_cases<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">&quot;case1&quot;</span><span class="token punctuation">)</span>
+    t1<span class="token punctuation">.</span>test_cases<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">&quot;case2&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment"># t1.setting_file_path = &quot;.&quot;</span>
+    t2 <span class="token operator">=</span> TestList<span class="token punctuation">(</span><span class="token string">&quot;demo_list2.testlist&quot;</span><span class="token punctuation">)</span>
+    t2<span class="token punctuation">.</span>test_list_name <span class="token operator">=</span> <span class="token string">&quot;Demo sub list&quot;</span>
+    t1<span class="token punctuation">.</span>sub_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>t2<span class="token punctuation">)</span>
+    t1<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    t1<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>t1<span class="token punctuation">)</span>
+
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/test/miniplatform/LogModule.html" class="prev">
+          测试日志管理模块
+        </a></span> <span class="next"><a href="/test/miniplatform/EngineModule.html">
+          测试引擎模块
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/test/miniplatform/CaseModule.html#测试用例模板" class="sidebar-link reco-side-测试用例模板" data-v-b57cc07c>测试用例模板</a></li><li class="level-2" data-v-b57cc07c><a href="/test/miniplatform/CaseModule.html#该平台测试用例为python脚本" class="sidebar-link reco-side-该平台测试用例为python脚本" data-v-b57cc07c>该平台测试用例为python脚本</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/CaseModule.html#测试用例的基类设计" class="sidebar-link reco-side-测试用例的基类设计" data-v-b57cc07c>测试用例的基类设计</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/CaseModule.html#使用类装饰器装饰类实现属性的输入增加测试用例对象的属性" class="sidebar-link reco-side-使用类装饰器装饰类实现属性的输入增加测试用例对象的属性" data-v-b57cc07c>使用类装饰器装饰类实现属性的输入增加测试用例对象的属性</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/CaseModule.html#测试用例参数" class="sidebar-link reco-side-测试用例参数" data-v-b57cc07c>测试用例参数</a></li><li class="level-2" data-v-b57cc07c><a href="/test/miniplatform/CaseModule.html#测试用例形式" class="sidebar-link reco-side-测试用例形式" data-v-b57cc07c>测试用例形式</a></li><li class="level-2" data-v-b57cc07c><a href="/test/miniplatform/CaseModule.html#测试列表即testlist" class="sidebar-link reco-side-测试列表即testlist" data-v-b57cc07c>测试列表即TestList</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/test/assets/js/app.f95afc0e.js" defer></script><script src="/test/assets/js/3.1de58c57.js" defer></script><script src="/test/assets/js/1.912b4b55.js" defer></script><script src="/test/assets/js/19.5b36ace8.js" defer></script>
+  </body>
+</html>

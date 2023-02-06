@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>测试资源管理模块 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/test/assets/css/0.styles.c0334387.css" as="style"><link rel="preload" href="/test/assets/js/app.f95afc0e.js" as="script"><link rel="preload" href="/test/assets/js/3.1de58c57.js" as="script"><link rel="preload" href="/test/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/test/assets/js/25.bd6d1825.js" as="script"><link rel="prefetch" href="/test/assets/js/10.5c2dccb8.js"><link rel="prefetch" href="/test/assets/js/11.8ccdf9e0.js"><link rel="prefetch" href="/test/assets/js/12.2cafa193.js"><link rel="prefetch" href="/test/assets/js/13.f84fbed8.js"><link rel="prefetch" href="/test/assets/js/14.630fbf66.js"><link rel="prefetch" href="/test/assets/js/15.bb979110.js"><link rel="prefetch" href="/test/assets/js/16.95d181db.js"><link rel="prefetch" href="/test/assets/js/17.e4952898.js"><link rel="prefetch" href="/test/assets/js/18.d349f9ac.js"><link rel="prefetch" href="/test/assets/js/19.5b36ace8.js"><link rel="prefetch" href="/test/assets/js/20.e87a0845.js"><link rel="prefetch" href="/test/assets/js/21.9b2c8478.js"><link rel="prefetch" href="/test/assets/js/22.e7376488.js"><link rel="prefetch" href="/test/assets/js/23.58ebbf70.js"><link rel="prefetch" href="/test/assets/js/24.fd8e7dcc.js"><link rel="prefetch" href="/test/assets/js/26.f7db35ea.js"><link rel="prefetch" href="/test/assets/js/27.e9020c7f.js"><link rel="prefetch" href="/test/assets/js/28.9bfdda65.js"><link rel="prefetch" href="/test/assets/js/29.f8f5b07a.js"><link rel="prefetch" href="/test/assets/js/30.4394a919.js"><link rel="prefetch" href="/test/assets/js/31.2bddd865.js"><link rel="prefetch" href="/test/assets/js/32.ad0973d0.js"><link rel="prefetch" href="/test/assets/js/33.224c072e.js"><link rel="prefetch" href="/test/assets/js/34.776b960a.js"><link rel="prefetch" href="/test/assets/js/35.b369adb9.js"><link rel="prefetch" href="/test/assets/js/36.8a409189.js"><link rel="prefetch" href="/test/assets/js/37.e8203659.js"><link rel="prefetch" href="/test/assets/js/38.ec7ebd69.js"><link rel="prefetch" href="/test/assets/js/39.029a257e.js"><link rel="prefetch" href="/test/assets/js/4.673bf15a.js"><link rel="prefetch" href="/test/assets/js/40.96456ab7.js"><link rel="prefetch" href="/test/assets/js/41.ea06ca1a.js"><link rel="prefetch" href="/test/assets/js/42.0f70b399.js"><link rel="prefetch" href="/test/assets/js/43.60e8b367.js"><link rel="prefetch" href="/test/assets/js/44.8d0871a7.js"><link rel="prefetch" href="/test/assets/js/45.02b5d702.js"><link rel="prefetch" href="/test/assets/js/46.e3baf61a.js"><link rel="prefetch" href="/test/assets/js/47.8e9a1df4.js"><link rel="prefetch" href="/test/assets/js/48.cffdb1f4.js"><link rel="prefetch" href="/test/assets/js/49.20f1ccf3.js"><link rel="prefetch" href="/test/assets/js/5.8b013b29.js"><link rel="prefetch" href="/test/assets/js/50.619e502f.js"><link rel="prefetch" href="/test/assets/js/6.aad79307.js"><link rel="prefetch" href="/test/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/test/assets/js/8.1296ca76.js"><link rel="prefetch" href="/test/assets/js/9.f2b953d4.js">
+    <link rel="stylesheet" href="/test/assets/css/0.styles.c0334387.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/test/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/test/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>37</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/test/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/test/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/concept/Test" class="sidebar-heading clickable"><span>概念</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/concept/Test.html" class="sidebar-link">软件测试</a></li><li><a href="/test/concept/Test.html" class="sidebar-link">质量标准</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/ut/Test" class="sidebar-heading clickable"><span>白盒测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/ut/Test.html" class="sidebar-link">白盒测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/api/Test" class="sidebar-heading clickable"><span>API测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/api/Test.html" class="sidebar-link">API测试</a></li><li><a href="/test/api/Model.html" class="sidebar-link">测试模型</a></li><li><a href="/test/api/Tools.html" class="sidebar-link">常见工具</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/ui/Test" class="sidebar-heading clickable"><span>UI测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/ui/Test.html" class="sidebar-link">UI测试</a></li><li><a href="/test/ui/Chrome.html" class="sidebar-link">浏览器UI测试</a></li><li><a href="/test/ui/Device.html" class="sidebar-link">移动端UI测试</a></li><li><a href="/test/ui/GUI.html" class="sidebar-link">桌面GUI测试</a></li><li><a href="/test/ui/Tools.html" class="sidebar-link">常见工具</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/app/Test" class="sidebar-heading clickable"><span>移动端测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/app/Test.html" class="sidebar-link">移动端测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/performance/Test" class="sidebar-heading clickable"><span>性能测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/performance/Test.html" class="sidebar-link">性能测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/stability/Test" class="sidebar-heading clickable"><span>稳定性测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/stability/Test.html" class="sidebar-link">稳定性测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/precise/Test" class="sidebar-heading clickable"><span>精准测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/precise/Test.html" class="sidebar-link">精准测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/safty/Test" class="sidebar-heading clickable"><span>安全测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/safty/Test.html" class="sidebar-link">安全测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/work/Summary" class="sidebar-heading clickable"><span>办公工具</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/work/Summary.html" class="sidebar-link">汇总</a></li><li><a href="/test/work/Case.html" class="sidebar-link">测试用例</a></li><li><a href="/test/work/CaseTools.html" class="sidebar-link">测试用例工具</a></li><li><a href="/test/work/Report.html" class="sidebar-link">测试报告</a></li><li><a href="/test/work/ReportTools.html" class="sidebar-link">测试报告工具</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/miniplatform/Composition" class="sidebar-heading clickable open"><span>微型测试平台开发</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/miniplatform/Composition.html" class="sidebar-link">测试平台基本组成</a></li><li><a href="/test/miniplatform/ResourceModule.html" aria-current="page" class="active sidebar-link">测试资源管理模块</a></li><li><a href="/test/miniplatform/ConfigModule.html" class="sidebar-link">测试配置管理模块</a></li><li><a href="/test/miniplatform/ReportModule.html" class="sidebar-link">测试报告管理模块</a></li><li><a href="/test/miniplatform/LogModule.html" class="sidebar-link">测试日志管理模块</a></li><li><a href="/test/miniplatform/CaseModule.html" class="sidebar-link">测试用例管理模块</a></li><li><a href="/test/miniplatform/EngineModule.html" class="sidebar-link">测试引擎模块</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/test/tools/Summary" class="sidebar-heading clickable"><span>工具汇总</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>测试资源管理模块</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">测试资源管理模块</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>T8840</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2023/1/15</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="测试资源形式"><a href="#测试资源形式" class="header-anchor">#</a> 测试资源形式</h2> <p>文本形式的配置文件：XML/JSON/YAML
+数据库：MySQL</p> <h2 id="使用拓扑结构的测试资源抽象模型"><a href="#使用拓扑结构的测试资源抽象模型" class="header-anchor">#</a> 使用拓扑结构的测试资源抽象模型</h2> <p>拓扑结构可以抽象为测试资源的静态属性及其连接信息，如：一台电脑通过网线连接另一台电脑。
+这种抽象模型比较适合运维。
+下面的代码完全使用python编写资源的模型并保存在文件中并从文件中获取，该数据模型没有使用MySQL专门的数据库。</p> <h3 id="测试资源的序列化-反序列化"><a href="#测试资源的序列化-反序列化" class="header-anchor">#</a> 测试资源的序列化/反序列化</h3> <p>就是模型与文件或mysql的转化操作。</p> <h3 id="资源池"><a href="#资源池" class="header-anchor">#</a> 资源池</h3> <p>管理测试资源的序列化/反序列化，以及资源的占用管理。<br>
+pool.py 代码如下：</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token triple-quoted-string string">&quot;&quot;&quot;
+资源池对象，包括了资源池、资源以及资源端口的定义，序列化以及反序列化的方法
+&quot;&quot;&quot;</span>
+<span class="token keyword">import</span> json
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> time
+<span class="token keyword">from</span> abc <span class="token keyword">import</span> ABCMeta<span class="token punctuation">,</span> abstractmethod
+<span class="token keyword">from</span> core<span class="token punctuation">.</span>config<span class="token punctuation">.</span>setting <span class="token keyword">import</span> static_setting<span class="token punctuation">,</span> SettingBase
+
+
+<span class="token comment"># 存放用户注册的配置接口对象类型</span>
+_resource_device_mapping <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+_resource_port_mapping <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">ResourceError</span><span class="token punctuation">(</span>Exception<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> msg<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>msg<span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">ResourceNotMeetConstraint</span><span class="token punctuation">(</span>Exception<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> constraints<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token string">&quot;Resource Not Meet Constraints&quot;</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>description <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+        <span class="token keyword">for</span> constraint <span class="token keyword">in</span> constraints<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>description <span class="token operator">+=</span> constraint<span class="token punctuation">.</span>description <span class="token operator">+</span> <span class="token string">&quot;\n&quot;</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">ResourceDevice</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    代表所有测试资源设备的配置类，字段动态定义
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+        self<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;type&quot;</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>description <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;description&quot;</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>pre_connect <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>ports <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_instance <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">def</span> <span class="token function">add_port</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> name <span class="token keyword">in</span> self<span class="token punctuation">.</span>ports<span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ResourceError<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Port Name </span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string"> already exists&quot;</span></span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string-interpolation"><span class="token string">f&quot;</span><span class="token interpolation"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">]</span> <span class="token operator">=</span> DevicePort<span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_port_count</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>ports<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">to_dict</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ret <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> self<span class="token punctuation">.</span>__dict__<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> key <span class="token operator">==</span> <span class="token string">&quot;__instance&quot;</span><span class="token punctuation">:</span>
+                <span class="token keyword">continue</span>
+            <span class="token keyword">if</span> key <span class="token operator">==</span> <span class="token string">&quot;ports&quot;</span><span class="token punctuation">:</span>
+                ret<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token keyword">for</span> port_name<span class="token punctuation">,</span> port <span class="token keyword">in</span> value<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    ret<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">[</span>port_name<span class="token punctuation">]</span> <span class="token operator">=</span> port<span class="token punctuation">.</span>to_dict<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                ret<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value
+        <span class="token keyword">return</span> ret
+
+    <span class="token keyword">def</span> <span class="token function">get_comm_instance</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> new<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token keyword">not</span> <span class="token keyword">in</span> _resource_device_mapping<span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ResourceError<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;type </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span><span class="token builtin">type</span><span class="token punctuation">}</span></span><span class="token string"> is not registered&quot;</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> new <span class="token keyword">and</span> self<span class="token punctuation">.</span>_instance<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>_instance
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>_instance <span class="token operator">=</span> _resource_device_mapping<span class="token punctuation">[</span>self<span class="token punctuation">.</span><span class="token builtin">type</span><span class="token punctuation">]</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>_instance
+
+    <span class="token decorator annotation punctuation">@staticmethod</span>
+    <span class="token keyword">def</span> <span class="token function">from_dict</span><span class="token punctuation">(</span>dict_obj<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ret <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> dict_obj<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> key <span class="token operator">==</span> <span class="token string">&quot;ports&quot;</span><span class="token punctuation">:</span>
+                ports <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token keyword">for</span> port_name<span class="token punctuation">,</span> port <span class="token keyword">in</span> value<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    ports<span class="token punctuation">[</span>port_name<span class="token punctuation">]</span> <span class="token operator">=</span> DevicePort<span class="token punctuation">.</span>from_dict<span class="token punctuation">(</span>port<span class="token punctuation">,</span> ret<span class="token punctuation">)</span>
+                <span class="token builtin">setattr</span><span class="token punctuation">(</span>ret<span class="token punctuation">,</span> <span class="token string">&quot;ports&quot;</span><span class="token punctuation">,</span> ports<span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token builtin">setattr</span><span class="token punctuation">(</span>ret<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> ret
+
+
+<span class="token keyword">class</span> <span class="token class-name">DevicePort</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    代表设备的连接端口
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> parent_device<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>parent <span class="token operator">=</span> parent_device
+        self<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;type&quot;</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+        self<span class="token punctuation">.</span>description <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;description&quot;</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>remote_ports <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_instance <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_comm_instance</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> new<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token keyword">not</span> <span class="token keyword">in</span> _resource_port_mapping<span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ResourceError<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;type </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span><span class="token builtin">type</span><span class="token punctuation">}</span></span><span class="token string"> is not registered&quot;</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> new <span class="token keyword">and</span> self<span class="token punctuation">.</span>_instance<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>_instance
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>_instance <span class="token operator">=</span> _resource_port_mapping<span class="token punctuation">[</span>self<span class="token punctuation">.</span><span class="token builtin">type</span><span class="token punctuation">]</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>_instance
+
+    <span class="token keyword">def</span> <span class="token function">to_dict</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ret <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> self<span class="token punctuation">.</span>__dict__<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> key <span class="token operator">==</span> <span class="token string">&quot;__instance&quot;</span><span class="token punctuation">:</span>
+                <span class="token keyword">continue</span>
+            <span class="token keyword">if</span> key <span class="token operator">==</span> <span class="token string">&quot;parent&quot;</span><span class="token punctuation">:</span>
+                ret<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">.</span>name
+            <span class="token keyword">elif</span> key <span class="token operator">==</span> <span class="token string">&quot;remote_ports&quot;</span><span class="token punctuation">:</span>
+                ret<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token keyword">for</span> remote_port <span class="token keyword">in</span> value<span class="token punctuation">:</span>
+                    <span class="token comment">#使用device的名称和port的名称来表示远端的端口</span>
+                    <span class="token comment">#在反序列化的时候可以方便地找到相应的对象实例</span>
+                    ret<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>
+                        <span class="token punctuation">{</span>
+                            <span class="token string">&quot;device&quot;</span><span class="token punctuation">:</span> remote_port<span class="token punctuation">.</span>parent<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+                            <span class="token string">&quot;port&quot;</span><span class="token punctuation">:</span> remote_port<span class="token punctuation">.</span>name
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                ret<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value
+        <span class="token keyword">return</span> ret
+
+    <span class="token decorator annotation punctuation">@staticmethod</span>
+    <span class="token keyword">def</span> <span class="token function">from_dict</span><span class="token punctuation">(</span>dict_obj<span class="token punctuation">,</span> parent<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ret <span class="token operator">=</span> DevicePort<span class="token punctuation">(</span>parent<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> dict_obj<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> key <span class="token operator">==</span> <span class="token string">&quot;remote_ports&quot;</span> <span class="token keyword">or</span> key <span class="token operator">==</span> <span class="token string">&quot;parent&quot;</span><span class="token punctuation">:</span>
+                <span class="token keyword">continue</span>
+            <span class="token builtin">setattr</span><span class="token punctuation">(</span>ret<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> ret
+
+
+<span class="token keyword">def</span> <span class="token function">register_resource</span><span class="token punctuation">(</span>category<span class="token punctuation">,</span> resource_type<span class="token punctuation">,</span> comm_callback<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    注册配置接口实例化的方法或者类。
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">if</span> category <span class="token operator">==</span> <span class="token string">&quot;device&quot;</span><span class="token punctuation">:</span>
+        _resource_device_mapping<span class="token punctuation">[</span>resource_type<span class="token punctuation">]</span> <span class="token operator">=</span> comm_callback
+    <span class="token keyword">elif</span> category <span class="token operator">==</span> <span class="token string">&quot;port&quot;</span><span class="token punctuation">:</span>
+        _resource_port_mapping<span class="token punctuation">[</span>resource_type<span class="token punctuation">]</span> <span class="token operator">=</span> comm_callback
+
+
+<span class="token keyword">class</span> <span class="token class-name">ResourcePool</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    资源池类，负责资源的序列化和反序列化以及储存和读取
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>topology <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>reserved <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>information <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>file_name <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>owner <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">def</span> <span class="token function">add_device</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> device_name<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> device_name <span class="token keyword">in</span> self<span class="token punctuation">.</span>topology<span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ResourceError<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;device </span><span class="token interpolation"><span class="token punctuation">{</span>device_name<span class="token punctuation">}</span></span><span class="token string"> already exists&quot;</span></span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>topology<span class="token punctuation">[</span>device_name<span class="token punctuation">]</span> <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>device_name<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">reserve</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;占用&quot;&quot;&quot;</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>file_name <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ResourceError<span class="token punctuation">(</span><span class="token string">&quot;load a resource file first&quot;</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>load<span class="token punctuation">(</span>self<span class="token punctuation">.</span>file_name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>owner<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>reserved <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;owner&quot;</span><span class="token punctuation">:</span> self<span class="token punctuation">.</span>owner<span class="token punctuation">,</span> <span class="token string">&quot;date&quot;</span><span class="token punctuation">:</span> time<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span><span class="token string">&quot;%Y/%m/%d %H:%M:%S&quot;</span><span class="token punctuation">,</span> time<span class="token punctuation">.</span>localtime<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+        self<span class="token punctuation">.</span>save<span class="token punctuation">(</span>self<span class="token punctuation">.</span>file_name<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">release</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> owner<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;释放&quot;&quot;&quot;</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>file_name <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span>  ResourceError<span class="token punctuation">(</span><span class="token string">&quot;load a resource file first&quot;</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>load<span class="token punctuation">(</span>self<span class="token punctuation">.</span>file_name<span class="token punctuation">,</span> owner<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>reserved <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>save<span class="token punctuation">(</span>self<span class="token punctuation">.</span>file_name<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">collect_device</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> device_type<span class="token punctuation">,</span> count<span class="token punctuation">,</span> constraints<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ret <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> self<span class="token punctuation">.</span>topology<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> value<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> device_type<span class="token punctuation">:</span>
+                <span class="token keyword">for</span> constraint <span class="token keyword">in</span> constraints<span class="token punctuation">:</span>
+                    <span class="token keyword">if</span> <span class="token keyword">not</span> constraint<span class="token punctuation">.</span>is_meet<span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                        <span class="token keyword">break</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    ret<span class="token punctuation">.</span>append<span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span> <span class="token operator">&gt;=</span> count<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> ret
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">collect_all_device</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> device_type<span class="token punctuation">,</span> constraints<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ret <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> self<span class="token punctuation">.</span>topology<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> value<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> device_type<span class="token punctuation">:</span>
+                <span class="token keyword">for</span> constraint <span class="token keyword">in</span> constraints<span class="token punctuation">:</span>
+                    <span class="token keyword">if</span> <span class="token keyword">not</span> constraint<span class="token punctuation">.</span>is_meet<span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                        <span class="token keyword">break</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    ret<span class="token punctuation">.</span>append<span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> ret
+
+    <span class="token keyword">def</span> <span class="token function">collect_connection_route</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> resource<span class="token punctuation">,</span> constraints<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        获取资源连接路由
+        &quot;&quot;&quot;</span>
+        <span class="token comment"># 限制类必须是连接限制ConnectionConstraint</span>
+        <span class="token keyword">for</span> constraint <span class="token keyword">in</span> constraints<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>constraint<span class="token punctuation">,</span> ConnectionConstraint<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">raise</span> ResourceError<span class="token punctuation">(</span>
+                    <span class="token string">&quot;collect_connection_route only accept ConnectionConstraints type&quot;</span><span class="token punctuation">)</span>
+        ret <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> constraint <span class="token keyword">in</span> constraints<span class="token punctuation">:</span>
+            conns <span class="token operator">=</span> constraint<span class="token punctuation">.</span>get_connection<span class="token punctuation">(</span>resource<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">any</span><span class="token punctuation">(</span>conns<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">raise</span> ResourceNotMeetConstraint<span class="token punctuation">(</span><span class="token punctuation">[</span>constraint<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword">for</span> conn <span class="token keyword">in</span> conns<span class="token punctuation">:</span>
+                ret<span class="token punctuation">.</span>append<span class="token punctuation">(</span>conn<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> ret
+
+    <span class="token keyword">def</span> <span class="token function">load</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> filename<span class="token punctuation">,</span> owner<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 检查文件是否存在</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ResourceError<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Cannot find file </span><span class="token interpolation"><span class="token punctuation">{</span>filename<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>file_name <span class="token operator">=</span> filename
+
+        <span class="token comment"># 初始化</span>
+        self<span class="token punctuation">.</span>topology<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>reserved <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>information <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token comment">#读取资源配置的json字符串</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+            json_object <span class="token operator">=</span> json<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+
+        <span class="token comment">#判断是否被占用</span>
+        <span class="token keyword">if</span> <span class="token string">&quot;reserved&quot;</span> <span class="token keyword">in</span> json_object <span class="token keyword">and</span> \
+            json_object<span class="token punctuation">[</span><span class="token string">'reserved'</span><span class="token punctuation">]</span> <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span> <span class="token keyword">and</span> \
+                json_object<span class="token punctuation">[</span><span class="token string">'reserved'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'owner'</span><span class="token punctuation">]</span> <span class="token operator">!=</span> owner<span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> ResourceError<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Resource is reserved by </span><span class="token interpolation"><span class="token punctuation">{</span>json_object<span class="token punctuation">[</span><span class="token string">'reserved'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'owner'</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>owner <span class="token operator">=</span> owner
+
+        <span class="token keyword">if</span> <span class="token string">&quot;info&quot;</span> <span class="token keyword">in</span> json_object<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>information <span class="token operator">=</span> json_object<span class="token punctuation">[</span><span class="token string">'info'</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> json_object<span class="token punctuation">[</span><span class="token string">'devices'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            device <span class="token operator">=</span> ResourceDevice<span class="token punctuation">.</span>from_dict<span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>topology<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> device
+
+        <span class="token comment"># 映射所有设备的连接关系</span>
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> device <span class="token keyword">in</span> json_object<span class="token punctuation">[</span><span class="token string">'devices'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> port_name<span class="token punctuation">,</span> port <span class="token keyword">in</span> device<span class="token punctuation">[</span><span class="token string">'ports'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">for</span> remote_port <span class="token keyword">in</span> port<span class="token punctuation">[</span><span class="token string">'remote_ports'</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                    remote_port_obj <span class="token operator">=</span> \
+                        self<span class="token punctuation">.</span>topology<span class="token punctuation">[</span>remote_port<span class="token punctuation">[</span><span class="token string">&quot;device&quot;</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>\
+                            ports<span class="token punctuation">[</span>remote_port<span class="token punctuation">[</span><span class="token string">&quot;port&quot;</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+                    self<span class="token punctuation">.</span>topology<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">.</span>ports<span class="token punctuation">[</span>port_name<span class="token punctuation">]</span><span class="token punctuation">.</span>\
+                        remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>remote_port_obj<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">save</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> mode<span class="token operator">=</span><span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+            root_object <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            root_object<span class="token punctuation">[</span><span class="token string">'devices'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            root_object<span class="token punctuation">[</span><span class="token string">'info'</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>information
+            root_object<span class="token punctuation">[</span><span class="token string">'reserved'</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>reserved
+            <span class="token keyword">for</span> device_key<span class="token punctuation">,</span> device <span class="token keyword">in</span> self<span class="token punctuation">.</span>topology<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                root_object<span class="token punctuation">[</span><span class="token string">'devices'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>device_key<span class="token punctuation">]</span> <span class="token operator">=</span> device<span class="token punctuation">.</span>to_dict<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>root_object<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">,</span> indent<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Constraint</span><span class="token punctuation">(</span>metaclass<span class="token operator">=</span>ABCMeta<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    资源选择器限制条件的基类
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>description <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">is_meet</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> resource<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">ConnectionConstraint</span><span class="token punctuation">(</span>Constraint<span class="token punctuation">,</span> metaclass<span class="token operator">=</span>ABCMeta<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    用户限制获取Remote Port的限制条件。
+    &quot;&quot;&quot;</span>
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">get_connection</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> resource<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+
+<span class="token decorator annotation punctuation">@static_setting<span class="token punctuation">.</span>setting</span><span class="token punctuation">(</span><span class="token string">&quot;ResourceSetting&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">ResourceSetting</span><span class="token punctuation">(</span>SettingBase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    file_name <span class="token operator">=</span> <span class="token string">&quot;resource_setting.setting&quot;</span>
+    resource_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span>
+    auto_connect <span class="token operator">=</span> <span class="token boolean">False</span>
+
+
+<span class="token keyword">def</span> <span class="token function">get_resource_pool</span><span class="token punctuation">(</span>filename<span class="token punctuation">,</span> owner<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ResourceSetting<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    full_name <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>ResourceSetting<span class="token punctuation">.</span>resource_path<span class="token punctuation">,</span> filename<span class="token punctuation">)</span>
+    rv <span class="token operator">=</span> ResourcePool<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    rv<span class="token punctuation">.</span>load<span class="token punctuation">(</span>full_name<span class="token punctuation">,</span> owner<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> rv
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&quot;__main__&quot;</span><span class="token punctuation">:</span>
+    <span class="token comment">## 设备连接形式1</span>
+    switch <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;switch1&quot;</span><span class="token punctuation">)</span>
+    switch<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;ETH1/1&quot;</span><span class="token punctuation">)</span>
+    switch<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;ETH1/2&quot;</span><span class="token punctuation">)</span>
+
+    switch2 <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;switch2&quot;</span><span class="token punctuation">)</span>
+    switch2<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;ETH1/1&quot;</span><span class="token punctuation">)</span>
+    switch2<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;ETH1/2&quot;</span><span class="token punctuation">)</span>
+
+    switch<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'ETH1/1'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>switch2<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'ETH1/1'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    switch2<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'ETH1/1'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>switch<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'ETH1/1'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    rp <span class="token operator">=</span> ResourcePool<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    rp<span class="token punctuation">.</span>topology<span class="token punctuation">[</span><span class="token string">'switch1'</span><span class="token punctuation">]</span> <span class="token operator">=</span> switch
+    rp<span class="token punctuation">.</span>topology<span class="token punctuation">[</span><span class="token string">'switch2'</span><span class="token punctuation">]</span> <span class="token operator">=</span> switch2
+    rp<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">&quot;test.json&quot;</span><span class="token punctuation">)</span>
+    rp<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">&quot;test.json&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;michael&quot;</span><span class="token punctuation">)</span>
+    rp<span class="token punctuation">.</span>reserve<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># rp2 = ResourcePool()</span>
+    <span class="token comment"># rp2.load(&quot;test.json&quot;, &quot;jason&quot;)</span>
+    <span class="token comment"># print(&quot;done&quot;)</span>
+
+    <span class="token comment">## 设备连接形式2</span>
+    HuaweiP50 <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;Huawei p50&quot;</span><span class="token punctuation">,</span><span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;Android&quot;</span><span class="token punctuation">)</span>
+    HuaweiP40 <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;Huawei p40&quot;</span><span class="token punctuation">,</span><span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;Android&quot;</span><span class="token punctuation">)</span>
+    HuaweiP30 <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;Huawei p30&quot;</span><span class="token punctuation">,</span><span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;Android&quot;</span><span class="token punctuation">)</span>
+    device_pool <span class="token operator">=</span> ResourcePool<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> device <span class="token keyword">in</span> <span class="token punctuation">[</span>HuaweiP50<span class="token punctuation">,</span>HuaweiP40<span class="token punctuation">,</span>HuaweiP30<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        device<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">)</span>
+        device<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;People&quot;</span><span class="token punctuation">)</span>
+        device_pool<span class="token punctuation">.</span>topology<span class="token punctuation">[</span>device<span class="token punctuation">.</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> device
+
+    Developer <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;Developer&quot;</span><span class="token punctuation">,</span><span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;Department&quot;</span><span class="token punctuation">)</span>
+    Tester <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;Tester&quot;</span><span class="token punctuation">,</span><span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;Department&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> department <span class="token keyword">in</span> <span class="token punctuation">[</span>Developer<span class="token punctuation">,</span> Tester<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        department<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">)</span>
+        department<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;People&quot;</span><span class="token punctuation">)</span>
+        device_pool<span class="token punctuation">.</span>topology<span class="token punctuation">[</span>department<span class="token punctuation">.</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> department
+
+    HuaweiP50<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>Developer<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    Developer<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>HuaweiP50<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    device_pool<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">&quot;device.json&quot;</span><span class="token punctuation">)</span>
+
+    device_pool<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">&quot;device.json&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;michael&quot;</span><span class="token punctuation">)</span>
+    device_pool<span class="token punctuation">.</span>reserve<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    device_pool<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token string">&quot;michael&quot;</span><span class="token punctuation">)</span>
+    device_pool<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">&quot;device.json&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;json&quot;</span><span class="token punctuation">)</span>
+    device_pool<span class="token punctuation">.</span>reserve<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">[</span>x<span class="token punctuation">.</span>name <span class="token keyword">for</span> x <span class="token keyword">in</span> device_pool<span class="token punctuation">.</span>collect_all_device<span class="token punctuation">(</span>device_type<span class="token operator">=</span><span class="token string">&quot;Android&quot;</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">[</span>x<span class="token punctuation">.</span>name <span class="token keyword">for</span> x <span class="token keyword">in</span> device_pool<span class="token punctuation">.</span>collect_all_device<span class="token punctuation">(</span>device_type<span class="token operator">=</span><span class="token string">&quot;Department&quot;</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+</code></pre></div><h3 id="资源选择器"><a href="#资源选择器" class="header-anchor">#</a> 资源选择器</h3> <p>资源限制条件，资源获取路由</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> core<span class="token punctuation">.</span>resource<span class="token punctuation">.</span>pool <span class="token keyword">import</span> Constraint<span class="token punctuation">,</span> ConnectionConstraint<span class="token punctuation">,</span> ResourceDevice<span class="token punctuation">,</span> DevicePort<span class="token punctuation">,</span> ResourcePool
+
+<span class="token keyword">class</span> <span class="token class-name">PhoneMustBeAndroidConstraint</span><span class="token punctuation">(</span>Constraint<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    判断手机必须是安卓系统，可以附带版本大小判断
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> version_op<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> version<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>version <span class="token operator">=</span> version
+        self<span class="token punctuation">.</span>version_op <span class="token operator">=</span> version_op
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>version_op <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>description <span class="token operator">=</span> \
+                <span class="token string-interpolation"><span class="token string">f&quot;Phone Type must be android and version </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>version_op<span class="token punctuation">}</span></span><span class="token string"> </span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>version<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>description <span class="token operator">=</span> <span class="token string">&quot;Phone Type must be android&quot;</span>
+
+    <span class="token keyword">def</span> <span class="token function">is_meet</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> resource<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        <span class="token comment"># 首先判断资源类型是Resource Device，并且type是Android</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>resource<span class="token punctuation">,</span> ResourceDevice<span class="token punctuation">)</span> <span class="token keyword">and</span> \
+                resource<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> <span class="token string">&quot;Android&quot;</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>version_op<span class="token punctuation">:</span>
+                <span class="token comment"># 判断资源是否有version字段和值</span>
+                device_version <span class="token operator">=</span> <span class="token builtin">getattr</span><span class="token punctuation">(</span>resource<span class="token punctuation">,</span> <span class="token string">&quot;version&quot;</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> device_version <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> <span class="token boolean">False</span>
+                <span class="token keyword">if</span> self<span class="token punctuation">.</span>version_op <span class="token operator">==</span> <span class="token string">&quot;=&quot;</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> device_version <span class="token operator">==</span> self<span class="token punctuation">.</span>version
+                <span class="token keyword">elif</span> self<span class="token punctuation">.</span>version_op <span class="token operator">==</span> <span class="token string">&quot;&gt;&quot;</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> device_version <span class="token operator">&gt;</span> self<span class="token punctuation">.</span>version
+                <span class="token keyword">elif</span> self<span class="token punctuation">.</span>version_op <span class="token operator">==</span> <span class="token string">&quot;&lt;&quot;</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> device_version <span class="token operator">&lt;</span> self<span class="token punctuation">.</span>version
+                <span class="token keyword">elif</span> self<span class="token punctuation">.</span>version_op <span class="token operator">==</span> <span class="token string">&quot;&gt;=&quot;</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> device_version <span class="token operator">&gt;=</span> self<span class="token punctuation">.</span>version
+                <span class="token keyword">elif</span> self<span class="token punctuation">.</span>version_op <span class="token operator">==</span> <span class="token string">&quot;&lt;=&quot;</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> device_version <span class="token operator">&lt;=</span> self<span class="token punctuation">.</span>version
+                <span class="token keyword">elif</span> self<span class="token punctuation">.</span>version_op <span class="token operator">==</span> <span class="token string">&quot;!=&quot;</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> device_version <span class="token operator">!=</span> self<span class="token punctuation">.</span>version
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> <span class="token boolean">False</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token comment"># 没有版本判断操作符，则资源满足条件</span>
+                <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token comment"># 不满足条件</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">DeviceMustHaveTrafficGeneratorConnected</span><span class="token punctuation">(</span>ConnectionConstraint<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    判断AP必须有测试仪表连接
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> speed_constraint<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> port_count<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>speed <span class="token operator">=</span> speed_constraint
+        self<span class="token punctuation">.</span>port_count <span class="token operator">=</span> port_count
+        self<span class="token punctuation">.</span>description <span class="token operator">=</span> \
+            <span class="token string-interpolation"><span class="token string">f&quot;AP Must have </span><span class="token interpolation"><span class="token punctuation">{</span>port_count<span class="token punctuation">}</span></span><span class="token string"> Traffic Generator Port(s) Connected&quot;</span></span>
+        <span class="token keyword">if</span> speed_constraint<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>description <span class="token operator">+=</span> <span class="token string-interpolation"><span class="token string">f&quot;, </span><span class="token interpolation"><span class="token punctuation">{</span>speed_constraint<span class="token punctuation">.</span>description<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span>
+
+    <span class="token keyword">def</span> <span class="token function">is_meet</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> resource<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token builtin">any</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>get_connection<span class="token punctuation">(</span>resource<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_connection</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> resource<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>resource<span class="token punctuation">,</span> ResourceDevice<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        meet_ports <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> port_key<span class="token punctuation">,</span> port <span class="token keyword">in</span> resource<span class="token punctuation">.</span>ports<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment"># 假设测试仪表端口连在ETH端口上，跳过非ETH端口的判断</span>
+            <span class="token keyword">if</span> port<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">!=</span> <span class="token string">&quot;ETH&quot;</span><span class="token punctuation">:</span>
+                <span class="token keyword">continue</span>
+            <span class="token comment">#遍历Remote ports</span>
+            <span class="token keyword">for</span> remote_port <span class="token keyword">in</span> port<span class="token punctuation">.</span>remote_ports<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> remote_port<span class="token punctuation">.</span>parent<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> <span class="token string">&quot;TrafficGen&quot;</span><span class="token punctuation">:</span>
+                    <span class="token comment"># 如果有速度限制，则调用该限制实例</span>
+                    <span class="token keyword">if</span> self<span class="token punctuation">.</span>speed<span class="token punctuation">:</span>
+                        <span class="token keyword">if</span> self<span class="token punctuation">.</span>speed<span class="token punctuation">.</span>is_meet<span class="token punctuation">(</span>remote_port<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                            meet_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>remote_port<span class="token punctuation">)</span>
+                    <span class="token keyword">else</span><span class="token punctuation">:</span>
+                        meet_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>remote_port<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>meet_ports<span class="token punctuation">)</span> <span class="token operator">&gt;=</span> self<span class="token punctuation">.</span>port_count<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> meet_ports<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span> self<span class="token punctuation">.</span>port_count<span class="token punctuation">]</span>
+        <span class="token keyword">return</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">TrafficGeneratorSpeedMustBeGraterThan</span><span class="token punctuation">(</span>Constraint<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    判断测试仪表端口速率必须大于速度
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> speed<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>speed <span class="token operator">=</span> speed
+        self<span class="token punctuation">.</span>description <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f&quot;Traffic Generator Port Speed Must Grater Than </span><span class="token interpolation"><span class="token punctuation">{</span>speed<span class="token punctuation">}</span></span><span class="token string">M&quot;</span></span>
+
+    <span class="token keyword">def</span> <span class="token function">is_meet</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> resource<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>resource<span class="token punctuation">,</span> DevicePort<span class="token punctuation">)</span> <span class="token keyword">or</span> resource<span class="token punctuation">.</span>parent<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">!=</span> <span class="token string">&quot;TrafficGen&quot;</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        <span class="token keyword">return</span> <span class="token builtin">getattr</span><span class="token punctuation">(</span>resource<span class="token punctuation">,</span> <span class="token string">&quot;speed&quot;</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span> <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span> <span class="token keyword">and</span> \
+               <span class="token builtin">getattr</span><span class="token punctuation">(</span>resource<span class="token punctuation">,</span> <span class="token string">&quot;speed&quot;</span><span class="token punctuation">)</span> <span class="token operator">&gt;=</span> self<span class="token punctuation">.</span>speed
+
+
+<span class="token keyword">class</span> <span class="token class-name">ApMustHaveStaConnected</span><span class="token punctuation">(</span>ConnectionConstraint<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    判断AP必须有STA连接
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> sta_constraints<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> sta_count<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 将constraint分类</span>
+        self<span class="token punctuation">.</span>sta_constraints <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sta_conn_constraints <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> sta_constraint <span class="token keyword">in</span> sta_constraints<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>sta_constraint<span class="token punctuation">,</span> ConnectionConstraint<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>sta_conn_constraints<span class="token punctuation">.</span>append<span class="token punctuation">(</span>sta_constraint<span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>sta_constraints<span class="token punctuation">.</span>append<span class="token punctuation">(</span>sta_constraint<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>sta_count <span class="token operator">=</span> sta_count
+        self<span class="token punctuation">.</span>description <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f&quot;AP must have </span><span class="token interpolation"><span class="token punctuation">{</span>sta_count<span class="token punctuation">}</span></span><span class="token string"> STA connected&quot;</span></span>
+        <span class="token keyword">for</span> sta_constraint <span class="token keyword">in</span> self<span class="token punctuation">.</span>sta_constraints<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>description <span class="token operator">+=</span> <span class="token string-interpolation"><span class="token string">f&quot;\n</span><span class="token interpolation"><span class="token punctuation">{</span>sta_constraint<span class="token punctuation">.</span>description<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span>
+
+    <span class="token keyword">def</span> <span class="token function">is_meet</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> resource<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token builtin">any</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>get_connection<span class="token punctuation">(</span>resource<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_connection</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> resource<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>resource<span class="token punctuation">,</span> ResourceDevice<span class="token punctuation">)</span> <span class="token keyword">or</span> resource<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">!=</span> <span class="token string">&quot;AP&quot;</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        <span class="token keyword">for</span> port_key<span class="token punctuation">,</span> port <span class="token keyword">in</span> resource<span class="token punctuation">.</span>ports<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> port<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">!=</span> <span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">:</span>
+                <span class="token keyword">continue</span>
+            ret <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">for</span> remote_port <span class="token keyword">in</span> port<span class="token punctuation">.</span>remote_ports<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> remote_port<span class="token punctuation">.</span>parent<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> <span class="token string">'STA'</span><span class="token punctuation">:</span>
+                    <span class="token comment"># 用STA Constraint判断远端端口的STA设备是否符合条件</span>
+                    meet_all <span class="token operator">=</span> <span class="token boolean">True</span>
+                    <span class="token keyword">for</span> sta_constraint <span class="token keyword">in</span> self<span class="token punctuation">.</span>sta_constraints<span class="token punctuation">:</span>
+                        <span class="token keyword">if</span> <span class="token keyword">not</span> sta_constraint<span class="token punctuation">.</span>is_meet<span class="token punctuation">(</span>remote_port<span class="token punctuation">.</span>parent<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                            meet_all <span class="token operator">=</span> <span class="token boolean">False</span>
+                            <span class="token keyword">break</span>
+
+                    <span class="token comment"># 如果没有基本的限制条件，不继续测试Connection条件</span>
+                    <span class="token keyword">if</span> <span class="token keyword">not</span> meet_all<span class="token punctuation">:</span>
+                        <span class="token keyword">continue</span>
+
+                    <span class="token comment"># 对于connection的条件，返回对端的所有端口</span>
+                    conn_remote <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                    meet_connection <span class="token operator">=</span> <span class="token boolean">True</span>
+                    <span class="token keyword">for</span> sta_conn_constraint <span class="token keyword">in</span> self<span class="token punctuation">.</span>sta_conn_constraints<span class="token punctuation">:</span>
+                        conns <span class="token operator">=</span> sta_conn_constraint<span class="token punctuation">.</span>get_connection<span class="token punctuation">(</span>remote_port<span class="token punctuation">.</span>parent<span class="token punctuation">)</span>
+                        <span class="token comment"># 不满足Connection条件</span>
+                        <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">any</span><span class="token punctuation">(</span>conns<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                            meet_connection <span class="token operator">=</span> <span class="token boolean">False</span>
+                            <span class="token keyword">break</span>
+                        <span class="token keyword">for</span> conn <span class="token keyword">in</span> conns<span class="token punctuation">:</span>
+                            conn_remote<span class="token punctuation">.</span>append<span class="token punctuation">(</span>conn<span class="token punctuation">)</span>
+
+                    <span class="token comment"># 没有满足Connection条件，跳过。</span>
+                    <span class="token keyword">if</span> <span class="token keyword">not</span> meet_connection<span class="token punctuation">:</span>
+                        <span class="token keyword">continue</span>
+
+                    ret<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>remote_port<span class="token punctuation">,</span> conn_remote<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+            <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span> <span class="token operator">&gt;=</span> self<span class="token punctuation">.</span>sta_count<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> ret<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span> self<span class="token punctuation">.</span>sta_count<span class="token punctuation">]</span>
+        <span class="token keyword">return</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&quot;__main__&quot;</span><span class="token punctuation">:</span>
+    ap1 <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;ap1&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;AP&quot;</span><span class="token punctuation">)</span>
+    ap1<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;ETH1/1&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;ETH&quot;</span><span class="token punctuation">)</span>
+    ap1<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;ETH1/2&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;ETH&quot;</span><span class="token punctuation">)</span>
+    ap1<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">)</span>
+
+    sta1 <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;sta1&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;STA&quot;</span><span class="token punctuation">)</span>
+    sta1<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">)</span>
+    sta1<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;ETH1/1&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;ETH&quot;</span><span class="token punctuation">)</span>
+    sta1<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;ETH1/2&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;ETH&quot;</span><span class="token punctuation">)</span>
+
+    sta2 <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;sta2&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;STA&quot;</span><span class="token punctuation">)</span>
+    sta2<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">)</span>
+    sta2<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;ETH1/1&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;ETH&quot;</span><span class="token punctuation">)</span>
+    sta2<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;ETH1/2&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;ETH&quot;</span><span class="token punctuation">)</span>
+
+    sta3 <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;sta3&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;STA&quot;</span><span class="token punctuation">)</span>
+    sta3<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;WIFI&quot;</span><span class="token punctuation">)</span>
+    sta3<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;ETH1/1&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;ETH&quot;</span><span class="token punctuation">)</span>
+    sta3<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;ETH1/2&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;ETH&quot;</span><span class="token punctuation">)</span>
+
+    traffic_gen <span class="token operator">=</span> ResourceDevice<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;trafficGen&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;TrafficGen&quot;</span><span class="token punctuation">)</span>
+    traffic_gen<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;PORT1/1/1&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;ETH&quot;</span><span class="token punctuation">)</span>
+    <span class="token builtin">setattr</span><span class="token punctuation">(</span>traffic_gen<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'PORT1/1/1'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">&quot;speed&quot;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    traffic_gen<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;PORT1/1/2&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;ETH&quot;</span><span class="token punctuation">)</span>
+    <span class="token builtin">setattr</span><span class="token punctuation">(</span>traffic_gen<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'PORT1/1/2'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">&quot;speed&quot;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    traffic_gen<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;PORT1/1/3&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;ETH&quot;</span><span class="token punctuation">)</span>
+    <span class="token builtin">setattr</span><span class="token punctuation">(</span>traffic_gen<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'PORT1/1/3'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">&quot;speed&quot;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+    traffic_gen<span class="token punctuation">.</span>add_port<span class="token punctuation">(</span><span class="token string">&quot;PORT1/1/4&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;ETH&quot;</span><span class="token punctuation">)</span>
+    <span class="token builtin">setattr</span><span class="token punctuation">(</span>traffic_gen<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'PORT1/1/4'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">&quot;speed&quot;</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+
+
+    <span class="token comment"># AP和Traffic Generator之间的连接</span>
+    ap1<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'ETH1/1'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>traffic_gen<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'PORT1/1/1'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    traffic_gen<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'PORT1/1/1'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ap1<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'ETH1/1'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment">#建立ap和STA之间的连接</span>
+    ap1<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'WIFI'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>sta1<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'WIFI'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    sta1<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'WIFI'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ap1<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'WIFI'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    ap1<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'WIFI'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>sta2<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'WIFI'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    sta2<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'WIFI'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ap1<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'WIFI'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    ap1<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'WIFI'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>sta3<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'WIFI'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    sta3<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'WIFI'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ap1<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'WIFI'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment">#建立 STA 和 Traffic Generator之间的连接</span>
+    sta1<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'ETH1/1'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>traffic_gen<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'PORT1/1/2'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    traffic_gen<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'PORT1/1/2'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>sta1<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'ETH1/1'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    sta2<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'ETH1/1'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>traffic_gen<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'PORT1/1/3'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    traffic_gen<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'PORT1/1/3'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>sta2<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'ETH1/1'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    sta3<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'ETH1/1'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>traffic_gen<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'PORT1/1/4'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    traffic_gen<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'PORT1/1/4'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>remote_ports<span class="token punctuation">.</span>append<span class="token punctuation">(</span>sta3<span class="token punctuation">.</span>ports<span class="token punctuation">[</span><span class="token string">'ETH1/1'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+    rp <span class="token operator">=</span> ResourcePool<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    rp<span class="token punctuation">.</span>topology<span class="token punctuation">[</span><span class="token string">'ap1'</span><span class="token punctuation">]</span> <span class="token operator">=</span> ap1
+    rp<span class="token punctuation">.</span>topology<span class="token punctuation">[</span><span class="token string">'sta1'</span><span class="token punctuation">]</span> <span class="token operator">=</span> sta1
+    rp<span class="token punctuation">.</span>topology<span class="token punctuation">[</span><span class="token string">'sta2'</span><span class="token punctuation">]</span> <span class="token operator">=</span> sta2
+    rp<span class="token punctuation">.</span>topology<span class="token punctuation">[</span><span class="token string">'sta3'</span><span class="token punctuation">]</span> <span class="token operator">=</span> sta3
+    rp<span class="token punctuation">.</span>topology<span class="token punctuation">[</span><span class="token string">'trafficGen'</span><span class="token punctuation">]</span> <span class="token operator">=</span> traffic_gen
+    rp<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">&quot;test.json&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># AP必须有STA的连接</span>
+    constraint1 <span class="token operator">=</span> ApMustHaveStaConnected<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># AP必须至少有3个STA连接</span>
+    constraint2 <span class="token operator">=</span> ApMustHaveStaConnected<span class="token punctuation">(</span>sta_count<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># AP必须至少有4个STA连接</span>
+    constraint3 <span class="token operator">=</span> ApMustHaveStaConnected<span class="token punctuation">(</span>sta_count<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+
+
+    <span class="token comment"># 设备必须有10000M速率的测试仪表端口连接</span>
+    constraint5 <span class="token operator">=</span> DeviceMustHaveTrafficGeneratorConnected<span class="token punctuation">(</span>
+        speed_constraint<span class="token operator">=</span>TrafficGeneratorSpeedMustBeGraterThan<span class="token punctuation">(</span><span class="token number">10000</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 设备必须有1000M速率的测试仪表端口连接</span>
+    constraint4 <span class="token operator">=</span> DeviceMustHaveTrafficGeneratorConnected<span class="token punctuation">(</span>
+        speed_constraint<span class="token operator">=</span>TrafficGeneratorSpeedMustBeGraterThan<span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># AP必须有至少3个STA连接，并且STA必须有1000M以上速率的测试仪表连接</span>
+    constraint6 <span class="token operator">=</span> ApMustHaveStaConnected<span class="token punctuation">(</span>sta_constraints<span class="token operator">=</span><span class="token punctuation">[</span>constraint4<span class="token punctuation">]</span><span class="token punctuation">,</span> sta_count<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span>
+
+    ap <span class="token operator">=</span> rp<span class="token punctuation">.</span>collect_device<span class="token punctuation">(</span>
+        <span class="token string">&quot;AP&quot;</span><span class="token punctuation">,</span>
+        <span class="token number">1</span><span class="token punctuation">,</span>
+        constraints<span class="token operator">=</span><span class="token punctuation">[</span>
+            constraint4<span class="token punctuation">,</span>
+            constraint6
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">)</span>
+
+    traffic_gen <span class="token operator">=</span> rp<span class="token punctuation">.</span>collect_connection_route<span class="token punctuation">(</span>ap1<span class="token punctuation">,</span> <span class="token punctuation">[</span>constraint4<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    sta_connection <span class="token operator">=</span> rp<span class="token punctuation">.</span>collect_connection_route<span class="token punctuation">(</span>ap1<span class="token punctuation">,</span> <span class="token punctuation">[</span>constraint6<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> port <span class="token keyword">in</span> traffic_gen<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>port<span class="token punctuation">.</span>parent<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> connection <span class="token keyword">in</span> sta_connection<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>connection<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>parent<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> traffic_port <span class="token keyword">in</span> connection<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;    </span><span class="token interpolation"><span class="token punctuation">{</span>traffic_port<span class="token punctuation">.</span>name<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="从资源类对象获取资源配置接口"><a href="#从资源类对象获取资源配置接口" class="header-anchor">#</a> 从资源类对象获取资源配置接口</h2> <h3 id="通用配置接口"><a href="#通用配置接口" class="header-anchor">#</a> 通用配置接口</h3> <p>下面这种方式是常见的接口使用方式，如果有不同的接口，这种使用方式就不够灵活</p> <div class="language-python extra-class"><pre class="language-python"><code>   <span class="token keyword">class</span> <span class="token class-name">SshServer</span><span class="token punctuation">:</span>
+        <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> ip<span class="token punctuation">,</span> port<span class="token punctuation">,</span> username<span class="token punctuation">,</span> password<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">pass</span>
+
+    resource <span class="token operator">=</span> ResourcePool<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    resource<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">&quot;test.json&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;neal&quot;</span><span class="token punctuation">)</span>
+    ssh_device <span class="token operator">=</span> resource<span class="token punctuation">.</span>collect_device<span class="token punctuation">(</span>device_type<span class="token operator">=</span><span class="token string">&quot;ssh_server&quot;</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    ssh_comm <span class="token operator">=</span> SshServer<span class="token punctuation">(</span>
+        ssh_device<span class="token punctuation">.</span>management<span class="token punctuation">[</span><span class="token string">&quot;ip&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        ssh_device<span class="token punctuation">.</span>management<span class="token punctuation">[</span><span class="token string">&quot;port&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        ssh_device<span class="token punctuation">.</span>management<span class="token punctuation">[</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        ssh_device<span class="token punctuation">.</span>management<span class="token punctuation">[</span><span class="token string">&quot;password&quot;</span><span class="token punctuation">]</span>
+    <span class="token punctuation">)</span>
+</code></pre></div><h3 id="利用回调机制进行优化"><a href="#利用回调机制进行优化" class="header-anchor">#</a> 利用回调机制进行优化</h3> <p>回调就是将函数或方法作为参数，传递给另一个函数或方法</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">def</span> <span class="token function">testA</span><span class="token punctuation">(</span>method<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    method<span class="token punctuation">(</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">method1</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">method2</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">str</span> <span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+testA<span class="token punctuation">(</span>method1<span class="token punctuation">)</span>
+testA<span class="token punctuation">(</span>method2<span class="token punctuation">)</span>
+</code></pre></div><h3 id="统一注册机制"><a href="#统一注册机制" class="header-anchor">#</a> 统一注册机制</h3> <p>利用委托设计模式
+统一的注册入口create_conn.py</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token triple-quoted-string string">&quot;&quot;&quot;
+注册实例化方法，和测试资源模块的耦合点
+&quot;&quot;&quot;</span>
+<span class="token keyword">from</span> thirdpart<span class="token punctuation">.</span>commandline<span class="token punctuation">.</span>telnet <span class="token keyword">import</span> TelnetClient
+<span class="token keyword">from</span> thirdpart<span class="token punctuation">.</span>commandline<span class="token punctuation">.</span>ssh <span class="token keyword">import</span> SshClient
+<span class="token keyword">from</span> core<span class="token punctuation">.</span>resource<span class="token punctuation">.</span>pool <span class="token keyword">import</span> register_resource<span class="token punctuation">,</span> ResourcePool
+
+
+<span class="token keyword">def</span> <span class="token function">create_telnet</span><span class="token punctuation">(</span>resource<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ip <span class="token operator">=</span> resource<span class="token punctuation">.</span>management<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;ip&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    port <span class="token operator">=</span> resource<span class="token punctuation">.</span>management<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;port&quot;</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">)</span>
+    username <span class="token operator">=</span> resource<span class="token punctuation">.</span>management<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    password <span class="token operator">=</span> resource<span class="token punctuation">.</span>management<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;password&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> TelnetClient<span class="token punctuation">(</span>ip<span class="token punctuation">,</span> port<span class="token punctuation">,</span> username<span class="token punctuation">,</span> password<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">create_ssh</span><span class="token punctuation">(</span>resource<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ip <span class="token operator">=</span> resource<span class="token punctuation">.</span>management<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;ip&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    port <span class="token operator">=</span> resource<span class="token punctuation">.</span>management<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;port&quot;</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">)</span>
+    username <span class="token operator">=</span> resource<span class="token punctuation">.</span>management<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;username&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+    password <span class="token operator">=</span> resource<span class="token punctuation">.</span>management<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;password&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> SshClient<span class="token punctuation">(</span>ip<span class="token punctuation">,</span> port<span class="token punctuation">,</span> username<span class="token punctuation">,</span> password<span class="token punctuation">)</span>
+
+
+register_mapping <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">(</span><span class="token string">&quot;device&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;telnet&quot;</span><span class="token punctuation">,</span> create_telnet<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">&quot;device&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;ssh&quot;</span><span class="token punctuation">,</span> create_ssh<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> mapping <span class="token keyword">in</span> register_mapping<span class="token punctuation">:</span>
+    register_resource<span class="token punctuation">(</span>mapping<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> mapping<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> mapping<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+rp <span class="token operator">=</span> ResourcePool<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+rp<span class="token punctuation">.</span>add_device<span class="token punctuation">(</span><span class="token string">&quot;TelnetServer1&quot;</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token string">&quot;telnet&quot;</span><span class="token punctuation">)</span>
+<span class="token builtin">setattr</span><span class="token punctuation">(</span>rp<span class="token punctuation">.</span>topology<span class="token punctuation">[</span><span class="token string">&quot;TelnetServer1&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">&quot;management&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">&quot;ip&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;192.168.1.100&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;port&quot;</span><span class="token punctuation">:</span><span class="token number">23</span><span class="token punctuation">,</span> <span class="token string">&quot;username&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;password&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;admin&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment"># rp.save(&quot;telnet.json&quot;)</span>
+
+telnet_resource <span class="token operator">=</span> rp<span class="token punctuation">.</span>collect_device<span class="token punctuation">(</span>device_type<span class="token operator">=</span><span class="token string">&quot;telnet&quot;</span><span class="token punctuation">,</span> count<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+telnet_client <span class="token operator">=</span> telnet_resource<span class="token punctuation">.</span>get_comm_instance<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>telnet_client<span class="token punctuation">.</span>host<span class="token punctuation">)</span>
+</code></pre></div><p>第三方ssh.py</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> <span class="token punctuation">.</span>base <span class="token keyword">import</span> CommandLine
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> paramiko
+
+
+<span class="token keyword">class</span> <span class="token class-name">SshClient</span><span class="token punctuation">(</span>CommandLine<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> host<span class="token punctuation">,</span> port<span class="token punctuation">,</span> username<span class="token punctuation">,</span> password<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>host <span class="token operator">=</span> host
+        self<span class="token punctuation">.</span>port <span class="token operator">=</span> port
+        self<span class="token punctuation">.</span>username <span class="token operator">=</span> username
+        self<span class="token punctuation">.</span>password <span class="token operator">=</span> password
+        self<span class="token punctuation">.</span>ssh <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>session <span class="token operator">=</span> <span class="token boolean">None</span>
+
+
+    <span class="token keyword">def</span> <span class="token function">connect</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>ssh <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>ssh <span class="token operator">=</span> paramiko<span class="token punctuation">.</span>SSHClient<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>ssh<span class="token punctuation">.</span>set_missing_host_key_policy<span class="token punctuation">(</span>paramiko<span class="token punctuation">.</span>AutoAddPolicy<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>ssh<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>host<span class="token punctuation">,</span> self<span class="token punctuation">.</span>port<span class="token punctuation">,</span> self<span class="token punctuation">.</span>username<span class="token punctuation">,</span> self<span class="token punctuation">.</span>password<span class="token punctuation">)</span>
+                trans <span class="token operator">=</span> self<span class="token punctuation">.</span>ssh<span class="token punctuation">.</span>get_transport<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>session <span class="token operator">=</span> trans<span class="token punctuation">.</span>open_session<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>session<span class="token punctuation">.</span>get_pty<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>session<span class="token punctuation">.</span>invoke_shell<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>_login<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    self<span class="token punctuation">.</span>disconnect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">except</span> Exception <span class="token keyword">as</span> ex<span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>ssh <span class="token operator">=</span> <span class="token boolean">None</span>
+                self<span class="token punctuation">.</span>session <span class="token operator">=</span> <span class="token boolean">None</span>
+
+
+    <span class="token keyword">def</span> <span class="token function">disconnect</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>ssh<span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>ssh<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">finally</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>ssh <span class="token operator">=</span> <span class="token boolean">None</span>
+                self<span class="token punctuation">.</span>session <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">def</span> <span class="token function">send</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> string<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>session<span class="token punctuation">.</span>send<span class="token punctuation">(</span>string<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">send_and_wait</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> string<span class="token punctuation">,</span> waitfor<span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">60</span><span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>send<span class="token punctuation">(</span>string<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>_wait_for<span class="token punctuation">(</span>waitfor<span class="token punctuation">,</span> timeout<span class="token operator">=</span>timeout<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">receive</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>session<span class="token punctuation">.</span>recv<span class="token punctuation">(</span><span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">receive_binary</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>session<span class="token punctuation">.</span>recv<span class="token punctuation">(</span><span class="token number">256</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">send_binary</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> binary<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>session<span class="token punctuation">.</span>send<span class="token punctuation">(</span>binary<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">_login</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>_wait_for<span class="token punctuation">(</span><span class="token string">&quot;$&quot;</span><span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">_wait_for</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> string<span class="token punctuation">,</span> timeout<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        rcv <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+        recent <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">while</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> recent <span class="token operator">&lt;</span> timeout<span class="token punctuation">:</span>
+            rcv <span class="token operator">+=</span> self<span class="token punctuation">.</span>session<span class="token punctuation">.</span>recv<span class="token punctuation">(</span><span class="token number">256</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> string <span class="token keyword">in</span> rcv<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> rcv
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token boolean">None</span>
+
+</code></pre></div><p>第三方telnet.py</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> <span class="token punctuation">.</span>base <span class="token keyword">import</span> CommandLine
+<span class="token keyword">from</span> telnetlib <span class="token keyword">import</span> Telnet
+
+
+<span class="token keyword">class</span> <span class="token class-name">TelnetClient</span><span class="token punctuation">(</span>CommandLine<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> host<span class="token punctuation">,</span> port<span class="token punctuation">,</span> username<span class="token punctuation">,</span> password<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>host <span class="token operator">=</span> host
+        self<span class="token punctuation">.</span>port <span class="token operator">=</span> port
+        self<span class="token punctuation">.</span>username <span class="token operator">=</span> username
+        self<span class="token punctuation">.</span>password <span class="token operator">=</span> password
+        self<span class="token punctuation">.</span>username_prompt <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;user_prompt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;as:&quot;</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>password_prompt <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;pwd_prompt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;assword:&quot;</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>telnet <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">def</span> <span class="token function">connect</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>telnet<span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+        self<span class="token punctuation">.</span>telnet <span class="token operator">=</span> Telnet<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>host<span class="token punctuation">,</span> self<span class="token punctuation">.</span>port<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>_login<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>disconnect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">disconnect</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>telnet<span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">finally</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>telnet <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">def</span> <span class="token function">send</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> string<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span>write<span class="token punctuation">(</span>string<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">send_and_wait</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> string<span class="token punctuation">,</span> waitfor<span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">60</span><span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span>write<span class="token punctuation">(</span>string<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span>read_until<span class="token punctuation">(</span>waitfor<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> timeout<span class="token operator">=</span>timeout<span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">receive</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span>read_eager<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">receive_binary</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span>read_eager<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">send_binary</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> binary<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span>write<span class="token punctuation">(</span>binary<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">_login</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ret_data <span class="token operator">=</span> self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span>read_until<span class="token punctuation">(</span>
+            self<span class="token punctuation">.</span>username_prompt<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> ret_data<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>username<span class="token punctuation">}</span></span><span class="token string">\n&quot;</span></span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        ret_data <span class="token operator">=</span> self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span>read_until<span class="token punctuation">(</span>
+            self<span class="token punctuation">.</span>password_prompt<span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> ret_data<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>password<span class="token punctuation">}</span></span><span class="token string">\n&quot;</span></span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        ret_data <span class="token operator">=</span> self<span class="token punctuation">.</span>telnet<span class="token punctuation">.</span>read_until<span class="token punctuation">(</span><span class="token string">&quot;$&quot;</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> ret_data<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">False</span>
+</code></pre></div><p>定义抽象类</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> abc <span class="token keyword">import</span> ABCMeta<span class="token punctuation">,</span> abstractmethod
+<span class="token keyword">from</span> core<span class="token punctuation">.</span>resource<span class="token punctuation">.</span>pool <span class="token keyword">import</span> register_resource
+
+<span class="token keyword">class</span> <span class="token class-name">CommandLine</span><span class="token punctuation">(</span>metaclass<span class="token operator">=</span>ABCMeta<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">send</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> string<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">send_and_wait</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> string<span class="token punctuation">,</span> waitfor<span class="token punctuation">,</span> timeout<span class="token operator">=</span><span class="token number">60</span><span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">receive</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">send_binary</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> binary<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">receive_binary</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">connect</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">disconnect</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">_login</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/test/miniplatform/Composition.html" class="prev">
+          测试平台基本组成
+        </a></span> <span class="next"><a href="/test/miniplatform/ConfigModule.html">
+          测试配置管理模块
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/test/miniplatform/ResourceModule.html#测试资源形式" class="sidebar-link reco-side-测试资源形式" data-v-b57cc07c>测试资源形式</a></li><li class="level-2" data-v-b57cc07c><a href="/test/miniplatform/ResourceModule.html#使用拓扑结构的测试资源抽象模型" class="sidebar-link reco-side-使用拓扑结构的测试资源抽象模型" data-v-b57cc07c>使用拓扑结构的测试资源抽象模型</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/ResourceModule.html#测试资源的序列化-反序列化" class="sidebar-link reco-side-测试资源的序列化-反序列化" data-v-b57cc07c>测试资源的序列化/反序列化</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/ResourceModule.html#资源池" class="sidebar-link reco-side-资源池" data-v-b57cc07c>资源池</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/ResourceModule.html#资源选择器" class="sidebar-link reco-side-资源选择器" data-v-b57cc07c>资源选择器</a></li><li class="level-2" data-v-b57cc07c><a href="/test/miniplatform/ResourceModule.html#从资源类对象获取资源配置接口" class="sidebar-link reco-side-从资源类对象获取资源配置接口" data-v-b57cc07c>从资源类对象获取资源配置接口</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/ResourceModule.html#通用配置接口" class="sidebar-link reco-side-通用配置接口" data-v-b57cc07c>通用配置接口</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/ResourceModule.html#利用回调机制进行优化" class="sidebar-link reco-side-利用回调机制进行优化" data-v-b57cc07c>利用回调机制进行优化</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/ResourceModule.html#统一注册机制" class="sidebar-link reco-side-统一注册机制" data-v-b57cc07c>统一注册机制</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/test/assets/js/app.f95afc0e.js" defer></script><script src="/test/assets/js/3.1de58c57.js" defer></script><script src="/test/assets/js/1.912b4b55.js" defer></script><script src="/test/assets/js/25.bd6d1825.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>测试报告管理模块 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/test/assets/css/0.styles.c0334387.css" as="style"><link rel="preload" href="/test/assets/js/app.f95afc0e.js" as="script"><link rel="preload" href="/test/assets/js/3.1de58c57.js" as="script"><link rel="preload" href="/test/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/test/assets/js/24.fd8e7dcc.js" as="script"><link rel="prefetch" href="/test/assets/js/10.5c2dccb8.js"><link rel="prefetch" href="/test/assets/js/11.8ccdf9e0.js"><link rel="prefetch" href="/test/assets/js/12.2cafa193.js"><link rel="prefetch" href="/test/assets/js/13.f84fbed8.js"><link rel="prefetch" href="/test/assets/js/14.630fbf66.js"><link rel="prefetch" href="/test/assets/js/15.bb979110.js"><link rel="prefetch" href="/test/assets/js/16.95d181db.js"><link rel="prefetch" href="/test/assets/js/17.e4952898.js"><link rel="prefetch" href="/test/assets/js/18.d349f9ac.js"><link rel="prefetch" href="/test/assets/js/19.5b36ace8.js"><link rel="prefetch" href="/test/assets/js/20.e87a0845.js"><link rel="prefetch" href="/test/assets/js/21.9b2c8478.js"><link rel="prefetch" href="/test/assets/js/22.e7376488.js"><link rel="prefetch" href="/test/assets/js/23.58ebbf70.js"><link rel="prefetch" href="/test/assets/js/25.bd6d1825.js"><link rel="prefetch" href="/test/assets/js/26.f7db35ea.js"><link rel="prefetch" href="/test/assets/js/27.e9020c7f.js"><link rel="prefetch" href="/test/assets/js/28.9bfdda65.js"><link rel="prefetch" href="/test/assets/js/29.f8f5b07a.js"><link rel="prefetch" href="/test/assets/js/30.4394a919.js"><link rel="prefetch" href="/test/assets/js/31.2bddd865.js"><link rel="prefetch" href="/test/assets/js/32.ad0973d0.js"><link rel="prefetch" href="/test/assets/js/33.224c072e.js"><link rel="prefetch" href="/test/assets/js/34.776b960a.js"><link rel="prefetch" href="/test/assets/js/35.b369adb9.js"><link rel="prefetch" href="/test/assets/js/36.8a409189.js"><link rel="prefetch" href="/test/assets/js/37.e8203659.js"><link rel="prefetch" href="/test/assets/js/38.ec7ebd69.js"><link rel="prefetch" href="/test/assets/js/39.029a257e.js"><link rel="prefetch" href="/test/assets/js/4.673bf15a.js"><link rel="prefetch" href="/test/assets/js/40.96456ab7.js"><link rel="prefetch" href="/test/assets/js/41.ea06ca1a.js"><link rel="prefetch" href="/test/assets/js/42.0f70b399.js"><link rel="prefetch" href="/test/assets/js/43.60e8b367.js"><link rel="prefetch" href="/test/assets/js/44.8d0871a7.js"><link rel="prefetch" href="/test/assets/js/45.02b5d702.js"><link rel="prefetch" href="/test/assets/js/46.e3baf61a.js"><link rel="prefetch" href="/test/assets/js/47.8e9a1df4.js"><link rel="prefetch" href="/test/assets/js/48.cffdb1f4.js"><link rel="prefetch" href="/test/assets/js/49.20f1ccf3.js"><link rel="prefetch" href="/test/assets/js/5.8b013b29.js"><link rel="prefetch" href="/test/assets/js/50.619e502f.js"><link rel="prefetch" href="/test/assets/js/6.aad79307.js"><link rel="prefetch" href="/test/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/test/assets/js/8.1296ca76.js"><link rel="prefetch" href="/test/assets/js/9.f2b953d4.js">
+    <link rel="stylesheet" href="/test/assets/css/0.styles.c0334387.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/test/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/test/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>37</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/test/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/test/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/concept/Test" class="sidebar-heading clickable"><span>概念</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/concept/Test.html" class="sidebar-link">软件测试</a></li><li><a href="/test/concept/Test.html" class="sidebar-link">质量标准</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/ut/Test" class="sidebar-heading clickable"><span>白盒测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/ut/Test.html" class="sidebar-link">白盒测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/api/Test" class="sidebar-heading clickable"><span>API测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/api/Test.html" class="sidebar-link">API测试</a></li><li><a href="/test/api/Model.html" class="sidebar-link">测试模型</a></li><li><a href="/test/api/Tools.html" class="sidebar-link">常见工具</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/ui/Test" class="sidebar-heading clickable"><span>UI测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/ui/Test.html" class="sidebar-link">UI测试</a></li><li><a href="/test/ui/Chrome.html" class="sidebar-link">浏览器UI测试</a></li><li><a href="/test/ui/Device.html" class="sidebar-link">移动端UI测试</a></li><li><a href="/test/ui/GUI.html" class="sidebar-link">桌面GUI测试</a></li><li><a href="/test/ui/Tools.html" class="sidebar-link">常见工具</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/app/Test" class="sidebar-heading clickable"><span>移动端测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/app/Test.html" class="sidebar-link">移动端测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/performance/Test" class="sidebar-heading clickable"><span>性能测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/performance/Test.html" class="sidebar-link">性能测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/stability/Test" class="sidebar-heading clickable"><span>稳定性测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/stability/Test.html" class="sidebar-link">稳定性测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/precise/Test" class="sidebar-heading clickable"><span>精准测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/precise/Test.html" class="sidebar-link">精准测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/safty/Test" class="sidebar-heading clickable"><span>安全测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/safty/Test.html" class="sidebar-link">安全测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/work/Summary" class="sidebar-heading clickable"><span>办公工具</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/work/Summary.html" class="sidebar-link">汇总</a></li><li><a href="/test/work/Case.html" class="sidebar-link">测试用例</a></li><li><a href="/test/work/CaseTools.html" class="sidebar-link">测试用例工具</a></li><li><a href="/test/work/Report.html" class="sidebar-link">测试报告</a></li><li><a href="/test/work/ReportTools.html" class="sidebar-link">测试报告工具</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/miniplatform/Composition" class="sidebar-heading clickable open"><span>微型测试平台开发</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/miniplatform/Composition.html" class="sidebar-link">测试平台基本组成</a></li><li><a href="/test/miniplatform/ResourceModule.html" class="sidebar-link">测试资源管理模块</a></li><li><a href="/test/miniplatform/ConfigModule.html" class="sidebar-link">测试配置管理模块</a></li><li><a href="/test/miniplatform/ReportModule.html" aria-current="page" class="active sidebar-link">测试报告管理模块</a></li><li><a href="/test/miniplatform/LogModule.html" class="sidebar-link">测试日志管理模块</a></li><li><a href="/test/miniplatform/CaseModule.html" class="sidebar-link">测试用例管理模块</a></li><li><a href="/test/miniplatform/EngineModule.html" class="sidebar-link">测试引擎模块</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/test/tools/Summary" class="sidebar-heading clickable"><span>工具汇总</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>测试报告管理模块</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">测试报告管理模块</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>T8840</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2023/1/15</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="测试报告原理"><a href="#测试报告原理" class="header-anchor">#</a> 测试报告原理</h2> <h3 id="方式一-利用树-数据结构-来设计树形测试结果输出"><a href="#方式一-利用树-数据结构-来设计树形测试结果输出" class="header-anchor">#</a> 方式一：利用树（数据结构）来设计树形测试结果输出</h3> <p>步骤：</p> <ol><li>首先使用ResultReporter类进行实例化</li> <li>添加一个测试列表节点，调用add_list方法</li> <li>添加一个测试用例节点，调用add_test方法</li> <li>添加一个SETUP步骤节点，调用add_step_group方法</li> <li>添加步骤，调用add方法</li> <li>结束第一个测试用例，调用end_test方法</li> <li>循环上面方法</li></ol> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> os
+<span class="token keyword">from</span> enum <span class="token keyword">import</span> IntEnum
+<span class="token keyword">from</span> threading <span class="token keyword">import</span> Event<span class="token punctuation">,</span> Lock
+<span class="token keyword">from</span> functools <span class="token keyword">import</span> wraps
+<span class="token keyword">import</span> time
+
+
+<span class="token keyword">def</span> <span class="token function">get_local_time</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> time<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span><span class="token string">&quot;%B %d, %y %H:%M:%S&quot;</span><span class="token punctuation">,</span> time<span class="token punctuation">.</span>localtime<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">StepResult</span><span class="token punctuation">(</span>IntEnum<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    表示节点的状态
+    &quot;&quot;&quot;</span>
+    INFO <span class="token operator">=</span> <span class="token number">1</span>
+    PASS <span class="token operator">=</span> <span class="token number">2</span>
+    FAIL <span class="token operator">=</span> <span class="token number">4</span>
+    EXCEPTION <span class="token operator">=</span> <span class="token number">8</span>
+    WARNING <span class="token operator">=</span> <span class="token number">16</span>
+    ERROR <span class="token operator">=</span> <span class="token number">32</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">NodeType</span><span class="token punctuation">(</span>IntEnum<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    表示节点的类型
+    &quot;&quot;&quot;</span>
+    Step <span class="token operator">=</span> <span class="token number">1</span>
+    Case <span class="token operator">=</span> <span class="token number">2</span>
+    TestList <span class="token operator">=</span> <span class="token number">4</span>
+    Other <span class="token operator">=</span> <span class="token number">256</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">ResultNode</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    测试结果节点
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> header<span class="token punctuation">,</span> status<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> parent<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>
+                 node_type<span class="token operator">=</span>NodeType<span class="token punctuation">.</span>Other<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>status <span class="token operator">=</span> StepResult<span class="token punctuation">.</span>INFO <span class="token keyword">if</span> status <span class="token keyword">is</span> <span class="token boolean">None</span> <span class="token keyword">else</span> status
+        self<span class="token punctuation">.</span>header <span class="token operator">=</span> header
+        self<span class="token punctuation">.</span>message <span class="token operator">=</span> message
+        self<span class="token punctuation">.</span>children <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>parent <span class="token operator">=</span> parent
+        self<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">=</span> node_type
+        self<span class="token punctuation">.</span>timestamp <span class="token operator">=</span> get_local_time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>log <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">def</span> <span class="token function">add_child</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> header<span class="token punctuation">,</span> status<span class="token operator">=</span>StepResult<span class="token punctuation">.</span>INFO<span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+                  node_type<span class="token operator">=</span>NodeType<span class="token punctuation">.</span>Other<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        添加新的子节点并返回该节点
+        &quot;&quot;&quot;</span>
+        new_node <span class="token operator">=</span> ResultNode<span class="token punctuation">(</span>header<span class="token punctuation">,</span> message<span class="token operator">=</span>message<span class="token punctuation">,</span> parent<span class="token operator">=</span>self<span class="token punctuation">,</span>
+                              node_type<span class="token operator">=</span>node_type<span class="token punctuation">)</span>
+        <span class="token comment"># 在case或者step类型的节点中，只允许类型是Step</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token keyword">in</span> <span class="token punctuation">[</span>NodeType<span class="token punctuation">.</span>Step<span class="token punctuation">,</span> NodeType<span class="token punctuation">.</span>Case<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            new_node<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">=</span> NodeType<span class="token punctuation">.</span>Step
+        self<span class="token punctuation">.</span>children<span class="token punctuation">.</span>append<span class="token punctuation">(</span>new_node<span class="token punctuation">)</span>
+        new_node<span class="token punctuation">.</span>set_status<span class="token punctuation">(</span>status<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> new_node
+
+    <span class="token keyword">def</span> <span class="token function">set_status</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> status<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        设置当前节点的状态，并且同时更新父节点的状态
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> NodeType<span class="token punctuation">.</span>Other<span class="token punctuation">:</span>
+            <span class="token comment"># 对于类型是非case或者是step的节点，不作状态设置</span>
+            <span class="token keyword">return</span>
+        <span class="token keyword">if</span> status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>INFO<span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>status <span class="token keyword">in</span> <span class="token punctuation">[</span>StepResult<span class="token punctuation">.</span>INFO<span class="token punctuation">,</span> StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>status <span class="token operator">=</span> status
+        self<span class="token punctuation">.</span>parent<span class="token punctuation">.</span>set_status<span class="token punctuation">(</span>status<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> status<span class="token punctuation">,</span> header<span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        简化的add方法，提供给事件驱动
+        &quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>add_child<span class="token punctuation">(</span>header<span class="token punctuation">,</span> status<span class="token punctuation">,</span> message<span class="token punctuation">,</span> NodeType<span class="token punctuation">.</span>Step<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>log<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>log<span class="token punctuation">.</span>info<span class="token punctuation">(</span>header<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_test_point_stats</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        stats_pass <span class="token operator">=</span> <span class="token number">0</span>
+        stats_fail <span class="token operator">=</span> <span class="token number">0</span>
+        stats_error <span class="token operator">=</span> <span class="token number">0</span>
+        stats_warning <span class="token operator">=</span> <span class="token number">0</span>
+        stats_exception <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">for</span> child <span class="token keyword">in</span> self<span class="token punctuation">.</span>children<span class="token punctuation">:</span>
+            child_stats <span class="token operator">=</span> child<span class="token punctuation">.</span>get_test_point_stats<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            stats_pass <span class="token operator">+=</span> child_stats<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            stats_fail <span class="token operator">+=</span> child_stats<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            stats_error <span class="token operator">+=</span> child_stats<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+            stats_warning <span class="token operator">+=</span> child_stats<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+            stats_exception <span class="token operator">+=</span> child_stats<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">any</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">:</span>
+                stats_pass <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token keyword">elif</span> self<span class="token punctuation">.</span>status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>FAIL<span class="token punctuation">:</span>
+                stats_fail <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token keyword">elif</span> self<span class="token punctuation">.</span>status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>ERROR<span class="token punctuation">:</span>
+                stats_error <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token keyword">elif</span> self<span class="token punctuation">.</span>status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>WARNING<span class="token punctuation">:</span>
+                stats_warning <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token keyword">elif</span> self<span class="token punctuation">.</span>status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>EXCEPTION<span class="token punctuation">:</span>
+                stats_exception <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token keyword">return</span> stats_pass<span class="token punctuation">,</span> stats_fail<span class="token punctuation">,</span> stats_error<span class="token punctuation">,</span> stats_warning<span class="token punctuation">,</span> stats_exception
+
+    <span class="token keyword">def</span> <span class="token function">get_test_case_stats</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        stats_pass <span class="token operator">=</span> <span class="token number">0</span>
+        stats_fail <span class="token operator">=</span> <span class="token number">0</span>
+        stats_error <span class="token operator">=</span> <span class="token number">0</span>
+        stats_warning <span class="token operator">=</span> <span class="token number">0</span>
+        stats_exception <span class="token operator">=</span> <span class="token number">0</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> NodeType<span class="token punctuation">.</span>Case<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">:</span>
+                stats_pass <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token keyword">elif</span> self<span class="token punctuation">.</span>status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>FAIL<span class="token punctuation">:</span>
+                stats_fail <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token keyword">elif</span> self<span class="token punctuation">.</span>status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>ERROR<span class="token punctuation">:</span>
+                stats_error <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token keyword">elif</span> self<span class="token punctuation">.</span>status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>WARNING<span class="token punctuation">:</span>
+                stats_warning <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token keyword">elif</span> self<span class="token punctuation">.</span>status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>EXCEPTION<span class="token punctuation">:</span>
+                stats_exception <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> child <span class="token keyword">in</span> self<span class="token punctuation">.</span>children<span class="token punctuation">:</span>
+                child_stats <span class="token operator">=</span> child<span class="token punctuation">.</span>get_test_case_stats<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                stats_pass <span class="token operator">+=</span> child_stats<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+                stats_fail <span class="token operator">+=</span> child_stats<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+                stats_error <span class="token operator">+=</span> child_stats<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+                stats_warning <span class="token operator">+=</span> child_stats<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+                stats_exception <span class="token operator">+=</span> child_stats<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span>
+        <span class="token keyword">return</span> stats_pass<span class="token punctuation">,</span> stats_fail<span class="token punctuation">,</span> stats_error<span class="token punctuation">,</span> stats_warning<span class="token punctuation">,</span> stats_exception
+
+    <span class="token decorator annotation punctuation">@property</span>
+    <span class="token keyword">def</span> <span class="token function">is_leaf</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token builtin">any</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>children<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">to_dict</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        将结果节点输出成字典结构
+        &quot;&quot;&quot;</span>
+        rv <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        rv<span class="token punctuation">[</span><span class="token string">&quot;header&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>header
+        rv<span class="token punctuation">[</span><span class="token string">&quot;status&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>status<span class="token punctuation">.</span>value
+        rv<span class="token punctuation">[</span><span class="token string">&quot;message&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>message
+        rv<span class="token punctuation">[</span><span class="token string">&quot;type&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span><span class="token builtin">type</span><span class="token punctuation">.</span>value
+        rv<span class="token punctuation">[</span><span class="token string">&quot;children&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        rv<span class="token punctuation">[</span><span class="token string">&quot;timestamp&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>timestamp
+        <span class="token keyword">for</span> child <span class="token keyword">in</span> self<span class="token punctuation">.</span>children<span class="token punctuation">:</span>
+            rv<span class="token punctuation">[</span><span class="token string">&quot;children&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>child<span class="token punctuation">.</span>to_dict<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> rv
+
+    <span class="token keyword">def</span> <span class="token function">to_text</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> indent<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        将结果生成文本类型的结构
+        &quot;&quot;&quot;</span>
+        rv <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f&quot;</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>_get_intent<span class="token punctuation">(</span>indent<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">[</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>timestamp<span class="token punctuation">}</span></span><span class="token string">]&quot;</span></span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> NodeType<span class="token punctuation">.</span>Case<span class="token punctuation">:</span>
+            rv <span class="token operator">+=</span> <span class="token string">&quot;[TestCase] &quot;</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> NodeType<span class="token punctuation">.</span>TestList<span class="token punctuation">:</span>
+            rv <span class="token operator">+=</span> <span class="token string">&quot;[Test List] &quot;</span>
+        rv <span class="token operator">+=</span> self<span class="token punctuation">.</span>header
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token keyword">in</span> <span class="token punctuation">[</span>NodeType<span class="token punctuation">.</span>Case<span class="token punctuation">,</span> NodeType<span class="token punctuation">.</span>Step<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            rv <span class="token operator">+=</span> self<span class="token punctuation">.</span>_get_dot_line<span class="token punctuation">(</span>rv<span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span>
+            rv <span class="token operator">+=</span> self<span class="token punctuation">.</span>status<span class="token punctuation">.</span>name
+        rv <span class="token operator">+=</span> os<span class="token punctuation">.</span>linesep
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>message<span class="token punctuation">:</span>
+            rv <span class="token operator">+=</span> self<span class="token punctuation">.</span>_get_intent<span class="token punctuation">(</span>indent<span class="token punctuation">)</span>
+            rv <span class="token operator">+=</span> <span class="token string-interpolation"><span class="token string">f&quot;Description:</span><span class="token interpolation"><span class="token punctuation">{</span>self<span class="token punctuation">.</span>message<span class="token punctuation">}</span></span><span class="token interpolation"><span class="token punctuation">{</span>os<span class="token punctuation">.</span>linesep<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span>
+        <span class="token keyword">for</span> child <span class="token keyword">in</span> self<span class="token punctuation">.</span>children<span class="token punctuation">:</span>
+            rv <span class="token operator">+=</span> child<span class="token punctuation">.</span>to_text<span class="token punctuation">(</span>indent<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> rv
+
+    <span class="token keyword">def</span> <span class="token function">_get_intent</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> indent<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token string">&quot;+&quot;</span> <span class="token operator">*</span> <span class="token punctuation">(</span>indent <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">_get_dot_line</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> line<span class="token punctuation">,</span> line_max<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span> <span class="token operator">&gt;=</span> line_max<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> line
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token string">&quot;-&quot;</span> <span class="token operator">*</span> <span class="token punctuation">(</span>line_max <span class="token operator">-</span> <span class="token builtin">len</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">locker</span><span class="token punctuation">(</span>lock<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">outer</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token decorator annotation punctuation">@wraps</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span>
+        <span class="token keyword">def</span> <span class="token function">inner</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                lock<span class="token punctuation">.</span>acquire<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token keyword">return</span> func<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+            <span class="token keyword">finally</span><span class="token punctuation">:</span>
+                lock<span class="token punctuation">.</span>release<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> inner
+    <span class="token keyword">return</span> outer
+
+
+<span class="token keyword">class</span> <span class="token class-name">ResultReporter</span><span class="token punctuation">:</span>
+
+    my_lock <span class="token operator">=</span> Lock<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> logger<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>halt_on_failure <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>halt_on_exception <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>halt_event <span class="token operator">=</span> Event<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>root <span class="token operator">=</span> ResultNode<span class="token punctuation">(</span><span class="token string">&quot;Root&quot;</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>recent_case <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>recent_node <span class="token operator">=</span> self<span class="token punctuation">.</span>root
+        self<span class="token punctuation">.</span>recent_list <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>logger <span class="token operator">=</span> logger
+        self<span class="token punctuation">.</span>case_logger <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">def</span> <span class="token function">search_result</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> case_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        搜索给定的测试用例名称的测试结果
+        &quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>_search_result<span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">,</span> case_name<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">_search_result</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> node<span class="token punctuation">,</span> case_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> node<span class="token punctuation">.</span><span class="token builtin">type</span> <span class="token operator">==</span> NodeType<span class="token punctuation">.</span>Step<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">None</span>
+        <span class="token keyword">for</span> child <span class="token keyword">in</span> node<span class="token punctuation">.</span>children<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> child<span class="token punctuation">.</span>header <span class="token operator">==</span> case_name<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> child<span class="token punctuation">.</span>status
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                rv <span class="token operator">=</span> self<span class="token punctuation">.</span>_search_result<span class="token punctuation">(</span>child<span class="token punctuation">,</span> case_name<span class="token punctuation">)</span>
+                <span class="token keyword">if</span> rv<span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> rv
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">None</span>
+
+    <span class="token decorator annotation punctuation">@locker</span><span class="token punctuation">(</span>my_lock<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">add_node</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> header<span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> status<span class="token operator">=</span>StepResult<span class="token punctuation">.</span>INFO<span class="token punctuation">,</span> node_type<span class="token operator">=</span>NodeType<span class="token punctuation">.</span>Other<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>recent_node <span class="token operator">=</span> self<span class="token punctuation">.</span>recent_node<span class="token punctuation">.</span>add_child<span class="token punctuation">(</span>header<span class="token operator">=</span>header<span class="token punctuation">,</span>
+                                                      status<span class="token operator">=</span>status<span class="token punctuation">,</span>
+                                                      message<span class="token operator">=</span>message<span class="token punctuation">,</span>
+                                                      node_type<span class="token operator">=</span>node_type<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_log_info<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;Result Node </span><span class="token interpolation"><span class="token punctuation">{</span>header<span class="token punctuation">}</span></span><span class="token string">, Message: </span><span class="token interpolation"><span class="token punctuation">{</span>message<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>recent_node
+
+    <span class="token decorator annotation punctuation">@locker</span><span class="token punctuation">(</span>my_lock<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">pop</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>recent_node<span class="token punctuation">.</span>parent<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>recent_node <span class="token operator">=</span> self<span class="token punctuation">.</span>recent_node<span class="token punctuation">.</span>parent
+
+    <span class="token decorator annotation punctuation">@locker</span><span class="token punctuation">(</span>my_lock<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">add_test</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> case_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>recent_node <span class="token operator">=</span> self<span class="token punctuation">.</span>recent_node<span class="token punctuation">.</span>add_child<span class="token punctuation">(</span>header<span class="token operator">=</span>case_name<span class="token punctuation">,</span>
+                                                      node_type<span class="token operator">=</span>NodeType<span class="token punctuation">.</span>Case<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>recent_case <span class="token operator">=</span> self<span class="token punctuation">.</span>recent_node
+        self<span class="token punctuation">.</span>_log_info<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;[Test Case] </span><span class="token interpolation"><span class="token punctuation">{</span>case_name<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+
+    <span class="token decorator annotation punctuation">@locker</span><span class="token punctuation">(</span>my_lock<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">end_test</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>recent_case <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+        self<span class="token punctuation">.</span>recent_node <span class="token operator">=</span> self<span class="token punctuation">.</span>recent_case<span class="token punctuation">.</span>parent
+        self<span class="token punctuation">.</span>recent_case <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token decorator annotation punctuation">@locker</span><span class="token punctuation">(</span>my_lock<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">add_list</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> list_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>recent_node <span class="token operator">=</span> self<span class="token punctuation">.</span>recent_node<span class="token punctuation">.</span>add_child<span class="token punctuation">(</span>header<span class="token operator">=</span>list_name<span class="token punctuation">,</span>
+                                                      node_type<span class="token operator">=</span>NodeType<span class="token punctuation">.</span>TestList<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>recent_list <span class="token operator">=</span> self<span class="token punctuation">.</span>recent_node
+        self<span class="token punctuation">.</span>_log_info<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;[Test list] </span><span class="token interpolation"><span class="token punctuation">{</span>list_name<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+
+    <span class="token decorator annotation punctuation">@locker</span><span class="token punctuation">(</span>my_lock<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">end_list</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>recent_list <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+        self<span class="token punctuation">.</span>recent_node <span class="token operator">=</span> self<span class="token punctuation">.</span>recent_list<span class="token punctuation">.</span>parent
+        self<span class="token punctuation">.</span>recent_list <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token decorator annotation punctuation">@locker</span><span class="token punctuation">(</span>my_lock<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">add_step_group</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> group_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>recent_node <span class="token operator">=</span> self<span class="token punctuation">.</span>recent_node<span class="token punctuation">.</span>add_child<span class="token punctuation">(</span>header<span class="token operator">=</span>group_name<span class="token punctuation">,</span>
+                                                      node_type<span class="token operator">=</span>NodeType<span class="token punctuation">.</span>Step<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_log_info<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;[Test Step Group] </span><span class="token interpolation"><span class="token punctuation">{</span>group_name<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+
+    <span class="token decorator annotation punctuation">@locker</span><span class="token punctuation">(</span>my_lock<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">add_event_group</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> group_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        rv <span class="token operator">=</span> self<span class="token punctuation">.</span>recent_node<span class="token punctuation">.</span>add_child<span class="token punctuation">(</span>header<span class="token operator">=</span>group_name<span class="token punctuation">,</span>
+                                        node_type<span class="token operator">=</span>NodeType<span class="token punctuation">.</span>Step<span class="token punctuation">)</span>
+        rv<span class="token punctuation">.</span>log <span class="token operator">=</span> self<span class="token punctuation">.</span>case_logger <span class="token keyword">if</span> self<span class="token punctuation">.</span>case_logger <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span> <span class="token keyword">else</span> self<span class="token punctuation">.</span>logger
+        self<span class="token punctuation">.</span>_log_info<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;[Event] </span><span class="token interpolation"><span class="token punctuation">{</span>group_name<span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> rv
+
+    <span class="token decorator annotation punctuation">@locker</span><span class="token punctuation">(</span>my_lock<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">end_step_group</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>recent_node<span class="token punctuation">.</span>parent<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>recent_node <span class="token operator">=</span> self<span class="token punctuation">.</span>recent_node<span class="token punctuation">.</span>parent
+
+    <span class="token keyword">def</span> <span class="token function">add_precheck_result</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> result<span class="token punctuation">,</span> headline<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token keyword">def</span> <span class="token function">is_high_priority_passed</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> priority<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token decorator annotation punctuation">@locker</span><span class="token punctuation">(</span>my_lock<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> status<span class="token punctuation">:</span> StepResult<span class="token punctuation">,</span> headline<span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>recent_node<span class="token punctuation">.</span>add_child<span class="token punctuation">(</span>header<span class="token operator">=</span>headline<span class="token punctuation">,</span>
+                                   message<span class="token operator">=</span>message<span class="token punctuation">,</span>
+                                   node_type<span class="token operator">=</span>NodeType<span class="token punctuation">.</span>Step<span class="token punctuation">,</span>
+                                   status<span class="token operator">=</span>status<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_log_info<span class="token punctuation">(</span><span class="token string">&quot;Step: &quot;</span> <span class="token operator">+</span> headline<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_log_info<span class="token punctuation">(</span><span class="token string">&quot;Message&quot;</span> <span class="token operator">+</span> message<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>halt_event<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>FAIL <span class="token keyword">and</span> self<span class="token punctuation">.</span>halt_on_failure<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>halt_event<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> status <span class="token operator">==</span> StepResult<span class="token punctuation">.</span>EXCEPTION <span class="token keyword">and</span> self<span class="token punctuation">.</span>halt_on_exception<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>halt_event<span class="token punctuation">.</span>wait<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">_log_info</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>case_logger<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>case_logger<span class="token punctuation">.</span>info<span class="token punctuation">(</span>message<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>logger<span class="token punctuation">.</span>info<span class="token punctuation">(</span>message<span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&quot;__main__&quot;</span><span class="token punctuation">:</span>
+    <span class="token keyword">import</span> logging
+    rr <span class="token operator">=</span> ResultReporter<span class="token punctuation">(</span>logging<span class="token punctuation">)</span>
+    <span class="token comment"># 添加一个测试列表节点</span>
+    rr<span class="token punctuation">.</span>add_list<span class="token punctuation">(</span><span class="token string">&quot;Test List 1&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 添加一个测试用例节点</span>
+    rr<span class="token punctuation">.</span>add_test<span class="token punctuation">(</span><span class="token string">&quot;Test Case 1&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 添加一个SETUP步骤节点</span>
+    rr<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span><span class="token string">&quot;SETUP&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment"># 添加一些步骤</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">,</span> <span class="token string">&quot;Do Something Setup&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;I'm doing something&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>end_step_group<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 添加一个测试步骤节点</span>
+    rr<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span><span class="token string">&quot;TEST&quot;</span><span class="token punctuation">)</span>
+
+    rr<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span><span class="token string">&quot;Login to website&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">,</span> <span class="token string">&quot;Input Username&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Username is admin&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">,</span> <span class="token string">&quot;Input Password&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Password is admin&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>FAIL<span class="token punctuation">,</span> <span class="token string">&quot;Login&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Login is failed&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>end_step_group<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 这里我们少了一个end_group, 但是end_test会把我们带回正确的位置。</span>
+    rr<span class="token punctuation">.</span>end_test<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 第二个测试用例</span>
+    rr<span class="token punctuation">.</span>add_test<span class="token punctuation">(</span><span class="token string">&quot;Test Case 2&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span><span class="token string">&quot;SETUP&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">,</span> <span class="token string">&quot;Do Something Setup&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;I'm doing something&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>end_step_group<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    rr<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span><span class="token string">&quot;TEST&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span><span class="token string">&quot;Login to website&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">,</span> <span class="token string">&quot;Input Username&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Username is admin&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">,</span> <span class="token string">&quot;Input Password&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Password is admin&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>end_step_group<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>end_test<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 第三个测试用例</span>
+    rr<span class="token punctuation">.</span>add_list<span class="token punctuation">(</span><span class="token string">&quot;Sub Test List&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add_test<span class="token punctuation">(</span><span class="token string">&quot;Test Case 3&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span><span class="token string">&quot;SETUP&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">,</span> <span class="token string">&quot;Do Something Setup&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;I'm doing something&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>end_step_group<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    rr<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span><span class="token string">&quot;TEST&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span><span class="token string">&quot;Login to website&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">,</span> <span class="token string">&quot;Input Username&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Username is admin&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">,</span> <span class="token string">&quot;Input Password&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Password is admin&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>end_step_group<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>end_test<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>end_list<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 第四个测试用例</span>
+    rr<span class="token punctuation">.</span>add_test<span class="token punctuation">(</span><span class="token string">&quot;Test Case 4&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span><span class="token string">&quot;SETUP&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">,</span> <span class="token string">&quot;Do Something Setup&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;I'm doing something&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>end_step_group<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    rr<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span><span class="token string">&quot;TEST&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add_step_group<span class="token punctuation">(</span><span class="token string">&quot;Login to website&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">,</span> <span class="token string">&quot;Input Username&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Username is admin&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>add<span class="token punctuation">(</span>StepResult<span class="token punctuation">.</span>PASS<span class="token punctuation">,</span> <span class="token string">&quot;Input Password&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Password is admin&quot;</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>end_step_group<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    rr<span class="token punctuation">.</span>end_test<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    rr<span class="token punctuation">.</span>end_list<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span>rr<span class="token punctuation">.</span>root<span class="token punctuation">.</span>to_text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    tp_stats <span class="token operator">=</span> rr<span class="token punctuation">.</span>root<span class="token punctuation">.</span>get_test_point_stats<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;PASS: </span><span class="token interpolation"><span class="token punctuation">{</span>tp_stats<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, FAIL: </span><span class="token interpolation"><span class="token punctuation">{</span>tp_stats<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;ERROR: </span><span class="token interpolation"><span class="token punctuation">{</span>tp_stats<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, WARNING: </span><span class="token interpolation"><span class="token punctuation">{</span>tp_stats<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, EXCEPTION: </span><span class="token interpolation"><span class="token punctuation">{</span>tp_stats<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+    tc_stats <span class="token operator">=</span> rr<span class="token punctuation">.</span>root<span class="token punctuation">.</span>get_test_case_stats<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;PASS: </span><span class="token interpolation"><span class="token punctuation">{</span>tc_stats<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, FAIL: </span><span class="token interpolation"><span class="token punctuation">{</span>tc_stats<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&quot;ERROR: </span><span class="token interpolation"><span class="token punctuation">{</span>tc_stats<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, WARNING: </span><span class="token interpolation"><span class="token punctuation">{</span>tc_stats<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, EXCEPTION: </span><span class="token interpolation"><span class="token punctuation">{</span>tc_stats<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">&quot;</span></span><span class="token punctuation">)</span>
+
+    <span class="token comment"># import json</span>
+    <span class="token comment"># print(json.dumps(rr.root.to_dict(), indent=4))</span>
+
+<span class="token triple-quoted-string string">&quot;&quot;&quot;
+# 输出
+[February 05, 23 09:00:24]Root
+++[February 05, 23 09:00:24][Test List] Test List 1
+++++[February 05, 23 09:00:24][TestCase] Test Case 1----------------------------FAIL
+++++++[February 05, 23 09:00:24]SETUP-------------------------------------------PASS
+++++++++[February 05, 23 09:00:24]Do Something Setup----------------------------PASS
+++++++++Description:I'm doing something
+++++++[February 05, 23 09:00:24]TEST--------------------------------------------FAIL
+++++++++[February 05, 23 09:00:24]Login to website------------------------------FAIL
+++++++++++[February 05, 23 09:00:24]Input Username------------------------------PASS
+++++++++++Description:Username is admin
+++++++++++[February 05, 23 09:00:24]Input Password------------------------------PASS
+++++++++++Description:Password is admin
+++++++++++[February 05, 23 09:00:24]Login---------------------------------------FAIL
+++++++++++Description:Login is failed
+++++[February 05, 23 09:00:24][TestCase] Test Case 2----------------------------PASS
+++++++[February 05, 23 09:00:24]SETUP-------------------------------------------PASS
+++++++++[February 05, 23 09:00:24]Do Something Setup----------------------------PASS
+++++++++Description:I'm doing something
+++++++[February 05, 23 09:00:24]TEST--------------------------------------------PASS
+++++++++[February 05, 23 09:00:24]Login to website------------------------------PASS
+++++++++++[February 05, 23 09:00:24]Input Username------------------------------PASS
+++++++++++Description:Username is admin
+++++++++++[February 05, 23 09:00:24]Input Password------------------------------PASS
+++++++++++Description:Password is admin
+++++[February 05, 23 09:00:24][Test List] Sub Test List
+++++++[February 05, 23 09:00:24][TestCase] Test Case 3--------------------------PASS
+++++++++[February 05, 23 09:00:24]SETUP-----------------------------------------PASS
+++++++++++[February 05, 23 09:00:24]Do Something Setup--------------------------PASS
+++++++++++Description:I'm doing something
+++++++++[February 05, 23 09:00:24]TEST------------------------------------------PASS
+++++++++++[February 05, 23 09:00:24]Login to website----------------------------PASS
+++++++++++++[February 05, 23 09:00:24]Input Username----------------------------PASS
+++++++++++++Description:Username is admin
+++++++++++++[February 05, 23 09:00:24]Input Password----------------------------PASS
+++++++++++++Description:Password is admin
+++++[February 05, 23 09:00:24][TestCase] Test Case 4----------------------------PASS
+++++++[February 05, 23 09:00:24]SETUP-------------------------------------------PASS
+++++++++[February 05, 23 09:00:24]Do Something Setup----------------------------PASS
+++++++++Description:I'm doing something
+++++++[February 05, 23 09:00:24]TEST--------------------------------------------PASS
+++++++++[February 05, 23 09:00:24]Login to website------------------------------PASS
+++++++++++[February 05, 23 09:00:24]Input Username------------------------------PASS
+++++++++++Description:Username is admin
+++++++++++[February 05, 23 09:00:24]Input Password------------------------------PASS
+++++++++++Description:Password is admin
+
+PASS: 12, FAIL: 1
+ERROR: 0, WARNING: 0, EXCEPTION: 0
+PASS: 3, FAIL: 1
+ERROR: 0, WARNING: 0, EXCEPTION: 0
+
+&quot;&quot;&quot;</span>
+
+</code></pre></div><h3 id="方式二-使用python-with上下文进行设计"><a href="#方式二-使用python-with上下文进行设计" class="header-anchor">#</a> 方式二：使用python with上下文进行设计</h3> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> json
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> logging
+
+<span class="token keyword">from</span> enum <span class="token keyword">import</span> Enum
+
+
+TIME_FORMAT <span class="token operator">=</span> <span class="token string">&quot;%Y-%m-%d %H:%M:%S&quot;</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">ResultType</span><span class="token punctuation">(</span>Enum<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    PASS <span class="token operator">=</span> <span class="token string">&quot;Passed&quot;</span>
+    FAIL <span class="token operator">=</span> <span class="token string">&quot;Failed&quot;</span>
+    ERROR <span class="token operator">=</span> <span class="token string">&quot;Errored&quot;</span>
+    BLOCK <span class="token operator">=</span> <span class="token string">&quot;Blocked&quot;</span>
+    SKIP <span class="token operator">=</span> <span class="token string">&quot;Skipped&quot;</span>
+    INFO <span class="token operator">=</span> <span class="token string">&quot;Information&quot;</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">StepEnd</span><span class="token punctuation">(</span>Exception<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> result<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>result <span class="token operator">=</span> result
+
+
+<span class="token keyword">class</span> <span class="token class-name">NodeEntry</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    代表一般节点，比如测试列表
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__enter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self
+
+    <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> exc_type<span class="token punctuation">,</span> exc_val<span class="token punctuation">,</span> exc_tb<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> exc_tb<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>message <span class="token operator">+=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>exc_tb<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> headline<span class="token punctuation">,</span> parent<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> update_action<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>headline <span class="token operator">=</span> headline
+        self<span class="token punctuation">.</span>message <span class="token operator">=</span> message
+        self<span class="token punctuation">.</span>parent <span class="token operator">=</span> parent
+        self<span class="token punctuation">.</span>children <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>timestamp <span class="token operator">=</span> time<span class="token punctuation">.</span>localtime<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>update_action <span class="token operator">=</span> update_action
+
+    <span class="token keyword">def</span> <span class="token function">start_node</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> headline<span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ret <span class="token operator">=</span> NodeEntry<span class="token punctuation">(</span>headline<span class="token punctuation">,</span> parent<span class="token operator">=</span>self<span class="token punctuation">,</span> message<span class="token operator">=</span>message<span class="token punctuation">,</span> update_action<span class="token operator">=</span>self<span class="token punctuation">.</span>update_action<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>children<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ret<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> ret
+
+    <span class="token keyword">def</span> <span class="token function">start_case</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> headline<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ret <span class="token operator">=</span> CaseEntry<span class="token punctuation">(</span>headline<span class="token punctuation">,</span> parent<span class="token operator">=</span>self<span class="token punctuation">)</span>
+        ret<span class="token punctuation">.</span>update_action <span class="token operator">=</span> self<span class="token punctuation">.</span>update_action
+        self<span class="token punctuation">.</span>children<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ret<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> ret
+
+    <span class="token keyword">def</span> <span class="token function">get_json</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        json_obj <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        json_obj<span class="token punctuation">[</span><span class="token string">&quot;headline&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>headline
+        json_obj<span class="token punctuation">[</span><span class="token string">&quot;message&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>message
+        json_obj<span class="token punctuation">[</span><span class="token string">'timestamp'</span><span class="token punctuation">]</span> <span class="token operator">=</span> time<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span>TIME_FORMAT<span class="token punctuation">,</span> self<span class="token punctuation">.</span>timestamp<span class="token punctuation">)</span>
+        json_obj<span class="token punctuation">[</span><span class="token string">&quot;children&quot;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> child <span class="token keyword">in</span> self<span class="token punctuation">.</span>children<span class="token punctuation">:</span>
+            json_obj<span class="token punctuation">[</span><span class="token string">&quot;children&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>child<span class="token punctuation">.</span>get_json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> json_obj
+
+    <span class="token keyword">def</span> <span class="token function">get_friend_print</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> indent<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ret <span class="token operator">=</span> <span class="token string">&quot;&quot;</span> <span class="token operator">*</span> indent
+        ret <span class="token operator">+=</span> self<span class="token punctuation">.</span>__str__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> child <span class="token keyword">in</span> self<span class="token punctuation">.</span>children<span class="token punctuation">:</span>
+            ret <span class="token operator">+=</span> child<span class="token punctuation">.</span>get_friend_print<span class="token punctuation">(</span>indent<span class="token operator">+</span><span class="token number">4</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> ret
+
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>headline <span class="token operator">+</span> <span class="token string">&quot;[&quot;</span> <span class="token operator">+</span> time<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span>TIME_FORMAT<span class="token punctuation">,</span> self<span class="token punctuation">.</span>timestamp<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot;]&quot;</span> <span class="token operator">+</span> os<span class="token punctuation">.</span>linesep
+
+
+<span class="token keyword">class</span> <span class="token class-name">CaseEntry</span><span class="token punctuation">(</span>NodeEntry<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    代表测试用例的节点
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__enter__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self
+
+    <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> exc_type<span class="token punctuation">,</span> exc_val<span class="token punctuation">,</span> exc_tb<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> exc_type <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_result<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>result <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>result <span class="token operator">=</span> ResultType<span class="token punctuation">.</span>PASS
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action<span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span>
+        <span class="token keyword">if</span> exc_type <span class="token keyword">is</span> StepEnd<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>result <span class="token operator">=</span> exc_val<span class="token punctuation">.</span>result
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>result <span class="token operator">!=</span> ResultType<span class="token punctuation">.</span>PASS<span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>message <span class="token operator">+=</span> exc_tb
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>result <span class="token operator">=</span> ResultType<span class="token punctuation">.</span>ERROR
+            self<span class="token punctuation">.</span>message <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>exc_tb<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>headline <span class="token operator">+</span> <span class="token string">&quot;[&quot;</span> <span class="token operator">+</span> time<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span>TIME_FORMAT<span class="token punctuation">,</span> self<span class="token punctuation">.</span>timestamp<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot;]&quot;</span>
+
+    <span class="token keyword">def</span> <span class="token function">_get_result_headline</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> width<span class="token punctuation">,</span> indent<span class="token punctuation">,</span> headline_max<span class="token operator">=</span><span class="token number">59</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>update_result<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        head_str <span class="token operator">=</span> self<span class="token punctuation">.</span>__str__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>head_str<span class="token punctuation">)</span> <span class="token operator">&gt;</span> headline_max<span class="token punctuation">:</span>
+            head_str <span class="token operator">=</span> head_str<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span> headline_max<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">&quot;...&quot;</span>
+        space_count <span class="token operator">=</span> width <span class="token operator">-</span> indent <span class="token operator">-</span> <span class="token builtin">len</span><span class="token punctuation">(</span>head_str<span class="token punctuation">)</span>
+        ret <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">&quot; &quot;</span> <span class="token operator">*</span> indent<span class="token punctuation">)</span> <span class="token operator">+</span> head_str <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token string">&quot;-&quot;</span> <span class="token operator">*</span> space_count<span class="token punctuation">)</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>value<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> ret
+
+    <span class="token keyword">def</span> <span class="token function">start</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> headline<span class="token punctuation">,</span> message<span class="token punctuation">,</span> prefix<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        entry <span class="token operator">=</span> CaseStepEntry<span class="token punctuation">(</span>headline<span class="token operator">=</span>headline<span class="token punctuation">,</span> parent<span class="token operator">=</span>self<span class="token punctuation">,</span> message<span class="token operator">=</span>message<span class="token punctuation">)</span>
+        entry<span class="token punctuation">.</span>update_action <span class="token operator">=</span> self<span class="token punctuation">.</span>update_action
+        <span class="token keyword">if</span> prefix <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            entry<span class="token punctuation">.</span>step_prefix <span class="token operator">=</span> prefix
+        self<span class="token punctuation">.</span>children<span class="token punctuation">.</span>append<span class="token punctuation">(</span>entry<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> entry
+
+    <span class="token keyword">def</span> <span class="token function">passed</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>message <span class="token operator">+=</span> message <span class="token operator">+</span> os<span class="token punctuation">.</span>linesep
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">raise</span> StepEnd<span class="token punctuation">(</span>ResultType<span class="token punctuation">.</span>PASS<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">failed</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>message <span class="token operator">+=</span> message <span class="token operator">+</span> os<span class="token punctuation">.</span>linesep
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">raise</span> StepEnd<span class="token punctuation">(</span>ResultType<span class="token punctuation">.</span>FAIL<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">blocked</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>message <span class="token operator">+=</span> message <span class="token operator">+</span> os<span class="token punctuation">.</span>linesep
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">raise</span> StepEnd<span class="token punctuation">(</span>ResultType<span class="token punctuation">.</span>BLOCK<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">skipped</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>message <span class="token operator">+=</span> message <span class="token operator">+</span> os<span class="token punctuation">.</span>linesep
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">raise</span> StepEnd<span class="token punctuation">(</span>ResultType<span class="token punctuation">.</span>SKIP<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">errored</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>message <span class="token operator">+=</span> message <span class="token operator">+</span> os<span class="token punctuation">.</span>linesep
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">raise</span> StepEnd<span class="token punctuation">(</span>ResultType<span class="token punctuation">.</span>ERROR<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">info</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>message <span class="token operator">+=</span> <span class="token string">&quot;INFO: &quot;</span> <span class="token operator">+</span> message <span class="token operator">+</span> os<span class="token punctuation">.</span>linesep
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> headline<span class="token punctuation">,</span> parent<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>headline<span class="token punctuation">,</span> parent<span class="token punctuation">,</span> message<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>result <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_json</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>update_result<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        json_obj <span class="token operator">=</span> <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>get_json<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        json_obj<span class="token punctuation">[</span><span class="token string">'result'</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>value
+        <span class="token keyword">return</span> json_obj
+
+    <span class="token keyword">def</span> <span class="token function">get_friend_print</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> indent<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ret <span class="token operator">=</span> self<span class="token punctuation">.</span>_get_result_headline<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> indent<span class="token punctuation">,</span> <span class="token punctuation">)</span> <span class="token operator">+</span> os<span class="token punctuation">.</span>linesep
+        <span class="token keyword">for</span> child <span class="token keyword">in</span> self<span class="token punctuation">.</span>children<span class="token punctuation">:</span>
+            ret <span class="token operator">+=</span> child<span class="token punctuation">.</span>get_friend_print<span class="token punctuation">(</span>indent <span class="token operator">+</span> <span class="token number">4</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> ret
+
+    <span class="token keyword">def</span> <span class="token function">update_result</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token builtin">any</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+        has_error <span class="token operator">=</span> <span class="token boolean">False</span>
+        has_failed <span class="token operator">=</span> <span class="token boolean">False</span>
+        has_block <span class="token operator">=</span> <span class="token boolean">False</span>
+        has_pass <span class="token operator">=</span> <span class="token boolean">False</span>
+
+        <span class="token keyword">for</span> child <span class="token keyword">in</span> self<span class="token punctuation">.</span>children<span class="token punctuation">:</span>
+            child<span class="token punctuation">.</span>update_result<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> child<span class="token punctuation">.</span>result <span class="token operator">==</span> ResultType<span class="token punctuation">.</span>ERROR<span class="token punctuation">:</span>
+                has_error <span class="token operator">=</span> <span class="token boolean">True</span>
+            <span class="token keyword">elif</span> child<span class="token punctuation">.</span>result <span class="token operator">==</span> ResultType<span class="token punctuation">.</span>FAIL<span class="token punctuation">:</span>
+                has_failed <span class="token operator">=</span> <span class="token boolean">True</span>
+            <span class="token keyword">elif</span> child<span class="token punctuation">.</span>result <span class="token operator">==</span> ResultType<span class="token punctuation">.</span>BLOCK<span class="token punctuation">:</span>
+                has_block <span class="token operator">=</span> <span class="token boolean">True</span>
+            <span class="token keyword">elif</span> child<span class="token punctuation">.</span>result <span class="token operator">==</span> ResultType<span class="token punctuation">.</span>PASS<span class="token punctuation">:</span>
+                has_pass <span class="token operator">=</span> <span class="token boolean">True</span>
+
+        <span class="token keyword">if</span> has_block<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>result <span class="token operator">=</span> ResultType<span class="token punctuation">.</span>BLOCK
+        <span class="token keyword">elif</span> has_error<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>result <span class="token operator">=</span> ResultType<span class="token punctuation">.</span>ERROR
+        <span class="token keyword">elif</span> has_failed<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>result <span class="token operator">=</span> ResultType<span class="token punctuation">.</span>FAIL
+        <span class="token keyword">elif</span> has_pass<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>result <span class="token operator">=</span> ResultType<span class="token punctuation">.</span>PASS
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>result <span class="token operator">=</span> ResultType<span class="token punctuation">.</span>INFO
+
+
+<span class="token keyword">class</span> <span class="token class-name">CaseStepEntry</span><span class="token punctuation">(</span>CaseEntry<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    测试步骤节点
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> headline<span class="token punctuation">,</span> parent<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> step_prefix<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> step_no<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> _continue<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>headline<span class="token punctuation">,</span> parent<span class="token punctuation">,</span> message<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>result <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>step_prefix <span class="token operator">=</span> step_prefix
+        self<span class="token punctuation">.</span>step_no <span class="token operator">=</span> step_no
+        self<span class="token punctuation">.</span>_continue <span class="token operator">=</span> _continue
+
+    <span class="token keyword">def</span> <span class="token function">__exit__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> exc_type<span class="token punctuation">,</span> exc_val<span class="token punctuation">,</span> exc_tb<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> exc_type <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_result<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>result <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>result <span class="token operator">=</span> ResultType<span class="token punctuation">.</span>PASS
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action<span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">if</span> exc_type <span class="token keyword">is</span> StepEnd<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>result <span class="token operator">=</span> exc_val<span class="token punctuation">.</span>result
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>result <span class="token operator">==</span> ResultType<span class="token punctuation">.</span>PASS<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">True</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> self<span class="token punctuation">.</span>_continue
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>result <span class="token operator">=</span> ResultType<span class="token punctuation">.</span>ERROR
+            self<span class="token punctuation">.</span>message <span class="token operator">+=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>exc_tb<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>_continue
+
+    <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">==</span> <span class="token string">&quot;COLLECT_RESOURCE&quot;</span> <span class="token keyword">or</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">==</span> <span class="token string">&quot;SETUP&quot;</span> <span class="token keyword">or</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">==</span> <span class="token string">&quot;TEST&quot;</span> <span class="token keyword">or</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">==</span> <span class="token string">&quot;CLEANUP&quot;</span><span class="token punctuation">:</span>
+            headline <span class="token operator">=</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">+</span> <span class="token string">&quot;[&quot;</span> <span class="token operator">+</span> time<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span>TIME_FORMAT<span class="token punctuation">,</span> self<span class="token punctuation">.</span>timestamp<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot;]&quot;</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            headline <span class="token operator">=</span> <span class="token string">&quot;STEP-&quot;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>step_no<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot;: &quot;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>headline <span class="token operator">+</span> \
+                       <span class="token string">&quot;[&quot;</span> <span class="token operator">+</span> time<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span>TIME_FORMAT<span class="token punctuation">,</span> self<span class="token punctuation">.</span>timestamp<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot;]&quot;</span>
+        <span class="token keyword">return</span> headline
+
+    <span class="token keyword">def</span> <span class="token function">start</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> headline<span class="token punctuation">,</span> message<span class="token punctuation">,</span> _continue<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> prefix<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        entry <span class="token operator">=</span> CaseStepEntry<span class="token punctuation">(</span>headline<span class="token operator">=</span>headline<span class="token punctuation">,</span> parent<span class="token operator">=</span>self<span class="token punctuation">,</span> message<span class="token operator">=</span>message<span class="token punctuation">,</span> _continue<span class="token operator">=</span>_continue<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> prefix <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            entry<span class="token punctuation">.</span>step_prefix <span class="token operator">=</span> prefix
+        <span class="token keyword">elif</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">==</span> <span class="token string">&quot;SETUP&quot;</span> <span class="token keyword">or</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">==</span> <span class="token string">&quot;TEST&quot;</span> <span class="token keyword">or</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">==</span> <span class="token string">&quot;CLEANUP&quot;</span> <span class="token keyword">or</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">==</span> <span class="token string">&quot;COLLECT_RESOURCE&quot;</span><span class="token punctuation">:</span>
+            entry<span class="token punctuation">.</span>step_prefix <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            entry<span class="token punctuation">.</span>step_prefix <span class="token operator">=</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>step_no<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&quot;-&quot;</span>
+
+        <span class="token keyword">if</span> <span class="token builtin">any</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            entry<span class="token punctuation">.</span>step_no <span class="token operator">=</span> self<span class="token punctuation">.</span>children<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>step_no <span class="token operator">+</span> <span class="token number">1</span>
+        entry<span class="token punctuation">.</span>update_action <span class="token operator">=</span> self<span class="token punctuation">.</span>update_action
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>update_action <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>update_action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>children<span class="token punctuation">.</span>append<span class="token punctuation">(</span>entry<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> entry
+
+    <span class="token keyword">def</span> <span class="token function">get_json</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        json_obj <span class="token operator">=</span> <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>get_json<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">==</span> <span class="token string">&quot;SETUP&quot;</span> <span class="token keyword">or</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">==</span> <span class="token string">&quot;TEST&quot;</span> <span class="token keyword">or</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">==</span> <span class="token string">&quot;CLEANUP&quot;</span><span class="token punctuation">:</span>
+            json_obj<span class="token punctuation">[</span><span class="token string">'headline'</span><span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>step_prefix
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            json_obj<span class="token punctuation">[</span><span class="token string">'headline'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;STEP-&quot;</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>step_prefix <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>step_no<span class="token punctuation">)</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>headline
+        <span class="token keyword">return</span> json_obj
+
+
+<span class="token keyword">class</span> <span class="token class-name">StepReporter</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    测试结果，用单例实现
+    &quot;&quot;&quot;</span>
+    instance <span class="token operator">=</span> <span class="token boolean">None</span>
+    path <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+
+    json_path <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+    txt_path <span class="token operator">=</span> <span class="token string">&quot;&quot;</span>
+
+    <span class="token decorator annotation punctuation">@classmethod</span>
+    <span class="token keyword">def</span> <span class="token function">get_instance</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> logger<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># cls.path = (&quot;%s/testresult/%s/%s/%s&quot; % (FwConfig.result_path,</span>
+        <span class="token comment">#                                                        RuntimeData.uuid,</span>
+        <span class="token comment">#                                                        FwConfig.branch,</span>
+        <span class="token comment">#                                                        FwConfig.app_num))</span>
+        cls<span class="token punctuation">.</span>path <span class="token operator">=</span> <span class="token string">&quot;/home/emc/&quot;</span>
+        cls<span class="token punctuation">.</span>json_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>cls<span class="token punctuation">.</span>path<span class="token punctuation">,</span> <span class="token string">&quot;step_result.json&quot;</span><span class="token punctuation">)</span>
+        cls<span class="token punctuation">.</span>txt_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>cls<span class="token punctuation">.</span>path<span class="token punctuation">,</span> <span class="token string">&quot;step_result.txt&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> cls<span class="token punctuation">.</span>instance <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> StepReporter<span class="token punctuation">(</span>logger<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> cls<span class="token punctuation">.</span>instance
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> logger<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>logger <span class="token operator">=</span> logger
+        self<span class="token punctuation">.</span>case_node <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>root <span class="token operator">=</span> NodeEntry<span class="token punctuation">(</span>headline<span class="token operator">=</span><span class="token string">&quot;Test Result&quot;</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>recent_node <span class="token operator">=</span> self<span class="token punctuation">.</span>root
+
+    <span class="token keyword">def</span> <span class="token function">update_file</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>json_path<span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> jsonfile<span class="token punctuation">:</span>
+            json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">.</span>get_json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> jsonfile<span class="token punctuation">,</span> indent<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>txt_path<span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> txtfile<span class="token punctuation">:</span>
+            txtfile<span class="token punctuation">.</span>write<span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">.</span>get_friend_print<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">start_node</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> headline<span class="token punctuation">,</span> message<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ret <span class="token operator">=</span> NodeEntry<span class="token punctuation">(</span>headline<span class="token punctuation">,</span> parent<span class="token operator">=</span>self<span class="token punctuation">.</span>root<span class="token punctuation">,</span> message<span class="token operator">=</span>message<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>root<span class="token punctuation">.</span>children<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ret<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> ret
+
+    <span class="token keyword">def</span> <span class="token function">print</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>root<span class="token punctuation">.</span>get_friend_print<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&quot;__main__&quot;</span><span class="token punctuation">:</span>
+    logger <span class="token operator">=</span> logging<span class="token punctuation">.</span>getLogger<span class="token punctuation">(</span><span class="token string">&quot;单元测试&quot;</span><span class="token punctuation">)</span>
+    rr <span class="token operator">=</span> StepReporter<span class="token punctuation">.</span>get_instance<span class="token punctuation">(</span>logger<span class="token punctuation">)</span>
+    <span class="token keyword">with</span> rr<span class="token punctuation">.</span>root<span class="token punctuation">.</span>start_node<span class="token punctuation">(</span><span class="token string">&quot;测试列表&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> testlist<span class="token punctuation">:</span>
+        <span class="token keyword">with</span> testlist<span class="token punctuation">.</span>start_case<span class="token punctuation">(</span><span class="token string">&quot;test_feature_001&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token keyword">case</span><span class="token punctuation">:</span>
+            <span class="token keyword">with</span> <span class="token keyword">case</span><span class="token punctuation">.</span>start<span class="token punctuation">(</span>headline<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> prefix<span class="token operator">=</span><span class="token string">&quot;SETUP&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> step<span class="token punctuation">:</span>
+                <span class="token keyword">with</span> step<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token string">&quot;设置浏览器&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;启动浏览器，选择chrome&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> substep<span class="token punctuation">:</span>
+                    substep<span class="token punctuation">.</span>passed<span class="token punctuation">(</span><span class="token string">&quot;成功设置浏览器&quot;</span><span class="token punctuation">)</span>
+                <span class="token keyword">with</span> step<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token string">&quot;登录系统&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;输入用户名密码&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> substep<span class="token punctuation">:</span>
+                    substep<span class="token punctuation">.</span>passed<span class="token punctuation">(</span><span class="token string">&quot;登录成功&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">with</span> <span class="token keyword">case</span><span class="token punctuation">.</span>start<span class="token punctuation">(</span>headline<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> prefix<span class="token operator">=</span><span class="token string">&quot;TEST&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> step<span class="token punctuation">:</span>
+                <span class="token keyword">with</span> step<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token string">&quot;测试步骤1&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;第一个测试步骤&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> substep<span class="token punctuation">:</span>
+                    <span class="token keyword">with</span> substep<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token string">&quot;一个pass的子步骤&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> ssubstep<span class="token punctuation">:</span>
+                        <span class="token keyword">pass</span>
+                <span class="token keyword">with</span> step<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token string">&quot;一个异常的步骤&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> _continue<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token keyword">as</span> substep<span class="token punctuation">:</span>
+                    <span class="token number">1</span><span class="token operator">/</span><span class="token number">0</span> <span class="token comment"># 造成异常</span>
+                <span class="token keyword">with</span> step<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token string">&quot;继续测试步骤&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> substep<span class="token punctuation">:</span>
+                    substep<span class="token punctuation">.</span>passed<span class="token punctuation">(</span><span class="token string">&quot;成功&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">with</span> <span class="token keyword">case</span><span class="token punctuation">.</span>start<span class="token punctuation">(</span>headline<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> message<span class="token operator">=</span><span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> prefix<span class="token operator">=</span><span class="token string">&quot;CLEANUP&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> step<span class="token punctuation">:</span>
+                step<span class="token punctuation">.</span>passed<span class="token punctuation">(</span><span class="token string">&quot;执行清理&quot;</span><span class="token punctuation">)</span>
+                
+    <span class="token keyword">print</span><span class="token punctuation">(</span>rr<span class="token punctuation">.</span>root<span class="token punctuation">.</span>get_friend_print<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token triple-quoted-string string">&quot;&quot;&quot;
+# 输出
+Test Result[2023-02-05 09:41:09]
+测试列表[2023-02-05 09:41:09]
+        test_feature_001[2023-02-05 09:41:09]-------------------------------------------------------ERRORED
+            SETUP[2023-02-05 09:41:09]--------------------------------------------------------------PASSED
+                STEP-1: 设置浏览器[2023-02-05 09:41:09]--------------------------------------------------PASSED
+                STEP-2: 登录系统[2023-02-05 09:41:09]---------------------------------------------------PASSED
+            TEST[2023-02-05 09:41:09]---------------------------------------------------------------ERRORED
+                STEP-1: 测试步骤1[2023-02-05 09:41:09]--------------------------------------------------PASSED
+                    STEP-1-1: 一个pass的子步骤[2023-02-05 09:41:09]---------------------------------------PASSED
+                STEP-2: 一个异常的步骤[2023-02-05 09:41:09]------------------------------------------------ERRORED
+                STEP-3: 继续测试步骤[2023-02-05 09:41:09]-------------------------------------------------PASSED
+            CLEANUP[2023-02-05 09:41:09]------------------------------------------------------------PASSED
+&quot;&quot;&quot;</span>
+</code></pre></div><h2 id="测试结果的统计"><a href="#测试结果的统计" class="header-anchor">#</a> 测试结果的统计</h2></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/test/miniplatform/ConfigModule.html" class="prev">
+          测试配置管理模块
+        </a></span> <span class="next"><a href="/test/miniplatform/LogModule.html">
+          测试日志管理模块
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/test/miniplatform/ReportModule.html#测试报告原理" class="sidebar-link reco-side-测试报告原理" data-v-b57cc07c>测试报告原理</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/ReportModule.html#方式一-利用树-数据结构-来设计树形测试结果输出" class="sidebar-link reco-side-方式一-利用树-数据结构-来设计树形测试结果输出" data-v-b57cc07c>方式一：利用树（数据结构）来设计树形测试结果输出</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/ReportModule.html#方式二-使用python-with上下文进行设计" class="sidebar-link reco-side-方式二-使用python-with上下文进行设计" data-v-b57cc07c>方式二：使用python with上下文进行设计</a></li><li class="level-2" data-v-b57cc07c><a href="/test/miniplatform/ReportModule.html#测试结果的统计" class="sidebar-link reco-side-测试结果的统计" data-v-b57cc07c>测试结果的统计</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/test/assets/js/app.f95afc0e.js" defer></script><script src="/test/assets/js/3.1de58c57.js" defer></script><script src="/test/assets/js/1.912b4b55.js" defer></script><script src="/test/assets/js/24.fd8e7dcc.js" defer></script>
+  </body>
+</html>

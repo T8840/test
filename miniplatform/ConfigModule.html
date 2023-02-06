@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>测试配置管理模块 | T8840 Blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    
+    <meta name="description" content="T8840的博客">
+    
+    <link rel="preload" href="/test/assets/css/0.styles.c0334387.css" as="style"><link rel="preload" href="/test/assets/js/app.f95afc0e.js" as="script"><link rel="preload" href="/test/assets/js/3.1de58c57.js" as="script"><link rel="preload" href="/test/assets/js/1.912b4b55.js" as="script"><link rel="preload" href="/test/assets/js/21.9b2c8478.js" as="script"><link rel="prefetch" href="/test/assets/js/10.5c2dccb8.js"><link rel="prefetch" href="/test/assets/js/11.8ccdf9e0.js"><link rel="prefetch" href="/test/assets/js/12.2cafa193.js"><link rel="prefetch" href="/test/assets/js/13.f84fbed8.js"><link rel="prefetch" href="/test/assets/js/14.630fbf66.js"><link rel="prefetch" href="/test/assets/js/15.bb979110.js"><link rel="prefetch" href="/test/assets/js/16.95d181db.js"><link rel="prefetch" href="/test/assets/js/17.e4952898.js"><link rel="prefetch" href="/test/assets/js/18.d349f9ac.js"><link rel="prefetch" href="/test/assets/js/19.5b36ace8.js"><link rel="prefetch" href="/test/assets/js/20.e87a0845.js"><link rel="prefetch" href="/test/assets/js/22.e7376488.js"><link rel="prefetch" href="/test/assets/js/23.58ebbf70.js"><link rel="prefetch" href="/test/assets/js/24.fd8e7dcc.js"><link rel="prefetch" href="/test/assets/js/25.bd6d1825.js"><link rel="prefetch" href="/test/assets/js/26.f7db35ea.js"><link rel="prefetch" href="/test/assets/js/27.e9020c7f.js"><link rel="prefetch" href="/test/assets/js/28.9bfdda65.js"><link rel="prefetch" href="/test/assets/js/29.f8f5b07a.js"><link rel="prefetch" href="/test/assets/js/30.4394a919.js"><link rel="prefetch" href="/test/assets/js/31.2bddd865.js"><link rel="prefetch" href="/test/assets/js/32.ad0973d0.js"><link rel="prefetch" href="/test/assets/js/33.224c072e.js"><link rel="prefetch" href="/test/assets/js/34.776b960a.js"><link rel="prefetch" href="/test/assets/js/35.b369adb9.js"><link rel="prefetch" href="/test/assets/js/36.8a409189.js"><link rel="prefetch" href="/test/assets/js/37.e8203659.js"><link rel="prefetch" href="/test/assets/js/38.ec7ebd69.js"><link rel="prefetch" href="/test/assets/js/39.029a257e.js"><link rel="prefetch" href="/test/assets/js/4.673bf15a.js"><link rel="prefetch" href="/test/assets/js/40.96456ab7.js"><link rel="prefetch" href="/test/assets/js/41.ea06ca1a.js"><link rel="prefetch" href="/test/assets/js/42.0f70b399.js"><link rel="prefetch" href="/test/assets/js/43.60e8b367.js"><link rel="prefetch" href="/test/assets/js/44.8d0871a7.js"><link rel="prefetch" href="/test/assets/js/45.02b5d702.js"><link rel="prefetch" href="/test/assets/js/46.e3baf61a.js"><link rel="prefetch" href="/test/assets/js/47.8e9a1df4.js"><link rel="prefetch" href="/test/assets/js/48.cffdb1f4.js"><link rel="prefetch" href="/test/assets/js/49.20f1ccf3.js"><link rel="prefetch" href="/test/assets/js/5.8b013b29.js"><link rel="prefetch" href="/test/assets/js/50.619e502f.js"><link rel="prefetch" href="/test/assets/js/6.aad79307.js"><link rel="prefetch" href="/test/assets/js/7.8e49b54c.js"><link rel="prefetch" href="/test/assets/js/8.1296ca76.js"><link rel="prefetch" href="/test/assets/js/9.f2b953d4.js">
+    <link rel="stylesheet" href="/test/assets/css/0.styles.c0334387.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>T8840 Blog</h3> <p class="description" data-v-59e6cb88>T8840的博客</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/test/" class="home-link router-link-active"><!----> <span class="site-name">T8840 Blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/test/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><!----> <!----> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>37</h3> <h6 data-v-1fad0c41>文章</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>0</h3> <h6 data-v-1fad0c41>标签</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/test/" class="nav-link"><i class="undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="undefined"></i>
+      T8840 博客
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/t8840" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="undefined"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/test/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/concept/Test" class="sidebar-heading clickable"><span>概念</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/concept/Test.html" class="sidebar-link">软件测试</a></li><li><a href="/test/concept/Test.html" class="sidebar-link">质量标准</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/ut/Test" class="sidebar-heading clickable"><span>白盒测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/ut/Test.html" class="sidebar-link">白盒测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/api/Test" class="sidebar-heading clickable"><span>API测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/api/Test.html" class="sidebar-link">API测试</a></li><li><a href="/test/api/Model.html" class="sidebar-link">测试模型</a></li><li><a href="/test/api/Tools.html" class="sidebar-link">常见工具</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/ui/Test" class="sidebar-heading clickable"><span>UI测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/ui/Test.html" class="sidebar-link">UI测试</a></li><li><a href="/test/ui/Chrome.html" class="sidebar-link">浏览器UI测试</a></li><li><a href="/test/ui/Device.html" class="sidebar-link">移动端UI测试</a></li><li><a href="/test/ui/GUI.html" class="sidebar-link">桌面GUI测试</a></li><li><a href="/test/ui/Tools.html" class="sidebar-link">常见工具</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/app/Test" class="sidebar-heading clickable"><span>移动端测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/app/Test.html" class="sidebar-link">移动端测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/performance/Test" class="sidebar-heading clickable"><span>性能测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/performance/Test.html" class="sidebar-link">性能测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/stability/Test" class="sidebar-heading clickable"><span>稳定性测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/stability/Test.html" class="sidebar-link">稳定性测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/precise/Test" class="sidebar-heading clickable"><span>精准测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/precise/Test.html" class="sidebar-link">精准测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/safty/Test" class="sidebar-heading clickable"><span>安全测试</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/safty/Test.html" class="sidebar-link">安全测试</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/work/Summary" class="sidebar-heading clickable"><span>办公工具</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/work/Summary.html" class="sidebar-link">汇总</a></li><li><a href="/test/work/Case.html" class="sidebar-link">测试用例</a></li><li><a href="/test/work/CaseTools.html" class="sidebar-link">测试用例工具</a></li><li><a href="/test/work/Report.html" class="sidebar-link">测试报告</a></li><li><a href="/test/work/ReportTools.html" class="sidebar-link">测试报告工具</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/test/miniplatform/Composition" class="sidebar-heading clickable open"><span>微型测试平台开发</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/test/miniplatform/Composition.html" class="sidebar-link">测试平台基本组成</a></li><li><a href="/test/miniplatform/ResourceModule.html" class="sidebar-link">测试资源管理模块</a></li><li><a href="/test/miniplatform/ConfigModule.html" aria-current="page" class="active sidebar-link">测试配置管理模块</a></li><li><a href="/test/miniplatform/ReportModule.html" class="sidebar-link">测试报告管理模块</a></li><li><a href="/test/miniplatform/LogModule.html" class="sidebar-link">测试日志管理模块</a></li><li><a href="/test/miniplatform/CaseModule.html" class="sidebar-link">测试用例管理模块</a></li><li><a href="/test/miniplatform/EngineModule.html" class="sidebar-link">测试引擎模块</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/test/tools/Summary" class="sidebar-heading clickable"><span>工具汇总</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>测试配置管理模块</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><!---->
+          
+        <!---->
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">测试配置管理模块</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>T8840</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2023/1/15</span></i> <!----> <!----></div></div> <div class="theme-reco-content content__default"><h2 id="测试配置基本分类"><a href="#测试配置基本分类" class="header-anchor">#</a> 测试配置基本分类</h2> <ul><li>静态配置<br>
+一些配置选项参数化，保存在一个外部资源(文本文件或数据库等)中。</li> <li>动态配置<br>
+配置文件并不是固定不变，会随着业务变化而增加或减少。这些配置并不是应用于整个平台或者某次执行中，而可能作用于某个测试平台的对象，比如测试列表和测试用例。</li> <li>带逻辑功能的配置<br>
+使用场景：
+<ol><li>设备版本检测<br>
+检测某些测试设备的版本是否满足测试需要，如果不满足可以对其进行一些操作，比如从测试资源池中移除该设备或在开发过程中有些不稳定版本在测试时不想使用，但又不想修改测试资源或测试用例，则可以添加该模块来对这些版本的资源进行过滤。</li> <li>控制口错误监测<br>
+用于检测控制口的输出是否包含某些特定的错误关键词信息，以此来判断执行过程中是否有测试用例不能抓到的错误存在。</li> <li>服务器资源监测</li> <li>测试设备重启<br>
+用于在测试用例结束后对设备进行重启操作。可能会因为某些缺陷导致配置无法清理到初始状态，通过这个模块的加载就可以在不修改测试用例的情况下对设备进行重新启动操作。<br>
+等</li></ol></li></ul> <h2 id="可扩展的静态与动态配置"><a href="#可扩展的静态与动态配置" class="header-anchor">#</a> 可扩展的静态与动态配置</h2> <p>参考Django静态配置设计</p> <h3 id="静态配置的设计原理"><a href="#静态配置的设计原理" class="header-anchor">#</a> 静态配置的设计原理</h3> <p>StaticSettingManager作为静态配置的管理类<br>
+使用步骤：</p> <ol><li>使用类装饰器@static_setting.setting(&quot;TestStaticSetting&quot;)针对自定义的配置类，如class TestStaticSettingClass(SettingBase)</li> <li>自定义的配置类可配置配置文件名与指定路径，不然会使用默认路径</li> <li>使用自定义配置类时要用自定义配置类继承的静态方法.load()加载</li></ol> <p>另外，引用被类装饰器@static_setting.setting的模块，下面这段代码就会自动在当前目录 &quot;settingfile&quot;中没有会自动创建对应的配置文件</p> <div class="language-python extra-class"><pre class="language-python"><code>static_setting<span class="token punctuation">.</span>setting_path <span class="token operator">=</span> <span class="token string">&quot;settingfile&quot;</span>
+static_setting<span class="token punctuation">.</span>load_all<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="灵活的动态配置"><a href="#灵活的动态配置" class="header-anchor">#</a> 灵活的动态配置</h3> <p>使用的是类中类与类装饰器。<br>
+每个类中类都会保存为一个单独的以类命名的配置文件。<br>
+注意：由于配置是动态生成的，所以生成动态配置文件中的配置一直会与类中类中的设置保持一致</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">import</span> os
+<span class="token keyword">import</span> importlib
+<span class="token keyword">import</span> json
+<span class="token keyword">from</span> abc <span class="token keyword">import</span> ABCMeta
+<span class="token keyword">from</span> functools <span class="token keyword">import</span> wraps<span class="token punctuation">,</span> update_wrapper
+
+<span class="token comment"># 使用环境变量作为默认路径</span>
+<span class="token comment"># _DEFAULT_PATH = os.path.join(os.environ['HOME'], &quot;test_config&quot;)</span>
+<span class="token comment"># 使用相对路径作为默认路径</span>
+_DEFAULT_PATH <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">SettingError</span><span class="token punctuation">(</span>Exception<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">SettingBase</span><span class="token punctuation">(</span>metaclass<span class="token operator">=</span>ABCMeta<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    file_name <span class="token operator">=</span> <span class="token boolean">None</span>
+    setting_path <span class="token operator">=</span> _DEFAULT_PATH
+
+    <span class="token decorator annotation punctuation">@classmethod</span>
+    <span class="token keyword">def</span> <span class="token function">_get_full_path</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        filename <span class="token operator">=</span> cls<span class="token punctuation">.</span>file_name <span class="token keyword">if</span> cls<span class="token punctuation">.</span>file_name <span class="token keyword">else</span> cls<span class="token punctuation">.</span>__name__ <span class="token operator">+</span> <span class="token string">&quot;.setting&quot;</span>
+        <span class="token keyword">return</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>cls<span class="token punctuation">.</span>setting_path<span class="token punctuation">,</span> filename<span class="token punctuation">)</span>
+
+    <span class="token decorator annotation punctuation">@classmethod</span>
+    <span class="token keyword">def</span> <span class="token function">save</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>cls<span class="token punctuation">.</span>setting_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>cls<span class="token punctuation">.</span>setting_path<span class="token punctuation">)</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>cls<span class="token punctuation">.</span>_get_full_path<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+            obj <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> cls<span class="token punctuation">.</span>__dict__<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> key<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">&quot;_&quot;</span><span class="token punctuation">)</span> <span class="token keyword">or</span> key <span class="token operator">==</span> <span class="token string">&quot;setting_path&quot;</span>\
+                        <span class="token keyword">or</span> key <span class="token operator">==</span> <span class="token string">&quot;file_name&quot;</span><span class="token punctuation">:</span>
+                    <span class="token keyword">continue</span>
+                obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value
+            json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">,</span> indent<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+
+    <span class="token decorator annotation punctuation">@classmethod</span>
+    <span class="token keyword">def</span> <span class="token function">load</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>cls<span class="token punctuation">.</span>_get_full_path<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>cls<span class="token punctuation">.</span>_get_full_path<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+                obj <span class="token operator">=</span> json<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+            <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> obj<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token builtin">setattr</span><span class="token punctuation">(</span>cls<span class="token punctuation">,</span> key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            cls<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+
+
+<span class="token keyword">class</span> <span class="token class-name">TestSettingBase</span><span class="token punctuation">(</span>SettingBase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> setting_path<span class="token punctuation">,</span> file_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>__class__<span class="token punctuation">.</span>file_name <span class="token operator">=</span> file_name
+        self<span class="token punctuation">.</span>__class__<span class="token punctuation">.</span>setting_path <span class="token operator">=</span> setting_path
+
+
+<span class="token keyword">class</span> <span class="token class-name">StaticSettingManager</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    静态配置管理类
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>settings <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_setting_path <span class="token operator">=</span> _DEFAULT_PATH
+
+    <span class="token keyword">def</span> <span class="token function">add_setting</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> setting_name<span class="token punctuation">,</span> setting_class<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">hasattr</span><span class="token punctuation">(</span>setting_class<span class="token punctuation">,</span> <span class="token string">&quot;__base__&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> setting_class<span class="token punctuation">.</span>__base__<span class="token punctuation">.</span>__name__ <span class="token operator">!=</span> <span class="token string">&quot;SettingBase&quot;</span><span class="token punctuation">:</span>
+                <span class="token keyword">raise</span> SettingError<span class="token punctuation">(</span><span class="token string">&quot;注册的配置必须是SettingBase的子类&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> SettingError<span class="token punctuation">(</span><span class="token string">&quot;注册的配置必须是SettingBase的子类&quot;</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>settings<span class="token punctuation">[</span>setting_name<span class="token punctuation">]</span> <span class="token operator">=</span> setting_class
+        setting_class<span class="token punctuation">.</span>setting_path <span class="token operator">=</span> self<span class="token punctuation">.</span>_setting_path
+
+    <span class="token keyword">def</span> <span class="token function">setting</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> setting_name<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        配置文件的注册装饰器
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">def</span> <span class="token function">wrapper</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>add_setting<span class="token punctuation">(</span>setting_name<span class="token punctuation">,</span> cls<span class="token punctuation">)</span>
+            <span class="token keyword">return</span> cls
+        <span class="token keyword">return</span> wrapper
+
+    <span class="token decorator annotation punctuation">@property</span>
+    <span class="token keyword">def</span> <span class="token function">setting_path</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>_setting_path
+
+    <span class="token decorator annotation punctuation">@setting_path<span class="token punctuation">.</span>setter</span>
+    <span class="token keyword">def</span> <span class="token function">setting_path</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>_setting_path <span class="token operator">=</span> value
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> setting <span class="token keyword">in</span> self<span class="token punctuation">.</span>settings<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            setting<span class="token punctuation">.</span>setting_path <span class="token operator">=</span> value
+
+    <span class="token keyword">def</span> <span class="token function">sync_path</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        同步所有配置的路径
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> setting <span class="token keyword">in</span> self<span class="token punctuation">.</span>settings<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            setting<span class="token punctuation">.</span>setting_path <span class="token operator">=</span> self<span class="token punctuation">.</span>_setting_path
+
+    <span class="token keyword">def</span> <span class="token function">save_all</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        保存所有配置
+        &quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>sync_path<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> setting <span class="token keyword">in</span> self<span class="token punctuation">.</span>settings<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            setting<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">load_all</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        读取所有配置
+        &quot;&quot;&quot;</span>
+        self<span class="token punctuation">.</span>sync_path<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> setting <span class="token keyword">in</span> self<span class="token punctuation">.</span>settings<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            setting<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">dynamic_setting</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;动态配置类装饰器&quot;&quot;&quot;</span>
+    <span class="token decorator annotation punctuation">@wraps</span><span class="token punctuation">(</span>cls<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">inner</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        rv <span class="token operator">=</span> cls<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> cls<span class="token punctuation">.</span>__dict__<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> <span class="token builtin">hasattr</span><span class="token punctuation">(</span>value<span class="token punctuation">,</span> <span class="token string">&quot;__base__&quot;</span><span class="token punctuation">)</span> <span class="token keyword">and</span> value<span class="token punctuation">.</span>__base__<span class="token punctuation">.</span>__name__ <span class="token operator">==</span> <span class="token string">&quot;SettingBase&quot;</span><span class="token punctuation">:</span>
+                <span class="token builtin">setattr</span><span class="token punctuation">(</span>rv<span class="token punctuation">,</span> <span class="token string">&quot;setting&quot;</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+                <span class="token keyword">if</span> <span class="token builtin">hasattr</span><span class="token punctuation">(</span>rv<span class="token punctuation">,</span> <span class="token string">&quot;setting_path&quot;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    value<span class="token punctuation">.</span>setting_path <span class="token operator">=</span> rv<span class="token punctuation">.</span>setting_path
+                <span class="token keyword">if</span> <span class="token builtin">hasattr</span><span class="token punctuation">(</span>rv<span class="token punctuation">,</span> <span class="token string">&quot;setting_file&quot;</span><span class="token punctuation">)</span> <span class="token keyword">and</span> rv<span class="token punctuation">.</span>setting_file <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+                    value<span class="token punctuation">.</span>file_name <span class="token operator">=</span> rv<span class="token punctuation">.</span>setting_file
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">if</span> value<span class="token punctuation">.</span>file_name <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+                        value<span class="token punctuation">.</span>file_name <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f&quot;</span><span class="token interpolation"><span class="token punctuation">{</span>cls<span class="token punctuation">.</span>__name__<span class="token punctuation">}</span></span><span class="token string">_</span><span class="token interpolation"><span class="token punctuation">{</span>value<span class="token punctuation">.</span>__name__<span class="token punctuation">}</span></span><span class="token string">.setting&quot;</span></span>
+                    <span class="token keyword">else</span><span class="token punctuation">:</span>
+                        value<span class="token punctuation">.</span>file_name <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f&quot;</span><span class="token interpolation"><span class="token punctuation">{</span>cls<span class="token punctuation">.</span>__name__<span class="token punctuation">}</span></span><span class="token string">_</span><span class="token interpolation"><span class="token punctuation">{</span>value<span class="token punctuation">.</span>file_name<span class="token punctuation">}</span></span><span class="token string">.setting&quot;</span></span>
+                value<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> rv
+    <span class="token keyword">return</span> inner
+
+
+static_setting <span class="token operator">=</span> StaticSettingManager<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&quot;__main__&quot;</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># ----------静态配置使用----------</span>
+    <span class="token comment">## 自定义配置类</span>
+    <span class="token decorator annotation punctuation">@static_setting<span class="token punctuation">.</span>setting</span><span class="token punctuation">(</span><span class="token string">&quot;TestStaticSetting&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">class</span> <span class="token class-name">TestStaticSettingClass</span><span class="token punctuation">(</span>SettingBase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;设置配置文件路径，不存在会自动创建&quot;&quot;&quot;</span>
+        file_name <span class="token operator">=</span> <span class="token string">&quot;test_static_setting.setting&quot;</span>
+        test_static_setting_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span>
+        <span class="token comment"># 可以添加配置会自动添加到配置文件中</span>
+        field1 <span class="token operator">=</span> <span class="token number">1</span>
+
+
+    <span class="token decorator annotation punctuation">@static_setting<span class="token punctuation">.</span>setting</span><span class="token punctuation">(</span><span class="token string">&quot;TestStaticSetting2&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">class</span> <span class="token class-name">TestStaticSettingClass2</span><span class="token punctuation">(</span>SettingBase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;设置配置文件路径，不存在会自动创建&quot;&quot;&quot;</span>
+        file_name <span class="token operator">=</span> <span class="token string">&quot;test_static_setting2.setting&quot;</span>
+        test_static_setting_path <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span>
+        <span class="token comment"># 可以添加配置会自动添加到配置文件中</span>
+        field2 <span class="token operator">=</span> <span class="token number">2</span>
+
+    <span class="token comment"># 使用前先注册</span>
+    TestStaticSettingClass<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    TestStaticSettingClass2<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">## 获取配置文件中全部配置</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>TestStaticSettingClass<span class="token punctuation">.</span>__dict__<span class="token punctuation">)</span>
+    <span class="token comment">## 获取某key配置</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>TestStaticSettingClass<span class="token punctuation">.</span>field1<span class="token punctuation">)</span>
+
+    <span class="token comment">## 可使用static_setting来获取注册进来的配置类, 配置路径用于另存配置</span>
+    static_setting<span class="token punctuation">.</span>setting_path <span class="token operator">=</span> <span class="token string">&quot;./conf&quot;</span> <span class="token comment"># 会在当前conf目录下出现2个自定义类的配置文件，并可自定义向某配置文件中添加配置不影响之前配置文件中配置</span>
+    TestStaticSettingClass2<span class="token punctuation">.</span>filed5 <span class="token operator">=</span> <span class="token number">5</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>static_setting<span class="token punctuation">.</span>__dict__<span class="token punctuation">)</span>
+    static_setting<span class="token punctuation">.</span>save_all<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># ---------动态配置----------</span>
+    <span class="token decorator annotation punctuation">@dynamic_setting</span>
+    <span class="token keyword">class</span> <span class="token class-name">TestDynamicSettingClass</span><span class="token punctuation">:</span>
+        <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>setting_path <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;setting_path&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>setting_file <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;setting_file&quot;</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+        <span class="token keyword">class</span> <span class="token class-name">MySetting</span><span class="token punctuation">(</span>SettingBase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+            field1 <span class="token operator">=</span> <span class="token number">1</span>
+            field2 <span class="token operator">=</span> <span class="token number">2</span>
+        <span class="token keyword">class</span> <span class="token class-name">MySetting2</span><span class="token punctuation">(</span>SettingBase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+            field1 <span class="token operator">=</span> <span class="token number">1</span>
+            field2 <span class="token operator">=</span> <span class="token number">2</span>
+    tc <span class="token operator">=</span> TestDynamicSettingClass<span class="token punctuation">(</span>setting_path<span class="token operator">=</span><span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>tc<span class="token punctuation">.</span>MySetting<span class="token punctuation">.</span>field1<span class="token punctuation">)</span>
+
+</code></pre></div><h2 id="带逻辑功能的配置实现原理"><a href="#带逻辑功能的配置实现原理" class="header-anchor">#</a> 带逻辑功能的配置实现原理</h2> <p>ModuleManager的实现：</p> <ol><li>ModuleBase默认需要传入报告对象与资源对象</li> <li>示例DemoModule继承ModuleBase</li> <li>针对其他情况需要调整ModuleBase</li> <li>ModuleManager在方法中组合使用传入的module实例</li> <li>通过load获取ModuleManager实例，add_module与save方法保存传入的module对象</li> <li>通过run_module方法进行逻辑调用（可批量针对测试前、中、后进行逻辑处理）</li></ol> <div class="language-python extra-class"><pre class="language-python"><code>
+<span class="token keyword">import</span> json
+<span class="token keyword">from</span> enum <span class="token keyword">import</span> Enum
+<span class="token keyword">from</span> abc <span class="token keyword">import</span> ABCMeta<span class="token punctuation">,</span> abstractmethod
+<span class="token keyword">from</span> core<span class="token punctuation">.</span>result<span class="token punctuation">.</span>reporter <span class="token keyword">import</span> ResultReporter
+<span class="token keyword">from</span> core<span class="token punctuation">.</span>resource<span class="token punctuation">.</span>pool <span class="token keyword">import</span> ResourcePool
+<span class="token keyword">from</span> core<span class="token punctuation">.</span>config<span class="token punctuation">.</span>setting <span class="token keyword">import</span> static_setting<span class="token punctuation">,</span> SettingBase
+<span class="token keyword">from</span> threading <span class="token keyword">import</span> Thread
+<span class="token keyword">from</span> importlib <span class="token keyword">import</span> import_module
+<span class="token keyword">import</span> os
+
+
+<span class="token keyword">class</span> <span class="token class-name">ModuleType</span><span class="token punctuation">(</span>Enum<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    PRE测试用例前运行该模块
+    PARALLEL和测试用例同步执行
+    POST测试用例执行完毕后执行
+    &quot;&quot;&quot;</span>
+    PRE <span class="token operator">=</span> <span class="token number">1</span>
+    PARALLEL <span class="token operator">=</span> <span class="token number">2</span>
+    POST <span class="token operator">=</span> <span class="token number">3</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">ModuleBase</span><span class="token punctuation">(</span>metaclass<span class="token operator">=</span>ABCMeta<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    逻辑配置模块的基类
+    &quot;&quot;&quot;</span>
+    module_type <span class="token operator">=</span> <span class="token boolean">None</span>
+    priority <span class="token operator">=</span> <span class="token number">99</span>
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> report<span class="token punctuation">:</span> ResultReporter<span class="token punctuation">,</span> resource<span class="token punctuation">:</span> ResourcePool<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>reporter <span class="token operator">=</span> report
+        self<span class="token punctuation">.</span>resource <span class="token operator">=</span> resource
+        self<span class="token punctuation">.</span>thread <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">action</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        实现该方法来实现模块的逻辑功能
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token keyword">def</span> <span class="token function">do</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>module_type <span class="token operator">==</span> ModuleType<span class="token punctuation">.</span>PARALLEL<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>thread <span class="token operator">=</span> Thread<span class="token punctuation">(</span>target<span class="token operator">=</span>self<span class="token punctuation">.</span>action<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>thread<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>action<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token decorator annotation punctuation">@abstractmethod</span>
+    <span class="token keyword">def</span> <span class="token function">stop</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        实现该方法来实现模块逻辑功能的终止方法
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">pass</span>
+
+
+<span class="token decorator annotation punctuation">@static_setting<span class="token punctuation">.</span>setting</span><span class="token punctuation">(</span><span class="token string">&quot;LogicModule&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">ModuleSetting</span><span class="token punctuation">(</span>SettingBase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    module_list_file <span class="token operator">=</span> <span class="token string">&quot;./modules/modulelist.json&quot;</span>
+    module_setting_path <span class="token operator">=</span> <span class="token string">&quot;./modules/settings&quot;</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">ModuleManager</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    配置模块的管理
+    &quot;&quot;&quot;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>modules <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">load</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        从模块列表装载所有模块类
+        &quot;&quot;&quot;</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>ModuleSetting<span class="token punctuation">.</span>module_list_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment"># 如果没有找到模块配置文件，则不做任何操作</span>
+            <span class="token keyword">return</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>ModuleSetting<span class="token punctuation">.</span>module_list_file<span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+            obj <span class="token operator">=</span> json<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">for</span> item <span class="token keyword">in</span> obj<span class="token punctuation">[</span><span class="token string">'modules'</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                <span class="token comment"># 配置条目格式：</span>
+                <span class="token comment"># {</span>
+                <span class="token comment">#     &quot;name&quot;: &quot;modulename&quot;,</span>
+                <span class="token comment">#     &quot;package&quot;:&quot;module path&quot;,</span>
+                <span class="token comment">#     &quot;setting_file&quot;: &quot;setting filename&quot;,</span>
+                <span class="token comment">#     &quot;setting_path&quot;: &quot;setting path&quot;</span>
+                <span class="token comment"># }</span>
+                module_name <span class="token operator">=</span> item<span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span>
+                module_package <span class="token operator">=</span> item<span class="token punctuation">[</span><span class="token string">'package'</span><span class="token punctuation">]</span>
+                setting_file <span class="token operator">=</span> item<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;setting_file&quot;</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+                setting_path <span class="token operator">=</span> item<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'setting_path'</span><span class="token punctuation">,</span> ModuleSetting<span class="token punctuation">.</span>module_setting_path<span class="token punctuation">)</span>
+                m <span class="token operator">=</span> import_module<span class="token punctuation">(</span>module_package<span class="token punctuation">)</span>
+                <span class="token keyword">for</span> element<span class="token punctuation">,</span> value <span class="token keyword">in</span> m<span class="token punctuation">.</span>__dict__<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    <span class="token keyword">if</span> element <span class="token operator">==</span> module_name<span class="token punctuation">:</span>
+                        self<span class="token punctuation">.</span>modules<span class="token punctuation">[</span>module_name<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+                            <span class="token string">&quot;class&quot;</span><span class="token punctuation">:</span> value<span class="token punctuation">,</span>
+                            <span class="token string">&quot;setting_file&quot;</span><span class="token punctuation">:</span> setting_file<span class="token punctuation">,</span>
+                            <span class="token string">&quot;setting_path&quot;</span><span class="token punctuation">:</span> setting_path
+                        <span class="token punctuation">}</span>
+            <span class="token keyword">except</span> Exception<span class="token punctuation">:</span>
+                <span class="token keyword">pass</span>
+
+    <span class="token keyword">def</span> <span class="token function">add_module</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> module_class<span class="token punctuation">,</span> setting_file<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> setting_path<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        添加模块
+        &quot;&quot;&quot;</span>
+        obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;class&quot;</span><span class="token punctuation">:</span> module_class<span class="token punctuation">,</span>
+            <span class="token string">&quot;setting_file&quot;</span><span class="token punctuation">:</span> setting_file<span class="token punctuation">,</span>
+            <span class="token string">&quot;setting_path&quot;</span><span class="token punctuation">:</span> setting_path
+        <span class="token punctuation">}</span>
+        self<span class="token punctuation">.</span>modules<span class="token punctuation">[</span>module_class<span class="token punctuation">.</span>__name__<span class="token punctuation">]</span> <span class="token operator">=</span> obj
+
+    <span class="token keyword">def</span> <span class="token function">get_module_instances</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> module_type<span class="token punctuation">,</span> result_reporter<span class="token punctuation">,</span> resources<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        获取模块的实例化列表
+        &quot;&quot;&quot;</span>
+        rv <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> mkey<span class="token punctuation">,</span> mvalue <span class="token keyword">in</span> self<span class="token punctuation">.</span>modules<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>mvalue<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>module_type<span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>module_type<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> mvalue<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>module_type<span class="token punctuation">.</span>value <span class="token operator">==</span> module_type<span class="token punctuation">.</span>value<span class="token punctuation">:</span>
+                rv<span class="token punctuation">.</span>append<span class="token punctuation">(</span>mvalue<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">(</span>result_reporter<span class="token punctuation">,</span> resources<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> rv
+
+    <span class="token keyword">def</span> <span class="token function">save</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+        保存所有模块到模块配置列表
+        &quot;&quot;&quot;</span>
+        obj <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        obj<span class="token punctuation">[</span><span class="token string">'modules'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> mkey<span class="token punctuation">,</span> mvalue <span class="token keyword">in</span> self<span class="token punctuation">.</span>modules<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            obj<span class="token punctuation">[</span><span class="token string">'modules'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span>
+                <span class="token string">&quot;name&quot;</span><span class="token punctuation">:</span> mkey<span class="token punctuation">,</span>
+                <span class="token string">&quot;package&quot;</span><span class="token punctuation">:</span> mvalue<span class="token punctuation">[</span><span class="token string">&quot;class&quot;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>__module__<span class="token punctuation">,</span>
+                <span class="token string">&quot;setting_file&quot;</span><span class="token punctuation">:</span> mvalue<span class="token punctuation">[</span><span class="token string">'setting_file'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                <span class="token string">&quot;setting_path&quot;</span><span class="token punctuation">:</span> mvalue<span class="token punctuation">[</span><span class="token string">'setting_path'</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        file_dir <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>ModuleSetting<span class="token punctuation">.</span>module_list_file<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>file_dir<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>file_dir<span class="token punctuation">)</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>ModuleSetting<span class="token punctuation">.</span>module_list_file<span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+            json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">,</span> indent<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">run_module</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> module_type<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">&quot;&quot;&quot;
+       对模块的实例化列表进行执行
+       &quot;&quot;&quot;</span>
+
+        <span class="token keyword">if</span> module_type <span class="token operator">==</span> ModuleType<span class="token punctuation">.</span>PRE <span class="token keyword">or</span> module_type <span class="token operator">==</span> ModuleType<span class="token punctuation">.</span>POST<span class="token punctuation">:</span>
+            <span class="token keyword">for</span> mkey<span class="token punctuation">,</span> mvalue <span class="token keyword">in</span> self<span class="token punctuation">.</span>modules<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> mvalue<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>module_type<span class="token punctuation">.</span>value <span class="token operator">==</span> module_type<span class="token punctuation">.</span>value<span class="token punctuation">:</span>
+                    mvalue<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>action<span class="token punctuation">(</span>self<span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> module_type <span class="token operator">==</span> ModuleType<span class="token punctuation">.</span>PARALLEL<span class="token punctuation">:</span>
+            <span class="token keyword">pass</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> Exception
+
+    <span class="token keyword">def</span> <span class="token function">stop_module</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">or</span> mkey<span class="token punctuation">,</span> mvalue <span class="token keyword">in</span> self<span class="token punctuation">.</span>modules<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> mvalue<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>module_type<span class="token punctuation">.</span>value <span class="token operator">==</span> module_type<span class="token punctuation">.</span>value<span class="token punctuation">:</span>
+                    mvalue<span class="token punctuation">[</span><span class="token string">'class'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>stop<span class="token punctuation">(</span>self<span class="token punctuation">)</span>
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&quot;__main__&quot;</span><span class="token punctuation">:</span>
+    <span class="token keyword">from</span> core<span class="token punctuation">.</span>config<span class="token punctuation">.</span>module <span class="token keyword">import</span> DemoModule <span class="token punctuation">,</span>DemoModule2 <span class="token punctuation">,</span>DemoModule3
+    mm <span class="token operator">=</span> ModuleManager<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    mm<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    mm<span class="token punctuation">.</span>add_module<span class="token punctuation">(</span>DemoModule<span class="token punctuation">)</span>
+    mm<span class="token punctuation">.</span>add_module<span class="token punctuation">(</span>DemoModule2<span class="token punctuation">)</span>
+    mm<span class="token punctuation">.</span>add_module<span class="token punctuation">(</span>DemoModule3<span class="token punctuation">)</span>
+    mm<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    
+    mm<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    post_module <span class="token operator">=</span> mm<span class="token punctuation">.</span>get_module_instances<span class="token punctuation">(</span>ModuleType<span class="token punctuation">.</span>POST<span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+    pre_module <span class="token operator">=</span> mm<span class="token punctuation">.</span>get_module_instances<span class="token punctuation">(</span>ModuleType<span class="token punctuation">.</span>PRE<span class="token punctuation">,</span> <span class="token string">&quot;.&quot;</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+    mm<span class="token punctuation">.</span>run_module<span class="token punctuation">(</span>ModuleType<span class="token punctuation">.</span>PRE<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>post_module<span class="token punctuation">)</span>
+</code></pre></div><p>示例DemoModule From config.demomodule.py</p> <div class="language-python extra-class"><pre class="language-python"><code><span class="token keyword">from</span> core<span class="token punctuation">.</span>config<span class="token punctuation">.</span>logicmodule <span class="token keyword">import</span> ModuleBase<span class="token punctuation">,</span> ModuleType
+<span class="token keyword">from</span> core<span class="token punctuation">.</span>config<span class="token punctuation">.</span>setting <span class="token keyword">import</span> dynamic_setting<span class="token punctuation">,</span> SettingBase
+<span class="token keyword">from</span> core<span class="token punctuation">.</span>resource<span class="token punctuation">.</span>pool <span class="token keyword">import</span> ResourcePool
+<span class="token keyword">from</span> core<span class="token punctuation">.</span>result<span class="token punctuation">.</span>reporter <span class="token keyword">import</span> ResultReporter<span class="token punctuation">,</span> StepResult
+
+
+<span class="token decorator annotation punctuation">@dynamic_setting</span>
+<span class="token keyword">class</span> <span class="token class-name">DemoModule</span><span class="token punctuation">(</span>ModuleBase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">&quot;&quot;&quot;
+    示例模块，在测试用例执行前输出一个INFO信息
+    &quot;&quot;&quot;</span>
+    module_type <span class="token operator">=</span> ModuleType<span class="token punctuation">.</span>PRE
+    priority <span class="token operator">=</span> <span class="token number">0</span>
+
+
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> report<span class="token punctuation">:</span> ResultReporter<span class="token punctuation">,</span> resource<span class="token punctuation">:</span> ResourcePool<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>report<span class="token punctuation">,</span> resource<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setting_path <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">&quot;setting_path&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;.&quot;</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setting_file <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">action</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># self.reporter.add(StepResult.INFO, &quot;This is a demo module&quot;)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;DemoModule action!&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">stop</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+
+    <span class="token keyword">class</span> <span class="token class-name">ModuleSetting</span><span class="token punctuation">(</span>SettingBase<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        setting_value <span class="token operator">=</span> <span class="token string">&quot;module setting 1&quot;</span>
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev"><a href="/test/miniplatform/ResourceModule.html" class="prev">
+          测试资源管理模块
+        </a></span> <span class="next"><a href="/test/miniplatform/ReportModule.html">
+          测试报告管理模块
+        </a></span></p></div> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/test/miniplatform/ConfigModule.html#测试配置基本分类" class="sidebar-link reco-side-测试配置基本分类" data-v-b57cc07c>测试配置基本分类</a></li><li class="level-2" data-v-b57cc07c><a href="/test/miniplatform/ConfigModule.html#可扩展的静态与动态配置" class="sidebar-link reco-side-可扩展的静态与动态配置" data-v-b57cc07c>可扩展的静态与动态配置</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/ConfigModule.html#静态配置的设计原理" class="sidebar-link reco-side-静态配置的设计原理" data-v-b57cc07c>静态配置的设计原理</a></li><li class="level-3" data-v-b57cc07c><a href="/test/miniplatform/ConfigModule.html#灵活的动态配置" class="sidebar-link reco-side-灵活的动态配置" data-v-b57cc07c>灵活的动态配置</a></li><li class="level-2" data-v-b57cc07c><a href="/test/miniplatform/ConfigModule.html#带逻辑功能的配置实现原理" class="sidebar-link reco-side-带逻辑功能的配置实现原理" data-v-b57cc07c>带逻辑功能的配置实现原理</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/test/assets/js/app.f95afc0e.js" defer></script><script src="/test/assets/js/3.1de58c57.js" defer></script><script src="/test/assets/js/1.912b4b55.js" defer></script><script src="/test/assets/js/21.9b2c8478.js" defer></script>
+  </body>
+</html>
