@@ -1,0 +1,10 @@
+# example:
+allow:
+  path:
+   - '/log-collect/front-behaviour'
+  host:
+#   - 'xxxx.net'
+#   - 'lcts5.ssjlicai.com'
+
+
+

@@ -1,0 +1,378 @@
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestReport</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            color: #333;
+            margin: 0 auto;
+            width: 960px;
+        }
+
+        #summary {
+            width: 960px;
+            margin-bottom: 20px;
+        }
+
+        #summary th {
+            background-color: skyblue;
+            padding: 5px 12px;
+        }
+
+        #summary td {
+            background-color: lightblue;
+            text-align: center;
+            padding: 4px 8px;
+        }
+
+        .details {
+            width: 960px;
+            margin-bottom: 20px;
+        }
+
+        .details th {
+            background-color: skyblue;
+            padding: 5px 12px;
+        }
+
+        .details tr .passed {
+            background-color: lightgreen;
+        }
+
+        .details tr .failed {
+            background-color: red;
+        }
+
+        .details tr .unchecked {
+            background-color: gray;
+        }
+
+        .details td {
+            background-color: lightblue;
+            padding: 5px 12px;
+        }
+
+        .details .detail {
+            background-color: lightgrey;
+            font-size: smaller;
+            padding: 5px 10px;
+            line-height: 20px;
+            text-align: left;
+        }
+
+        .details .success {
+            background-color: greenyellow;
+        }
+
+        .details .error {
+            background-color: red;
+        }
+
+        .details .failure {
+            background-color: salmon;
+        }
+
+        .details .skipped {
+            background-color: gray;
+        }
+
+        .button {
+            font-size: 1em;
+            padding: 6px;
+            width: 4em;
+            text-align: center;
+            background-color: #06d85f;
+            border-radius: 20px/50px;
+            cursor: pointer;
+            transition: all 0.3s ease-out;
+        }
+
+        a.button {
+            color: gray;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background: #2cffbd;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            transition: opacity 500ms;
+            visibility: hidden;
+            opacity: 0;
+            line-height: 25px;
+        }
+
+        .overlay:target {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .popup {
+            margin: 70px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            width: 50%;
+            position: relative;
+            transition: all 3s ease-in-out;
+        }
+
+        .popup h2 {
+            margin-top: 0;
+            color: #333;
+            font-family: Tahoma, Arial, sans-serif;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            transition: all 200ms;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .popup .close:hover {
+            color: #06d85f;
+        }
+
+        .popup .content {
+            max-height: 80%;
+            overflow: auto;
+            text-align: left;
+        }
+
+        .popup .separator {
+            color: royalblue
+        }
+
+        @media screen and (max-width: 700px) {
+            .box {
+                width: 70%;
+            }
+
+            .popup {
+                width: 70%;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+<h1>API Test Report</h1>
+
+<h2>Summary</h2>
+<table id="summary">
+    <tr>
+        <th>START AT</th>
+        <td colspan="4">2023-09-12 16:26:04.4061896 &#43;0800 CST m=&#43;0.008630301</td>
+    </tr>
+    <tr>
+        <th>DURATION</th>
+        <td colspan="4">2.2901353 seconds</td>
+    </tr>
+    <tr>
+        <th>PLATFORM</th>
+        <td>HttpRunnerPlus v4.3.5</td>
+        <td>go1.20.6</td>
+        <td colspan="2">windows-amd64</td>
+    </tr>
+    <tr>
+        <th>STAT</th>
+        <th colspan="2">TESTCASES (success/fail)</th>
+        <th colspan="2">TESTSTEPS (success/fail/error/skip)</th>
+    </tr>
+    <tr>
+        <td>total (details) =></td>
+        <td colspan="2">1 (1/0)</td>
+        <td colspan="2">1 (1/0/0/0)</td>
+    </tr>
+</table>
+
+<h2>Details</h2>
+
+<h3>testcase description</h3>
+<table id="suite_0" class="details">
+    <tr>
+        <td>TOTAL: 1</td>
+        <td>SUCCESS: 1</td>
+        <td>FAILED: 0</td>
+        <td>ERROR: 0</td>
+        <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+        <th>Status</th>
+        <th colspan="2">Name</th>
+        <th>Response Time</th>
+        <th>Detail</th>
+    </tr>  
+    <tr id="record_0_0">
+        <th class=success style="width:5em;">success</th>
+        <td colspan="2">GET https://superapp.seedao.xyz/proposal</td>
+        <td style="text-align:center;width:6em;">1485 ms</td>
+        <td class="detail">
+            <a class="button" href="#popup_log_0_0">log</a>
+            <div id="popup_log_0_0" class="overlay">
+                <div class="popup">
+                    <h2>Request and Response data</h2>
+                    <a class="close" href="#record_0_0">&times;</a>
+                    <div class="content">
+                        <h3>Name: GET https://superapp.seedao.xyz/proposal</h3>
+                        <h3>Request:</h3>
+                        <div style="overflow: auto">
+                            <table>
+                                <tr>
+                                    <th>cookies</th>
+                                    <td align="left">
+                                        <pre>_ga: GA1.1.2143200941.1693642009</pre>
+                                        <pre>_ga_FPJVR8J0T1: GS1.1.1693642008.1.1.1693643444.0.0.0</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>headers</th>
+                                    <td align="left">
+                                        <pre>Accept: text/html,application/xhtml&#43;xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</pre>
+                                        <pre>Accept-Encoding: gzip, deflate, br</pre>
+                                        <pre>Accept-Language: zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7</pre>
+                                        <pre>Connection: keep-alive</pre>
+                                        <pre>Cookie: _ga=GA1.1.2143200941.1693642009; _ga_FPJVR8J0T1=GS1.1.1693642008.1.1.1693643444.0.0.0</pre>
+                                        <pre>Host: superapp.seedao.xyz</pre>
+                                        <pre>Sec-Ch-Ua: &#34;Chromium&#34;;v=&#34;116&#34;, &#34;Not)A;Brand&#34;;v=&#34;24&#34;, &#34;Google Chrome&#34;;v=&#34;116&#34;</pre>
+                                        <pre>Sec-Ch-Ua-Mobile: ?0</pre>
+                                        <pre>Sec-Ch-Ua-Platform: &#34;Windows&#34;</pre>
+                                        <pre>Sec-Fetch-Dest: document</pre>
+                                        <pre>Sec-Fetch-Mode: navigate</pre>
+                                        <pre>Sec-Fetch-Site: none</pre>
+                                        <pre>Sec-Fetch-User: ?1</pre>
+                                        <pre>Upgrade-Insecure-Requests: 1</pre>
+                                        <pre>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>method</th>
+                                    <td align="left">
+                                        <pre>GET</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>url</th>
+                                    <td align="left">
+                                        <pre>https://superapp.seedao.xyz/proposal/</pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <h3>Response:</h3>
+                        <div style="overflow: auto">
+                            <table>
+                                <tr>
+                                    <th>body</th>
+                                    <td align="left">
+                                        <pre>&#34;\u003c!DOCTYPE html\u003e\u003chtml\u003e\u003chead\u003e\u003cmeta charSet=\&#34;utf-8\&#34; /\u003e\u003cmeta name=\&#34;viewport\&#34; content=\&#34;width=device-width\&#34; /\u003e\u003cmeta name=\&#34;next-head-count\&#34; content=\&#34;2\&#34; /\u003e\u003clink rel=\&#34;preload\&#34; href=\&#34;/_next/static/css/e39197a330af2c4f.css\&#34; as=\&#34;style\&#34; /\u003e\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/_next/static/css/e39197a330af2c4f.css\&#34; data-n-g /\u003e\u003cnoscript data-n-css\u003e\u003c/noscript\u003e\u003cscript defer nomodule src=\&#34;/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js\&#34;\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/chunks/webpack-e13df76d2a34af76.js\&#34; defer\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/chunks/framework-f44ba79936f400b5.js\&#34; defer\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/chunks/main-d997f8cd257b8385.js\&#34; defer\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/chunks/pages/_app-13d1bae820d8ea40.js\&#34; defer\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/chunks/b46a2385-62bd83f489666d78.js\&#34; defer\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/chunks/9159-2545a2fbacb3dc37.js\&#34; defer\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/chunks/4998-738b0ee50bfbd36d.js\&#34; defer\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/chunks/466-5475e0d747d8ec7d.js\&#34; defer\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/chunks/4994-75d041532d02a6f3.js\&#34; defer\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/chunks/5986-e846b0f93a006439.js\&#34; defer\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/chunks/pages/proposal-7275e9ee8bff518c.js\&#34; defer\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/SFo-YKwCM_0L9MfETUxyR/_buildManifest.js\&#34; defer\u003e\u003c/script\u003e\u003cscript src=\&#34;/_next/static/SFo-YKwCM_0L9MfETUxyR/_ssgManifest.js\&#34; defer\u003e\u003c/script\u003e\u003cstyle data-styled data-styled-version=\&#34;5.3.1\&#34;\u003e\u003c/style\u003e\u003c/head\u003e\u003cbody\u003e\u003cdiv id=\&#34;__next\&#34; data-reactroot\u003e\u003c/div\u003e\u003cscript id=\&#34;__NEXT_DATA__\&#34; type=\&#34;application/json\&#34;\u003e{\&#34;props\&#34;:{\&#34;pageProps\&#34;:{}},\&#34;page\&#34;:\&#34;/proposal\&#34;,\&#34;query\&#34;:{},\&#34;buildId\&#34;:\&#34;SFo-YKwCM_0L9MfETUxyR\&#34;,\&#34;nextExport\&#34;:true,\&#34;autoExport\&#34;:true,\&#34;isFallback\&#34;:false,\&#34;scriptLoader\&#34;:[]}\u003c/script\u003e\u003c/body\u003e\u003c/html\u003e&#34;</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>cookies</th>
+                                    <td align="left">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>headers</th>
+                                    <td align="left">
+                                        <pre>Age: 2</pre>
+                                        <pre>Alt-Svc: h3=&#34;:443&#34;; ma=86400</pre>
+                                        <pre>Cache-Control: public,max-age=0,must-revalidate</pre>
+                                        <pre>Cf-Cache-Status: DYNAMIC</pre>
+                                        <pre>Cf-Ray: 8056c3876c0bdd4c-LHR</pre>
+                                        <pre>Connection: keep-alive</pre>
+                                        <pre>Content-Encoding: br</pre>
+                                        <pre>Content-Type: text/html; charset=UTF-8</pre>
+                                        <pre>Date: Tue, 12 Sep 2023 08:26:08 GMT</pre>
+                                        <pre>Nel: {&#34;success_fraction&#34;:0,&#34;report_to&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}</pre>
+                                        <pre>Report-To: {&#34;endpoints&#34;:[{&#34;url&#34;:&#34;https:\/\/a.nel.cloudflare.com\/report\/v3?s=EHuw1YwaJcECowH5F6uCUJWlxViVvBDd1dNI7FtKthzi1S7%2FhJJlg8jtRFlxTuZuULlUGpamH0vlJ%2FIaYbtLuOzPpU5k9cx9O4h6%2Bk4N0R%2FAvOq1zeHtzb7zea8XwOq1D0ZdK7%2Fiz7WcN4p5sYZm6wEb&#34;}],&#34;group&#34;:&#34;cf-nel&#34;,&#34;max_age&#34;:604800}</pre>
+                                        <pre>Server: cloudflare</pre>
+                                        <pre>Vary: X-Bb-Conditions,Accept-Encoding</pre>
+                                        <pre>X-Nf-Request-Id: 01HA47YW5MVH9Q828DCJZDASAD</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>proto</th>
+                                    <td align="left">
+                                        <pre>HTTP/1.1</pre>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>status_code</th>
+                                    <td align="left">
+                                        <pre>200</pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <h3>Validators:</h3>
+                        <div style="overflow: auto">
+                            <table>
+                                <tr>
+                                    <th>check</th>
+                                    <th>comparator</th>
+                                    <th>expect value</th>
+                                    <th>actual value</th>
+                                </tr>
+                                <tr>
+                                    <td class="passed">
+                                        status_code
+                                    </td>
+                                    <td>equals</td>
+                                    <td>200</td>
+                                    <td>200</td>
+                                </tr>
+                                <tr>
+                                    <td class="passed">
+                                        headers.&#34;Content-Type&#34;
+                                    </td>
+                                    <td>equals</td>
+                                    <td>text/html; charset=UTF-8</td>
+                                    <td>text/html; charset=UTF-8</td>
+                                </tr>
+                            </table>
+
+                            <h3>Statistics:</h3>
+                            <div style="overflow: auto">
+                                <table>
+                                    <tr>
+                                        <th>content_size(bytes)</th>
+                                        <td>-1</td>
+                                    </tr>
+                                    <tr>
+                                        <th>response_time(ms)</th>
+                                        <td>1485</td>
+                                    </tr>
+                                    <tr>
+                                        <th>elapsed(ms)</th>
+                                        <td>1485</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </td>
+    </tr>
+</table>
+</body>

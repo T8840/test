@@ -1,0 +1,48 @@
+{
+    "config": {
+        "name": "testcase description"
+    },
+    "teststeps": [
+        {
+            "name": "",
+            "request": {
+                "method": "GET",
+                "url": "https://superapp.seedao.xyz/proposal",
+                "headers": {
+                    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+                    "Accept-Encoding": "gzip, deflate, br",
+                    "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+                    "Connection": "keep-alive",
+                    "Host": "superapp.seedao.xyz",
+                    "Sec-Fetch-Dest": "document",
+                    "Sec-Fetch-Mode": "navigate",
+                    "Sec-Fetch-Site": "none",
+                    "Sec-Fetch-User": "?1",
+                    "Upgrade-Insecure-Requests": "1",
+                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36",
+                    "sec-ch-ua": "\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"Google Chrome\";v=\"116\"",
+                    "sec-ch-ua-mobile": "?0",
+                    "sec-ch-ua-platform": "\"Windows\""
+                },
+                "cookies": {
+                    "_ga": "GA1.1.2143200941.1693642009",
+                    "_ga_FPJVR8J0T1": "GS1.1.1693642008.1.1.1693643444.0.0.0"
+                }
+            },
+            "validate": [
+                {
+                    "check": "status_code",
+                    "assert": "equals",
+                    "expect": 200,
+                    "msg": "assert response status code"
+                },
+                {
+                    "check": "headers.\"Content-Type\"",
+                    "assert": "equals",
+                    "expect": "text/html; charset=UTF-8",
+                    "msg": "assert response header Content-Type"
+                }
+            ]
+        }
+    ]
+}
