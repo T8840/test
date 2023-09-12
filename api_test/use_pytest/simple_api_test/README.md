@@ -1,0 +1,6 @@
+- API.xlsx
+    - 表头
+        - 接口库 id-name-host-url-method-headers-data-flag
+        - 公共变量 key values location flag
+            - 空运询价号    数据库变量-空运询价号	data	Y
+    - 可以在headers flag等地方对Excel设置 数据-插入下拉列表
