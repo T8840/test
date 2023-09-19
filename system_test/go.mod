@@ -1,4 +1,4 @@
-module system_test
+module coyote
 
 go 1.19
 
