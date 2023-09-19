@@ -1,0 +1,153 @@
+config:
+    name: testcase description
+teststeps:
+    # - name: ""
+    #   request:
+    #     method: POST
+    #     url: https://go-dev.tellaw.com/api/account
+    #     headers:
+    #         Accept-Encoding: gzip
+    #         Connection: Keep-Alive
+    #         Content-Length: "500"
+    #         Content-Type: application/json
+    #         Host: go-dev.tellaw.com
+    #         User-Agent: okhttp/4.9.2
+    #         accept-language: en
+    #         x-user-agent: android
+    #     body:
+    #         action: user_login
+    #         data:
+    #             account: 0xcC2c84BDB6a2eAEEe25941e2e640894D759E5Ccf
+    #             fcm_token: fbZtHZFITDiR_pK-Fq2mkR:APA91bERhwoTOWuwuTYrP-btJg0IFKSsKtF_T96kky8k_sy0VVc-HQay-oTioWxmEb6QjWuu4BAEGC5kXW2ZPWVIxMHmJero63lcAyCGHOBtpjxc6S2yBokGNgJdQc6OXeu5-W9xDftx
+    #             token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTQ3NDkxNjksImFpZCI6IjB4Y0MyYzg0QkRCNmEyZUFFRWUyNTk0MWUyZTY0MDg5NEQ3NTlFNUNjZiIsImlhdCI6MTY5NDc0MTk2OSwic3JjIjoiIn0.TShDzkpSpdiolL0AOk8ypWmPePuav7Xhhl_LjwY2Bz4
+    #         version: "1.0"
+    #   validate:
+    #     - check: status_code
+    #       assert: equals
+    #       expect: 200
+    #       msg: assert response status code
+    #     - check: headers."Content-Type"
+    #       assert: equals
+    #       expect: application/json; charset=utf-8
+    #       msg: assert response header Content-Type
+    #     - check: body.code
+    #       assert: equals
+    #       expect: 0
+    #       msg: assert response body code
+    #     - check: body.msg
+    #       assert: equals
+    #       expect: success
+    #       msg: assert response body msg
+    - name: ""
+      request:
+        method: POST
+        url: https://go-dev.tellaw.com/api/currency
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Content-Length: "56"
+            Content-Type: application/json
+            Host: go-dev.tellaw.com
+            User-Agent: okhttp/4.9.2
+            accept-language: en
+            access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI5NjM4NTAwOTY3MDY1NjAiLCJleHAiOjIwMTAxMDU1NzAsImlhdCI6MTY5NDc0NTU3MCwic3JjIjoiYW5kcm9pZCJ9.Px0kVewBysr65lIJgWuyK5fwnD6BRYEa4x5NGyZPcbA
+            x-user-agent: android
+        body:
+            action: get_currency_list
+            data: {}
+            version: "1.0"
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=utf-8
+          msg: assert response header Content-Type
+        - check: body.code
+          assert: equals
+          expect: 0
+          msg: assert response body code
+        - check: body.msg
+          assert: equals
+          expect: success
+          msg: assert response body msg
+    - name: ""
+      request:
+        method: POST
+        url: https://go-dev.tellaw.com/api/dapp
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Content-Length: "117"
+            Content-Type: application/json
+            Host: go-dev.tellaw.com
+            User-Agent: okhttp/4.9.2
+            accept-language: en
+            access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI5NjM4NTAwOTY3MDY1NjAiLCJleHAiOjIwMTAxMDU1NzAsImlhdCI6MTY5NDc0NTU3MCwic3JjIjoiYW5kcm9pZCJ9.Px0kVewBysr65lIJgWuyK5fwnD6BRYEa4x5NGyZPcbA
+            x-user-agent: android
+        body:
+            action: get_user_dapp_list
+            data:
+                category: ""
+                page_info:
+                    page: 1
+                    page_size: 20
+                type: 2
+            version: "1.0"
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=utf-8
+          msg: assert response header Content-Type
+        - check: body.code
+          assert: equals
+          expect: 0
+          msg: assert response body code
+        - check: body.msg
+          assert: equals
+          expect: success
+          msg: assert response body msg
+    - name: ""
+      request:
+        method: POST
+        url: https://go-dev.tellaw.com/api/currency
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Content-Length: "116"
+            Content-Type: application/json
+            Host: go-dev.tellaw.com
+            User-Agent: okhttp/4.9.2
+            accept-language: en
+            access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI5NjM4NTAwOTY3MDY1NjAiLCJleHAiOjIwMTAxMDU1NzAsImlhdCI6MTY5NDc0NTU3MCwic3JjIjoiYW5kcm9pZCJ9.Px0kVewBysr65lIJgWuyK5fwnD6BRYEa4x5NGyZPcbA
+            x-user-agent: android
+        body:
+            action: get_currency_quote_historical
+            data:
+                currency: usd
+                id: ethereum
+                interval: 1D
+            version: "1.0"
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=utf-8
+          msg: assert response header Content-Type
+        - check: body.code
+          assert: equals
+          expect: 0
+          msg: assert response body code
+        - check: body.msg
+          assert: equals
+          expect: success
+          msg: assert response body msg

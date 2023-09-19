@@ -1,0 +1,1356 @@
+config:
+    name: testcase description
+teststeps:
+    - name: ""
+      request:
+        method: POST
+        url: https://firebaseinstallations.googleapis.com/v1/projects/google.com:cakemix/installations/f8LlImqcSrCzighOOxmKUU/authTokens:generate
+        headers:
+            Accept: application/json
+            Accept-Encoding: gzip
+            Authorization: FIS_v2 2_Sip5bBfwnvVjQY2pKdkB_EpdZ-2RFUvL0ksbBqJ9qpTj51V7poBXvSqdSUQptdvg
+            Connection: Keep-Alive
+            Content-Encoding: gzip
+            Content-Length: "61"
+            Content-Type: application/json
+            Host: firebaseinstallations.googleapis.com
+            User-Agent: Dalvik/2.1.0 (Linux; U; Android 11; sdk_gphone_x86_arm Build/RSR1.200819.001.A1)
+            X-Android-Cert: 58E1C4133F7441EC3D2C270270A14802DA47BA0E
+            X-Android-Package: com.google.android.apps.docs
+            x-firebase-client: fire-fcm/20.2.1 fire-core/19.2.0_1p fire-iid/20.2.1 fire-android/ fire-installations/16.3.0_1p
+            x-firebase-client-log-type: "3"
+            x-goog-api-key: AIzaSyBCcTM_PYMJ688Njw7NxBTh2DutdYNROrQ
+        body:
+            installation:
+                sdkVersion: a:16.3.0_1p
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=UTF-8
+          msg: assert response header Content-Type
+        - check: body.expiresIn
+          assert: equals
+          expect: 604800s
+          msg: assert response body expiresIn
+        - check: body.token
+          assert: equals
+          expect: eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IjE6Mzc4MDc2OTY1NTUzOmFuZHJvaWQ6YWJhNzczMDczMTI1YjMwMyIsImV4cCI6MTY5NTM1MDMzNSwiZmlkIjoiZjhMbEltcWNTckN6aWdoT094bUtVVSIsInByb2plY3ROdW1iZXIiOjM3ODA3Njk2NTU1M30.AB2LPV8wRAIgfpbb9sKuOfoBmCzDEV7N79jHJRIydb5XIIn2HbbiWGQCIEcxiqOhObbVVvySYFXS4J8l8nLPbESDHK_2LPVH4oZU
+          msg: assert response body token
+    - name: ""
+      request:
+        method: GET
+        url: https://tellaw-assets.s3.ap-southeast-1.amazonaws.com/version.json
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Host: tellaw-assets.s3.ap-southeast-1.amazonaws.com
+            User-Agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: HEAD
+        url: https://i.ytimg.com/generate_204
+        headers:
+            accept-encoding: gzip, deflate, br
+            user-agent: com.google.android.youtube/15.18.39(Linux; U; Android 11; en_US; sdk_gphone_x86_arm Build/RSR1.200819.001.A1) gzip
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 204
+          msg: assert response status code
+    - name: ""
+      request:
+        method: HEAD
+        url: https://youtubei.googleapis.com/generate_204
+        headers:
+            accept-encoding: gzip, deflate, br
+            user-agent: com.google.android.youtube/15.18.39(Linux; U; Android 11; en_US; sdk_gphone_x86_arm Build/RSR1.200819.001.A1) gzip
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 204
+          msg: assert response status code
+    - name: ""
+      request:
+        method: POST
+        url: https://in.appcenter.ms/logs
+        params:
+            api-version: 1.0.0
+        headers:
+            Accept-Encoding: gzip
+            App-Secret: 8ff3999d-8132-4c42-86e6-6fc459e3723d
+            Connection: Keep-Alive
+            Content-Length: "1168"
+            Content-Type: application/json
+            Host: in.appcenter.ms
+            Install-ID: 63f1e0a5-21d1-4ee9-ac37-92ed1e906d48
+            User-Agent: Dalvik/2.1.0 (Linux; U; Android 11; sdk_gphone_x86_arm Build/RSR1.200819.001.A1)
+        body:
+            logs:
+                - device:
+                    appBuild: "25"
+                    appNamespace: com.tellaw.tellaw.development
+                    appVersion: 1.0.24
+                    carrierCountry: us
+                    carrierName: Android
+                    locale: en_US
+                    model: sdk_gphone_x86_arm
+                    oemName: Appetize.io
+                    osApiLevel: 30
+                    osBuild: RSR1.200819.001.A1
+                    osName: Android
+                    osVersion: "11"
+                    screenSize: 1080x2148
+                    sdkName: appcenter.android
+                    sdkVersion: 4.4.5
+                    timeZoneOffset: 480
+                    wrapperSdkName: appcenter.react-native
+                    wrapperSdkVersion: 4.4.5
+                  isOneCollectorEnabled: false
+                  services:
+                    - Analytics
+                  timestamp: "2023-09-15T02:38:54.688Z"
+                  type: startService
+                - device:
+                    appBuild: "25"
+                    appNamespace: com.tellaw.tellaw.development
+                    appVersion: 1.0.24
+                    carrierCountry: us
+                    carrierName: Android
+                    locale: en_US
+                    model: sdk_gphone_x86_arm
+                    oemName: Appetize.io
+                    osApiLevel: 30
+                    osBuild: RSR1.200819.001.A1
+                    osName: Android
+                    osVersion: "11"
+                    screenSize: 1080x2148
+                    sdkName: appcenter.android
+                    sdkVersion: 4.4.5
+                    timeZoneOffset: 480
+                    wrapperSdkName: appcenter.react-native
+                    wrapperSdkVersion: 4.4.5
+                  isOneCollectorEnabled: false
+                  services:
+                    - Crashes
+                  timestamp: "2023-09-15T02:38:54.694Z"
+                  type: startService
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json
+          msg: assert response header Content-Type
+        - check: body.correlationId
+          assert: equals
+          expect: 3e73a977-7104-45ac-941a-f7626d989023
+          msg: assert response body correlationId
+        - check: body.status
+          assert: equals
+          expect: Success
+          msg: assert response body status
+    - name: ""
+      request:
+        method: POST
+        url: https://ssl.google-analytics.com/batch
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Content-Encoding: gzip
+            Content-Length: "235"
+            Content-Type: application/x-www-form-urlencoded
+            Host: ssl.google-analytics.com
+            User-Agent: GoogleAnalytics/201.8.17 (Linux; U; Android 11; en-us; sdk_gphone_x86_arm Build/RSR1.200819.001.A1)
+        body: {}
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/gif
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: POST
+        url: https://in.appcenter.ms/logs
+        params:
+            api-version: 1.0.0
+        headers:
+            Accept-Encoding: gzip
+            App-Secret: 8ff3999d-8132-4c42-86e6-6fc459e3723d
+            Connection: Keep-Alive
+            Content-Length: "580"
+            Content-Type: application/json
+            Host: in.appcenter.ms
+            Install-ID: 63f1e0a5-21d1-4ee9-ac37-92ed1e906d48
+            User-Agent: Dalvik/2.1.0 (Linux; U; Android 11; sdk_gphone_x86_arm Build/RSR1.200819.001.A1)
+        body:
+            logs:
+                - device:
+                    appBuild: "25"
+                    appNamespace: com.tellaw.tellaw.development
+                    appVersion: 1.0.24
+                    carrierCountry: us
+                    carrierName: Android
+                    locale: en_US
+                    model: sdk_gphone_x86_arm
+                    oemName: Appetize.io
+                    osApiLevel: 30
+                    osBuild: RSR1.200819.001.A1
+                    osName: Android
+                    osVersion: "11"
+                    screenSize: 1080x2148
+                    sdkName: appcenter.android
+                    sdkVersion: 4.4.5
+                    timeZoneOffset: 480
+                    wrapperSdkName: appcenter.react-native
+                    wrapperSdkVersion: 4.4.5
+                  sid: ca026b6c-5cb6-49fa-b853-13e4ba519327
+                  timestamp: "2023-09-15T02:38:54.716Z"
+                  type: startSession
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json
+          msg: assert response header Content-Type
+        - check: body.correlationId
+          assert: equals
+          expect: 3dc1b11f-8e49-415f-8656-91ddd8f27326
+          msg: assert response body correlationId
+        - check: body.status
+          assert: equals
+          expect: Success
+          msg: assert response body status
+    - name: ""
+      request:
+        method: GET
+        url: https://app-measurement.com/config/app/1:482424900219:android:31739860410cae4913f0de
+        params:
+            app_instance_id: 7a95ee7568f2c2fd1ebe66c09c863787
+            gmp_version: "201817"
+            platform: android
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Host: app-measurement.com
+            User-Agent: Dalvik/2.1.0 (Linux; U; Android 11; sdk_gphone_x86_arm Build/RSR1.200819.001.A1)
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/x-protobuf
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: POST
+        url: https://app-measurement.com/a
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Content-Encoding: gzip
+            Content-Length: "573"
+            Content-Type: application/x-www-form-urlencoded
+            Host: app-measurement.com
+            User-Agent: Dalvik/2.1.0 (Linux; U; Android 11; sdk_gphone_x86_arm Build/RSR1.200819.001.A1)
+        body: {}
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 204
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/gif
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: POST
+        url: https://www.googleapis.com/experimentsandconfigs/v1/getExperimentsAndConfigs
+        params:
+            c: "1"
+            r: "6"
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Content-Encoding: gzip
+            Content-Length: "7497"
+            Content-Type: application/x-protobuf
+            Host: www.googleapis.com
+            User-Agent: Dalvik/2.1.0 (Linux; U; Android 11; sdk_gphone_x86_arm Build/RSR1.200819.001.A1)
+            X-SERVER-TOKEN: CAMSDQ0C0ciKAAQVA5OarRU=
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/octet-stream
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://firebase-settings.crashlytics.com/spi/v2/platforms/android/gmp/1:482424900219:android:31739860410cae4913f0de/settings
+        params:
+            build_version: "25"
+            display_version: 1.0.24
+            instance: 756711a63cf459f23181151bb5719547cb05e69c
+            source: "1"
+        headers:
+            Accept: application/json
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Host: firebase-settings.crashlytics.com
+            User-Agent: Crashlytics Android SDK/18.3.6
+            X-CRASHLYTICS-API-CLIENT-TYPE: android
+            X-CRASHLYTICS-API-CLIENT-VERSION: 18.3.6
+            X-CRASHLYTICS-DEVELOPER-TOKEN: 470fa2b4ae81cd56ecbcda9735803434cec591fa
+            X-CRASHLYTICS-DEVICE-MODEL: Appetize.io/sdk_gphone_x86_arm
+            X-CRASHLYTICS-GOOGLE-APP-ID: 1:482424900219:android:31739860410cae4913f0de
+            X-CRASHLYTICS-INSTALLATION-ID: a62b9dbe34354320aea6aa429c18c6c6
+            X-CRASHLYTICS-OS-BUILD-VERSION: "6823625"
+            X-CRASHLYTICS-OS-DISPLAY-VERSION: "11"
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=utf-8
+          msg: assert response header Content-Type
+        - check: body.cache_duration
+          assert: equals
+          expect: 86400
+          msg: assert response body cache_duration
+        - check: body.on_demand_backoff_base
+          assert: equals
+          expect: 1.2
+          msg: assert response body on_demand_backoff_base
+        - check: body.on_demand_backoff_step_duration_seconds
+          assert: equals
+          expect: 60
+          msg: assert response body on_demand_backoff_step_duration_seconds
+        - check: body.on_demand_upload_rate_per_minute
+          assert: equals
+          expect: 10
+          msg: assert response body on_demand_upload_rate_per_minute
+        - check: body.settings_version
+          assert: equals
+          expect: 3
+          msg: assert response body settings_version
+    - name: ""
+      request:
+        method: POST
+        url: https://www.googleapis.com/experimentsandconfigs/v1/getExperimentsAndConfigs
+        params:
+            c: "1"
+            r: "15"
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Content-Encoding: gzip
+            Content-Length: "7519"
+            Content-Type: application/x-protobuf
+            Host: www.googleapis.com
+            User-Agent: Dalvik/2.1.0 (Linux; U; Android 11; sdk_gphone_x86_arm Build/RSR1.200819.001.A1)
+            X-SERVER-TOKEN: CAMSDQ0C0ciKAAQVA5OarRU=
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/octet-stream
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: POST
+        url: https://android.apis.google.com/c2dm/register3
+        headers:
+            Accept-Encoding: gzip
+            Authorization: AidLogin 4592605363870270701:8385864843770169704
+            Connection: Keep-Alive
+            Host: android.apis.google.com
+            User-Agent: Android-GCM/1.5 (generic_x86_arm RSR1.200819.001.A1)
+            app: com.tellaw.tellaw.development
+            content-length: "827"
+            content-type: application/x-www-form-urlencoded
+            gcm_ver: "201817022"
+        body: {}
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: text/plain; charset=UTF-8
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: POST
+        url: https://go-dev.tellaw.com/api/account
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Content-Length: "500"
+            Content-Type: application/json
+            Host: go-dev.tellaw.com
+            User-Agent: okhttp/4.9.2
+            accept-language: en
+            x-user-agent: android
+        body:
+            action: user_login
+            data:
+                account: 0xcC2c84BDB6a2eAEEe25941e2e640894D759E5Ccf
+                fcm_token: fbZtHZFITDiR_pK-Fq2mkR:APA91bERhwoTOWuwuTYrP-btJg0IFKSsKtF_T96kky8k_sy0VVc-HQay-oTioWxmEb6QjWuu4BAEGC5kXW2ZPWVIxMHmJero63lcAyCGHOBtpjxc6S2yBokGNgJdQc6OXeu5-W9xDftx
+                token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTQ3NDkxNjksImFpZCI6IjB4Y0MyYzg0QkRCNmEyZUFFRWUyNTk0MWUyZTY0MDg5NEQ3NTlFNUNjZiIsImlhdCI6MTY5NDc0MTk2OSwic3JjIjoiIn0.TShDzkpSpdiolL0AOk8ypWmPePuav7Xhhl_LjwY2Bz4
+            version: "1.0"
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=utf-8
+          msg: assert response header Content-Type
+        - check: body.code
+          assert: equals
+          expect: 0
+          msg: assert response body code
+        - check: body.msg
+          assert: equals
+          expect: success
+          msg: assert response body msg
+    - name: ""
+      request:
+        method: POST
+        url: https://go-dev.tellaw.com/api/currency
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Content-Length: "56"
+            Content-Type: application/json
+            Host: go-dev.tellaw.com
+            User-Agent: okhttp/4.9.2
+            accept-language: en
+            access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI5NjM4NTAwOTY3MDY1NjAiLCJleHAiOjIwMTAxMDU1NzAsImlhdCI6MTY5NDc0NTU3MCwic3JjIjoiYW5kcm9pZCJ9.Px0kVewBysr65lIJgWuyK5fwnD6BRYEa4x5NGyZPcbA
+            x-user-agent: android
+        body:
+            action: get_currency_list
+            data: {}
+            version: "1.0"
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=utf-8
+          msg: assert response header Content-Type
+        - check: body.code
+          assert: equals
+          expect: 0
+          msg: assert response body code
+        - check: body.msg
+          assert: equals
+          expect: success
+          msg: assert response body msg
+    - name: ""
+      request:
+        method: POST
+        url: https://go-dev.tellaw.com/api/dapp
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Content-Length: "117"
+            Content-Type: application/json
+            Host: go-dev.tellaw.com
+            User-Agent: okhttp/4.9.2
+            accept-language: en
+            access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI5NjM4NTAwOTY3MDY1NjAiLCJleHAiOjIwMTAxMDU1NzAsImlhdCI6MTY5NDc0NTU3MCwic3JjIjoiYW5kcm9pZCJ9.Px0kVewBysr65lIJgWuyK5fwnD6BRYEa4x5NGyZPcbA
+            x-user-agent: android
+        body:
+            action: get_user_dapp_list
+            data:
+                category: ""
+                page_info:
+                    page: 1
+                    page_size: 20
+                type: 2
+            version: "1.0"
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=utf-8
+          msg: assert response header Content-Type
+        - check: body.code
+          assert: equals
+          expect: 0
+          msg: assert response body code
+        - check: body.msg
+          assert: equals
+          expect: success
+          msg: assert response body msg
+    - name: ""
+      request:
+        method: GET
+        url: https://relay.walletconnect.com/
+        params:
+            auth: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkaWQ6a2V5Ono2TWtvM2czeGFyNDgyVHc4U1hlRkZNdTJocFhqMlk1YVRnMTFDQnlIZ3pydkhSbyIsInN1YiI6IjYxZDRkZjU0MTUzZDYxOGUzOWZjZmEwOTQ3MDliMzkxYzdjNmYwNDJhNWY1NTRiMTViZTkwODhlZTc5Y2M1YzEiLCJhdWQiOiJ3c3M6Ly9yZWxheS53YWxsZXRjb25uZWN0LmNvbSIsImlhdCI6MTY5NDc0NTU3MCwiZXhwIjoxNjk0ODMxOTcwfQ.7GJDPG6g253Q7FcBEXVSmbAsQV_-mTaaoMf_vrm4dcwARIYr2s7mHrZBVDEzFDTKQQL2J9UCJPWFQASkvid4Dw
+            projectId: 32050aa5fa4e1c9d970b61e302233dde
+            ua: wc-2/js-2.2.0/unknown-/react-native
+        headers:
+            Accept-Encoding: gzip
+            Connection: Upgrade
+            Host: relay.walletconnect.com
+            Sec-WebSocket-Extensions: permessage-deflate
+            Sec-WebSocket-Key: JLr1I3mk5n9gJWV+xBFL2w==
+            Sec-WebSocket-Version: "13"
+            Upgrade: websocket
+            User-Agent: okhttp/4.9.2
+            origin: https://relay.walletconnect.com
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 101
+          msg: assert response status code
+    - name: ""
+      request:
+        method: POST
+        url: https://rpc.ankr.com/eth
+        headers:
+            accept-encoding: gzip
+            content-length: "116"
+            content-type: application/json
+            user-agent: okhttp/4.9.2
+        body:
+            id: 42
+            jsonrpc: "2.0"
+            method: eth_getBalance
+            params:
+                - 0xcc2c84bdb6a2eaeee25941e2e640894d759e5ccf
+                - latest
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json
+          msg: assert response header Content-Type
+        - check: body.id
+          assert: equals
+          expect: 42
+          msg: assert response body id
+        - check: body.jsonrpc
+          assert: equals
+          expect: "2.0"
+          msg: assert response body jsonrpc
+        - check: body.result
+          assert: equals
+          expect: "0x0"
+          msg: assert response body result
+    - name: ""
+      request:
+        method: POST
+        url: https://rpc.ankr.com/eth
+        headers:
+            accept-encoding: gzip
+            content-length: "201"
+            content-type: application/json
+            user-agent: okhttp/4.9.2
+        body:
+            id: 46
+            jsonrpc: "2.0"
+            method: eth_call
+            params:
+                - data: 0x70a08231000000000000000000000000cc2c84bdb6a2eaeee25941e2e640894d759e5ccf
+                  to: 0x0d8775f648430679a709e98d2b0cb6250d2887ef
+                - latest
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json
+          msg: assert response header Content-Type
+        - check: body.id
+          assert: equals
+          expect: 46
+          msg: assert response body id
+        - check: body.jsonrpc
+          assert: equals
+          expect: "2.0"
+          msg: assert response body jsonrpc
+        - check: body.result
+          assert: equals
+          expect: "0x0000000000000000000000000000000000000000000000000000000000000000"
+          msg: assert response body result
+    - name: ""
+      request:
+        method: POST
+        url: https://rpc.ankr.com/eth
+        headers:
+            accept-encoding: gzip
+            content-length: "201"
+            content-type: application/json
+            user-agent: okhttp/4.9.2
+        body:
+            id: 45
+            jsonrpc: "2.0"
+            method: eth_call
+            params:
+                - data: 0x70a08231000000000000000000000000cc2c84bdb6a2eaeee25941e2e640894d759e5ccf
+                  to: 0xc944e90c64b2c07662a292be6244bdf05cda44a7
+                - latest
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json
+          msg: assert response header Content-Type
+        - check: body.id
+          assert: equals
+          expect: 45
+          msg: assert response body id
+        - check: body.jsonrpc
+          assert: equals
+          expect: "2.0"
+          msg: assert response body jsonrpc
+        - check: body.result
+          assert: equals
+          expect: "0x0000000000000000000000000000000000000000000000000000000000000000"
+          msg: assert response body result
+    - name: ""
+      request:
+        method: POST
+        url: https://android.apis.google.com/c2dm/register3
+        headers:
+            Accept-Encoding: gzip
+            Authorization: AidLogin 4592605363870270701:8385864843770169704
+            Connection: Keep-Alive
+            Host: android.apis.google.com
+            User-Agent: Android-GCM/1.5 (generic_x86_arm RSR1.200819.001.A1)
+            app: com.google.android.apps.docs
+            content-length: "998"
+            content-type: application/x-www-form-urlencoded
+            gcm_ver: "201817022"
+        body: {}
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: text/plain; charset=UTF-8
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: POST
+        url: https://rpc.ankr.com/eth
+        headers:
+            accept-encoding: gzip
+            content-length: "201"
+            content-type: application/json
+            user-agent: okhttp/4.9.2
+        body:
+            id: 43
+            jsonrpc: "2.0"
+            method: eth_call
+            params:
+                - data: 0x70a08231000000000000000000000000cc2c84bdb6a2eaeee25941e2e640894d759e5ccf
+                  to: 0x514910771af9ca656af840dff83e8264ecf986ca
+                - latest
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json
+          msg: assert response header Content-Type
+        - check: body.id
+          assert: equals
+          expect: 43
+          msg: assert response body id
+        - check: body.jsonrpc
+          assert: equals
+          expect: "2.0"
+          msg: assert response body jsonrpc
+        - check: body.result
+          assert: equals
+          expect: "0x0000000000000000000000000000000000000000000000000000000000000000"
+          msg: assert response body result
+    - name: ""
+      request:
+        method: POST
+        url: https://rpc.ankr.com/eth
+        headers:
+            accept-encoding: gzip
+            content-length: "201"
+            content-type: application/json
+            user-agent: okhttp/4.9.2
+        body:
+            id: 44
+            jsonrpc: "2.0"
+            method: eth_call
+            params:
+                - data: 0x70a08231000000000000000000000000cc2c84bdb6a2eaeee25941e2e640894d759e5ccf
+                  to: 0x1cf4592ebffd730c7dc92c1bdffdfc3b9efcf29a
+                - latest
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json
+          msg: assert response header Content-Type
+        - check: body.id
+          assert: equals
+          expect: 44
+          msg: assert response body id
+        - check: body.jsonrpc
+          assert: equals
+          expect: "2.0"
+          msg: assert response body jsonrpc
+        - check: body.result
+          assert: equals
+          expect: "0x0000000000000000000000000000000000000000000000000000000000000000"
+          msg: assert response body result
+    - name: ""
+      request:
+        method: GET
+        url: https://assets.coingecko.com/coins/images/825/small/bnb-icon2_2x.png
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/png
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://assets.coingecko.com/coins/images/279/small/ethereum.png
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/png
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://assets.coingecko.com/coins/images/13397/small/Graph_Token.png
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/png
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://assets.coingecko.com/coins/images/677/small/basic-attention-token.png
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/png
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://assets.coingecko.com/coins/images/425/small/waves.png
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/png
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: POST
+        url: https://rpc.ankr.com/eth
+        headers:
+            accept-encoding: gzip
+            content-length: "201"
+            content-type: application/json
+            user-agent: okhttp/4.9.2
+        body:
+            id: 48
+            jsonrpc: "2.0"
+            method: eth_call
+            params:
+                - data: 0x70a08231000000000000000000000000cc2c84bdb6a2eaeee25941e2e640894d759e5ccf
+                  to: 0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48
+                - latest
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json
+          msg: assert response header Content-Type
+        - check: body.id
+          assert: equals
+          expect: 48
+          msg: assert response body id
+        - check: body.jsonrpc
+          assert: equals
+          expect: "2.0"
+          msg: assert response body jsonrpc
+        - check: body.result
+          assert: equals
+          expect: "0x0000000000000000000000000000000000000000000000000000000000000000"
+          msg: assert response body result
+    - name: ""
+      request:
+        method: POST
+        url: https://rpc.ankr.com/eth
+        headers:
+            accept-encoding: gzip
+            content-length: "201"
+            content-type: application/json
+            user-agent: okhttp/4.9.2
+        body:
+            id: 47
+            jsonrpc: "2.0"
+            method: eth_call
+            params:
+                - data: 0x70a08231000000000000000000000000cc2c84bdb6a2eaeee25941e2e640894d759e5ccf
+                  to: 0x744d70fdbe2ba4cf95131626614a1763df805b9e
+                - latest
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json
+          msg: assert response header Content-Type
+        - check: body.id
+          assert: equals
+          expect: 47
+          msg: assert response body id
+        - check: body.jsonrpc
+          assert: equals
+          expect: "2.0"
+          msg: assert response body jsonrpc
+        - check: body.result
+          assert: equals
+          expect: "0x0000000000000000000000000000000000000000000000000000000000000000"
+          msg: assert response body result
+    - name: ""
+      request:
+        method: GET
+        url: https://assets.coingecko.com/coins/images/6319/small/USD_Coin_icon.png
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+        cookies:
+            __cf_bm: m5PCEdcdcwgegzbQ5h0MQlK0umPQt2FbKzNN6Ye5X48-1694745571-0-ASTJ+1qYs81FTKYIa3n5szsGdbnFcKkktJxi/mmU4Is2/WBnaGIjJzXTHp5ATGpIUitkW/e4/QdOkNu73cINSIk=
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/png
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: POST
+        url: https://firebaseinstallations.googleapis.com/v1/projects/chime-sdk/installations/cBjxkq4JTOmxGRwR0RhF6G/authTokens:generate
+        headers:
+            Accept: application/json
+            Accept-Encoding: gzip
+            Authorization: FIS_v2 2_TEKyI8Wvv_3BHPMDGhCL3p0W9U9MuWU1NN1YYkOjpahYwGbDbmLjtklRY6SGudgk
+            Connection: Keep-Alive
+            Content-Encoding: gzip
+            Content-Length: "61"
+            Content-Type: application/json
+            Host: firebaseinstallations.googleapis.com
+            User-Agent: Dalvik/2.1.0 (Linux; U; Android 11; sdk_gphone_x86_arm Build/RSR1.200819.001.A1)
+            X-Android-Cert: 58E1C4133F7441EC3D2C270270A14802DA47BA0E
+            X-Android-Package: com.google.android.calendar
+            x-firebase-client: fire-core/19.2.0_1p fire-iid/20.1.7 fire-installations/16.2.2_1p fire-android/
+            x-firebase-client-log-type: "3"
+            x-goog-api-key: AIzaSyC8UYZpvA2eknNex0Pjid0_eTLJoDu6los
+        body:
+            installation:
+                sdkVersion: a:16.2.2_1p
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=UTF-8
+          msg: assert response header Content-Type
+        - check: body.expiresIn
+          assert: equals
+          expect: 604800s
+          msg: assert response body expiresIn
+        - check: body.token
+          assert: equals
+          expect: eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6IjE6NzQ3NjU0NTIwMjIwOmFuZHJvaWQ6MDAwMDAwMDAwMDAwMDAwMCIsImV4cCI6MTY5NTM1MDMzNSwiZmlkIjoiY0JqeGtxNEpUT214R1J3UjBSaEY2RyIsInByb2plY3ROdW1iZXIiOjc0NzY1NDUyMDIyMH0.AB2LPV8wRgIhANZiyRzv3WeAIewPWC6093qSlkj40CfIabtfEs4boPhCAiEA-cCp5U5aYgRjwpG-QVbTq67kvPPXcGQsCB_uXICw7dg
+          msg: assert response body token
+    - name: ""
+      request:
+        method: GET
+        url: https://assets.coingecko.com/coins/images/877/small/chainlink-new-logo.png
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+        cookies:
+            __cf_bm: ci8Ry09zkwDMETVVDPx5Y6zClt4GH8uEFPxbjDUpgGw-1694745571-0-AQORNhYtC5ZR8oA/9B262p3Mnv3FokO459xYEbuJvfZ4LpViwvzyUC0Z2hl7oihWbcwocxbF6wry18m8M1Udt64=
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/png
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://assets.coingecko.com/coins/images/779/small/status.png
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+        cookies:
+            __cf_bm: m5PCEdcdcwgegzbQ5h0MQlK0umPQt2FbKzNN6Ye5X48-1694745571-0-ASTJ+1qYs81FTKYIa3n5szsGdbnFcKkktJxi/mmU4Is2/WBnaGIjJzXTHp5ATGpIUitkW/e4/QdOkNu73cINSIk=
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/png
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://dydx.exchange/meta/apple-icon-57x57.png
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/png
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://www.loopop.io/favicon.ico
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/x-icon
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://opensea.io/static/images/favicon/180x180.png
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/png
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://assets.debank.com/favicon.ico
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/vnd.microsoft.icon
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://civfund.org/wp-content/uploads/2022/11/civ_logo_graphic-300x300.png
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/png
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://decentraland.org/favicon-32x32.png
+        params:
+            v: b57be10317666edc399e2bdf863f26bf
+        headers:
+            accept-encoding: gzip
+            user-agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: image/png
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: POST
+        url: https://bsc-mainnet.public.blastapi.io/
+        headers:
+            accept-encoding: gzip
+            content-length: "116"
+            content-type: application/json
+            user-agent: okhttp/4.9.2
+        body:
+            id: 42
+            jsonrpc: "2.0"
+            method: eth_getBalance
+            params:
+                - 0xcc2c84bdb6a2eaeee25941e2e640894d759e5ccf
+                - latest
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json
+          msg: assert response header Content-Type
+        - check: body.id
+          assert: equals
+          expect: 42
+          msg: assert response body id
+        - check: body.jsonrpc
+          assert: equals
+          expect: "2.0"
+          msg: assert response body jsonrpc
+        - check: body.result
+          assert: equals
+          expect: "0x0"
+          msg: assert response body result
+    - name: ""
+      request:
+        method: GET
+        url: https://relay.walletconnect.com/
+        params:
+            auth: eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJkaWQ6a2V5Ono2TWtvM2czeGFyNDgyVHc4U1hlRkZNdTJocFhqMlk1YVRnMTFDQnlIZ3pydkhSbyIsInN1YiI6ImJiZmNhYjEwNGY1NmRiYTgyZTY1NDNjZDM3MzA5NjA0MzM1NTI4Y2RkMmQ2N2Y3ODk2MjBhOTBiYWM2NzYyZmEiLCJhdWQiOiJ3c3M6Ly9yZWxheS53YWxsZXRjb25uZWN0LmNvbSIsImlhdCI6MTY5NDc0NTU3MCwiZXhwIjoxNjk0ODMxOTcwfQ.Zi4OG3OUDqt_WmnpG-sq3ftlnSxWxdh67vujkulst3_x1KhZggIep3hEA7Rm-kQth_RWnkfJ4ABApvLA-CouAg
+            projectId: 32050aa5fa4e1c9d970b61e302233dde
+            ua: wc-2/js-2.8.0/unknown-/react-native
+            useOnCloseEvent: "true"
+        headers:
+            Accept-Encoding: gzip
+            Connection: Upgrade
+            Host: relay.walletconnect.com
+            Sec-WebSocket-Extensions: permessage-deflate
+            Sec-WebSocket-Key: c49UgW21REyu7ELptWFYBg==
+            Sec-WebSocket-Version: "13"
+            Upgrade: websocket
+            User-Agent: okhttp/4.9.2
+            origin: https://relay.walletconnect.com
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 101
+          msg: assert response status code
+    - name: ""
+      request:
+        method: POST
+        url: https://firebaseinstallations.googleapis.com/v1/projects/tellaw-a4de5/installations
+        headers:
+            Accept: application/json
+            Accept-Encoding: gzip
+            Cache-Control: no-cache
+            Connection: Keep-Alive
+            Content-Encoding: gzip
+            Content-Length: "140"
+            Content-Type: application/json
+            Host: firebaseinstallations.googleapis.com
+            User-Agent: Dalvik/2.1.0 (Linux; U; Android 11; sdk_gphone_x86_arm Build/RSR1.200819.001.A1)
+            X-Android-Cert: 51BAD0183C99879BC14C43F456BBE3F3F3D23236
+            X-Android-Package: com.tellaw.tellaw.development
+            x-firebase-client: H4sIAAAAAAAAAD2RXY7CMAyEr1LlmaRNKn6Wq1CETGtKRJpUjoV2hbj7Gmh4ncx8ntgPdUUgPiNwVvvDQ8GIkdVeQRwo-UEz0Iis83Dr6tZVF0-o-0TY1a4xrVkUiBD-2PdZZGucsdUtcfCxq63ZGtssuSDvdiexTVX4PmaGEJC6-mO69JNAWmMLW1I6vsYvSULoWUdgfxe3OM6QpY7dmrVpSp03XBo31YB336M-k4hdPaY0Bvy4ltECSjG_Ada0xT-lAYP4MSL5_vS725yApm_tycfPTpz9arOgLomm8hOWkXlOxO_qsojCjjBJYYmfxvmaIha6WqkBGF-HUK5xrW5-tF2r4_O4UnekLD3lMk49_wEQGAh4tgEAAA
+            x-goog-api-key: AIzaSyAb5wbb_9WJ2FxaBV_yFt3NN-35YgdjTcA
+        body:
+            appId: 1:482424900219:android:31739860410cae4913f0de
+            authVersion: FIS_v2
+            fid: fbZtHZFITDiR_pK-Fq2mkR
+            sdkVersion: a:17.1.3
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=UTF-8
+          msg: assert response header Content-Type
+        - check: body.fid
+          assert: equals
+          expect: fbZtHZFITDiR_pK-Fq2mkR
+          msg: assert response body fid
+        - check: body.name
+          assert: equals
+          expect: projects/482424900219/installations/fbZtHZFITDiR_pK-Fq2mkR
+          msg: assert response body name
+        - check: body.refreshToken
+          assert: equals
+          expect: 3_AS3qfwI4lVpxMVs8Ny64gJCENLFklbz0VyQPxaw9t8iwLucqZ8PIUKGqq23cglJccL0MlGjb2LMkT7LBhjyOH45J4bdcMHE-JMQZpgzkFm3zmi8
+          msg: assert response body refreshToken
+    - name: ""
+      request:
+        method: POST
+        url: https://go-dev.tellaw.com/api/currency
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Content-Length: "116"
+            Content-Type: application/json
+            Host: go-dev.tellaw.com
+            User-Agent: okhttp/4.9.2
+            accept-language: en
+            access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhaWQiOiI5NjM4NTAwOTY3MDY1NjAiLCJleHAiOjIwMTAxMDU1NzAsImlhdCI6MTY5NDc0NTU3MCwic3JjIjoiYW5kcm9pZCJ9.Px0kVewBysr65lIJgWuyK5fwnD6BRYEa4x5NGyZPcbA
+            x-user-agent: android
+        body:
+            action: get_currency_quote_historical
+            data:
+                currency: usd
+                id: ethereum
+                interval: 1D
+            version: "1.0"
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json; charset=utf-8
+          msg: assert response header Content-Type
+        - check: body.code
+          assert: equals
+          expect: 0
+          msg: assert response body code
+        - check: body.msg
+          assert: equals
+          expect: success
+          msg: assert response body msg
+    - name: ""
+      request:
+        method: POST
+        url: https://rpc.ankr.com/eth
+        headers:
+            accept-encoding: gzip
+            content-length: "116"
+            content-type: application/json
+            user-agent: okhttp/4.9.2
+        body:
+            id: 49
+            jsonrpc: "2.0"
+            method: eth_getBalance
+            params:
+                - 0xcc2c84bdb6a2eaeee25941e2e640894d759e5ccf
+                - latest
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/json
+          msg: assert response header Content-Type
+        - check: body.id
+          assert: equals
+          expect: 49
+          msg: assert response body id
+        - check: body.jsonrpc
+          assert: equals
+          expect: "2.0"
+          msg: assert response body jsonrpc
+        - check: body.result
+          assert: equals
+          expect: "0x0"
+          msg: assert response body result
+    - name: ""
+      request:
+        method: POST
+        url: https://android.apis.google.com/c2dm/register3
+        headers:
+            Accept-Encoding: gzip
+            Authorization: AidLogin 4592605363870270701:8385864843770169704
+            Connection: Keep-Alive
+            Host: android.apis.google.com
+            User-Agent: Android-GCM/1.5 (generic_x86_arm RSR1.200819.001.A1)
+            app: com.google.android.calendar
+            content-length: "997"
+            content-type: application/x-www-form-urlencoded
+            gcm_ver: "201817022"
+        body: {}
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: text/plain; charset=UTF-8
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: POST
+        url: https://www.googleapis.com/experimentsandconfigs/v1/getExperimentsAndConfigs
+        params:
+            c: "1"
+            r: "15"
+        headers:
+            Accept-Encoding: gzip
+            Connection: Keep-Alive
+            Content-Encoding: gzip
+            Content-Length: "7473"
+            Content-Type: application/x-protobuf
+            Host: www.googleapis.com
+            User-Agent: Dalvik/2.1.0 (Linux; U; Android 11; sdk_gphone_x86_arm Build/RSR1.200819.001.A1)
+            X-SERVER-TOKEN: CAMSDQ0C0ciKAAQVA5OarRU=
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: application/octet-stream
+          msg: assert response header Content-Type
+    - name: ""
+      request:
+        method: GET
+        url: https://cdn.shopify.com/s/javascripts/currencies.js
+        headers:
+            accept: application/json
+            accept-encoding: gzip
+            content-type: application/json
+            user-agent: okhttp/4.9.2
+      validate:
+        - check: status_code
+          assert: equals
+          expect: 200
+          msg: assert response status code
+        - check: headers."Content-Type"
+          assert: equals
+          expect: text/javascript
+          msg: assert response header Content-Type

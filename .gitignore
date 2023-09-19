@@ -162,3 +162,5 @@ dmypy.json
 
 report
 logs/
+video/
+screenshots/

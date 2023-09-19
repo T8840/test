@@ -1,0 +1,103 @@
+- name: coyote
+  title: Sample YML
+
+- name: coyote
+  # global vars
+  vars:
+    TEST: echo
+
+- name: test
+  # local vars (have precedence)
+  vars:
+    TEST: ls
+  entries:
+    - name: ls command
+      command: |
+        %TEST%
+        -lR
+        .
+    - name: echo command
+      command: echo hello
+    - name: error unless you are root
+      command: "%TEST% /root"
+
+
+- name: moar tests
+  entries:
+    - name: base64
+      command: |
+        bash -c 'echo Hello World | base64'
+
+- name: test timeout
+  entries:
+    - name: sleep timeout
+      command: sleep 3
+      timeout: 1s
+
+- name: test stdin
+  entries:
+    - name: cat from stdin
+      command: cat
+      stdin: hello
+
+- name: test env vars
+  entries:
+    - name: "%TEST% a var"
+      command: bash -c '%TEST% "$TEST"'
+      env: [ TEST="hello world" ]
+
+- name: test text search
+  entries:
+    - name: match stdout
+      command: echo "hello world"
+      stdout_has:
+        - hello
+    - name: not match stdout
+      command: echo "hello world"
+      stdout_not_has: [ 'foo' ]
+    - name: not match expected stdout
+      command: echo "hello world"
+      stdout_has: [ foo ]
+    - name: match not expected stdout
+      command: echo "hello world"
+      stdout_not_has: [ hello ]
+
+- name: test unique string generation
+  entries:
+    - name: command
+      command: echo %UNIQUE%
+    - name: stdin
+      command: cat
+      stdin: |
+        First: %UNIQUE% Second: %UNIQUE%
+
+- name: test unique string matching
+  entries:
+  - name: command
+    command: echo %UNIQUE%
+  - name: stdin
+    command: cat
+    stdin: |
+      First: %UNIQUE_1% Second: %UNIQUE%
+    stdout_has: [ "%UNIQUE_1%" ]
+
+- name: test ignore exit code
+  entries:
+    - name: ignore exit code
+      command: false
+      ignore_exit_code: true
+
+- name: test persisting unique variables
+  entries:
+    - name: first instance
+      command: echo %UNIQUE_TEST% %UNIQUE_1%
+    - name: stdin
+      command: cat
+      stdin: |
+        Should be the same as before. First: %UNIQUE_TEST% Second: %UNIQUE_1%
+
+- name: skip test
+  skip: true
+  entries:
+    - name: skip or fail
+      command: exit 1
